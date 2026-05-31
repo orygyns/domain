@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+
+    <url>
+        <loc>https://orygyns.in/</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Core Services -->
+
+    <url>
+        <loc>https://orygyns.in/website.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/eportfolio.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/prodev.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/ai.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Coding Platform -->
+
+    <url>
+        <loc>https://orygyns.in/coding.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/learn.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/compiler.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Programming Courses -->
+
+    <url>
+        <loc>https://orygyns.in/c.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/cpp.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/python.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/java.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/tools.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Academic Resources -->
+
+    <url>
+        <loc>https://orygyns.in/cppsrmu1.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/cppsrmu2.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/cppsrmu3.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/cppsrmu4.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/cppsrmu5.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Quizzes -->
+
+    <url>
+        <loc>https://orygyns.in/cquiz.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/cppquiz.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/pythonquiz.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/javaquiz.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://orygyns.in/toolsquiz.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- User Profile -->
+
+    <url>
+        <loc>https://orygyns.in/profile.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <priority>0.60</priority>
+    </url>
+
+</urlset>

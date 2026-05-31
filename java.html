@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Java Programming Course | Orygyns Coding Platform</title>
+  <meta name="description" content="Master Java programming from basics to Object-Oriented Programming (OOP) with the comprehensive Orygyns Java Course. Learn classes, objects, arrays, and exception handling.">
+  <meta name="keywords" content="Java Course, Learn Java, Java Programming, OOP in Java, Java Classes and Objects, Orygyns Coding Platform, Programming Education">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/java.html">
+
+  <meta property="og:title" content="Java Programming Course | Orygyns Coding Platform">
+  <meta property="og:description" content="Master Java programming from basics to Object-Oriented Programming (OOP) with the comprehensive Orygyns Java Course. Learn classes, objects, arrays, and exception handling.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/java.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Java Programming Course | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Master Java programming from basics to Object-Oriented Programming (OOP) with the comprehensive Orygyns Java Course. Learn classes, objects, arrays, and exception handling.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/java.html#webpage",
+        "url": "https://orygyns.in/java.html",
+        "name": "Java Programming Course | Orygyns",
+        "description": "Master Java programming from basics to Object-Oriented Programming (OOP) with the comprehensive Orygyns Java Course."
+      },
+      {
+        "@type": "Course",
+        "name": "Complete Java Course",
+        "description": "Master Java from basics to Object-Oriented Programming.",
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        },
+        "about": [
+          {"@type": "Thing", "name": "Java Programming"},
+          {"@type": "Thing", "name": "Object-Oriented Programming"},
+          {"@type": "Thing", "name": "Java Classes and Objects"},
+          {"@type": "Thing", "name": "Exception Handling"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #121619;
+      --surface: #1e2429;
+      --text-main: #f5f6fa;
+      --text-muted: #a4b0be;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(18, 22, 25, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --border-color: #2f363d;
+      --code-bg: #111417;
+      --practice-bg: rgba(22, 163, 74, 0.08);
+      --code-text: #fdcb6e; /* Java-esque warm yellow/orange */
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 246, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f8f9fa;
+      --surface: #ffffff;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --border-color: #e1e4e8;
+      --code-bg: #f1f3f5;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --code-text: #d35400;
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2845, 52, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 80px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar overrides --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 1px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.2rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--surface); border: 2px solid var(--border-color); color: var(--text-main); font-size: 1.2rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 42px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Content Area --- */
+    main { flex: 1; padding: 40px 0 60px; max-width: 900px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.5s ease; }
+    .page-header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 800; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); }
+
+    .breadcrumb-custom { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; font-weight: 600; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); }
+
+    /* --- Lesson Cards --- */
+    .lesson-card { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; animation: fadeInUp 0.6s ease; }
+    .lesson-card:hover { transform: translateY(-4px); }
+    .lesson-card.highlight-card { border: 2px solid var(--primary-green); }
+    
+    .lesson-card h2 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-green); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; font-weight: 700; }
+    .lesson-card h3 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem 0; color: var(--text-main); font-weight: 600; }
+    .lesson-card p { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-muted); }
+    .lesson-card ul { padding-left: 20px; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .lesson-card li { margin-bottom: 0.5rem; }
+    .lesson-card strong { color: var(--text-main); }
+
+    /* --- Code Blocks (Strictly Formatted) --- */
+    .code-block { background-color: var(--code-bg); padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; overflow-x: auto; border: 1px solid var(--border-color); margin: 1.5rem 0; line-height: 1.8; color: var(--text-main); tab-size: 4; }
+    .code-block code { color: var(--code-text); }
+
+    /* --- Interactive Elements --- */
+    .practice-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .practice-box h4 { color: var(--primary-green); margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 700; }
+    .practice-box p { color: var(--text-main); margin: 0; font-weight: 500; }
+
+    /* --- Action Box Alignment Rules --- */
+    .action-box { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 1.5rem; }
+    .success-text { color: var(--primary-green) !important; font-weight: 600; margin: 0 !important; }
+
+    /* --- Buttons --- */
+    .btn-main { display: inline-block; padding: 10px 24px; background-color: transparent; color: var(--primary-green); border: 2px solid var(--primary-green); font-size: 1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .btn-main:hover { background-color: var(--primary-green); color: #fff; transform: translateY(-2px); }
+
+    .final-section { text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 2px dashed var(--border-color); animation: fadeInUp 0.8s ease; }
+    .final-section .btn-main { background-color: var(--primary-green); color: #ffffff; font-size: 1.2rem; padding: 16px 40px; box-shadow: 0 6px 0 var(--primary-dark); border: none; border-radius: 30px; }
+    .final-section .btn-main:hover { background-color: #15b850; color: #fff; }
+    .final-section .btn-main:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--primary-dark); }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 4rem 2rem 2rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; transition: color 0.2s ease; }
+    .footer-nav a:hover { color: var(--primary-green); }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* --- Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) { 
+      .page-header h1 { font-size: 2.2rem; } 
+      .lesson-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Logo">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumb">
+      <a href="learn.html">⬅️ Back to Courses</a> <span>/</span> <span>Java Course</span>
+    </div>
+
+    <div class="page-header">
+      <h1>Complete Java Course ☕</h1>
+      <p>Master Java from basics to Object-Oriented Programming</p>
+    </div>
+
+    <section class="lesson-card" aria-labelledby="level-1">
+      <h2 id="level-1">Level 1: Introduction to Java</h2>
+      <p><strong>What is it?</strong> Java is a robust, high-level, class-based programming language.</p>
+      
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li><strong>Platform Independent:</strong> Write Once, Run Anywhere (WORA).</li>
+        <li><strong>Object-Oriented:</strong> Everything is organized around objects and data.</li>
+      </ul>
+      
+      <p><strong>Where Java is used:</strong> Android apps, enterprise software, large-scale web applications, and embedded systems.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Think about an Android app you use daily. It was likely built using Java!</p>
+      </div>
+
+      <div class="action-box">
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-2">
+      <h2 id="level-2">Level 2: Basic Program Structure</h2>
+      <p><strong>What is it?</strong> Every Java program must be enclosed in a class and contain a main method to execute.</p>
+
+<pre class="code-block" tabindex="0"><code>
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+
+        System.out.println("Hello World");
+
+    }
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><code>class</code>: A blueprint for the code.</li>
+        <li><code>main method</code>: The starting point where the program begins executing.</li>
+        <li><code>System.out.println</code>: The command used to print text to the screen.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Change "Hello World" to your own name and observe the output.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You wrote your first Java program!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-3">
+      <h2 id="level-3">Level 3: Variables & Data Types</h2>
+      <p><strong>What is it?</strong> Variables are containers for storing data. In Java, you MUST specify the data type.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int age = 18;
+
+double marks = 85.5;
+
+char grade = 'A';
+
+String name = "Rajan";
+</code></pre>
+
+      <p><strong>Explanation:</strong> <code>int</code> holds whole numbers, <code>double</code> holds decimals, <code>char</code> holds a single character in single quotes, and <code>String</code> holds text in double quotes.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a String variable for your favorite subject and an int for your expected score.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-4">
+      <h2 id="level-4">Level 4: Operators</h2>
+      <p><strong>What is it?</strong> Symbols used to perform mathematical or logical operations.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int x = 10;
+
+int y = 5;
+
+int result = x + y;
+</code></pre>
+
+      <p><strong>Explanation:</strong> Java supports standard operators like <code>+</code> (add), <code>-</code> (subtract), <code>*</code> (multiply), and <code>/</code> (divide).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Change the operator to <code>*</code> and print the result using <code>System.out.println(result);</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-5">
+      <h2 id="level-5">Level 5: Conditionals</h2>
+      <p><strong>What is it?</strong> Blocks of code that only run if a specific condition is evaluated as true.</p>
+
+<pre class="code-block" tabindex="0"><code>
+if (x > 0)
+{
+
+    System.out.println("Positive");
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> We use the <code>if</code> keyword to test a condition inside parentheses <code>()</code>. If true, the code inside the curly braces <code>{}</code> runs.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Add an <code>else</code> block to handle the scenario where x is less than 0.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-6">
+      <h2 id="level-6">Level 6: Loops</h2>
+      <p><strong>What is it?</strong> Structures that repeat a specific block of code as long as a condition is met.</p>
+
+<pre class="code-block" tabindex="0"><code>
+for (int i = 0; i < 5; i++)
+{
+
+    System.out.println(i);
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> A <code>for</code> loop initializes a variable (i = 0), sets a condition to check before each loop (i < 5), and increments the variable after each cycle (i++).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Modify the loop condition to <code>i < 10</code> to print numbers from 0 to 9.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-7">
+      <h2 id="level-7">Level 7: Methods</h2>
+      <p><strong>What is it?</strong> Reusable blocks of code that perform a specific task when called.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int add(int a, int b)
+{
+
+    return a + b;
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> A method has a return type (like <code>int</code>) and parameters. <strong>Method Overloading</strong> is when you create multiple methods with the exact same name but different parameters (e.g., <code>add(int a, int b, int c)</code>).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a method named <code>multiply</code> that takes two integers and returns their product.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-8">
+      <h2 id="level-8">Level 8: Arrays & Strings</h2>
+      <p><strong>What is it?</strong> Arrays store multiple values of the same type. Strings handle text sequences.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int[] arr = {1, 2, 3};
+
+for (int i = 0; i < arr.length; i++)
+{
+
+    System.out.println(arr[i]);
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> <code>arr.length</code> automatically gives the size of the array. The loop goes through each index systematically to print the values.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a String array containing three fruit names, and loop through to print them.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card highlight-card" aria-labelledby="level-9">
+      <h2 id="level-9">Level 9: Object-Oriented Programming (OOP)</h2>
+      <p><strong>What is OOP?</strong> OOP is a programming approach using objects and classes to model real-world concepts.</p>
+      
+      <ul>
+        <li><strong>1. Encapsulation:</strong> Hiding internal data and requiring access via methods (like getter/setter).</li>
+        <li><strong>2. Abstraction:</strong> Hiding complex implementation details and showing only essentials.</li>
+        <li><strong>3. Inheritance:</strong> A new class taking on the properties of an existing class.</li>
+        <li><strong>4. Polymorphism:</strong> One action occurring in different ways (like method overloading).</li>
+      </ul>
+
+<pre class="code-block" tabindex="0"><code>
+class Car
+{
+
+    String brand;
+
+    void show()
+    {
+
+        System.out.println(brand);
+
+    }
+
+}
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Add an <code>int year</code> variable to the Car class and print it inside the <code>show()</code> method.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-10">
+      <h2 id="level-10">Level 10: Classes & Objects</h2>
+      <p><strong>What is it?</strong> A Class is a blueprint. An Object is a real, usable instance of that blueprint.</p>
+
+<pre class="code-block" tabindex="0"><code>
+Car c = new Car();
+
+c.brand = "BMW";
+
+c.show();
+</code></pre>
+
+      <p><strong>Explanation:</strong> We use the <code>new</code> keyword to create an object of the <code>Car</code> class. We then access its variables and methods using the dot (<code>.</code>) operator.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a second Car object named <code>c2</code>, set its brand to "Audi", and call its <code>show()</code> method.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-11">
+      <h2 id="level-11">Level 11: Constructors</h2>
+      <p><strong>What is it?</strong> A special method that runs automatically when an object is created, used to set initial values.</p>
+
+<pre class="code-block" tabindex="0"><code>
+class Car
+{
+
+    Car()
+    {
+
+        System.out.println("Created");
+
+    }
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> The constructor must have the exact same name as the class and does not have a return type (not even <code>void</code>).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create an object of this Car class to see the "Created" message automatically print.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-12">
+      <h2 id="level-12">Level 12: Access Modifiers</h2>
+      <p><strong>What is it?</strong> Keywords that set the visibility and security level of classes, variables, and methods.</p>
+
+      <ul>
+        <li><strong>public:</strong> The code is accessible from any other class.</li>
+        <li><strong>private:</strong> The code is accessible ONLY within the declared class (Key for Encapsulation).</li>
+        <li><strong>protected:</strong> The code is accessible in the same package and subclasses.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Try making a variable <code>private</code> and accessing it from another class. You will get an error!</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-13">
+      <h2 id="level-13">Level 13: Exception Handling</h2>
+      <p><strong>What is it?</strong> Managing runtime errors so your application doesn't completely crash.</p>
+
+<pre class="code-block" tabindex="0"><code>
+try
+{
+
+    int x = 10 / 0;
+
+}
+catch (Exception e)
+{
+
+    System.out.println("Error");
+
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> The program attempts the code in the <code>try</code> block. Since dividing by zero is impossible, it catches the error and runs the <code>catch</code> block instead.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Change the division to <code>10 / 2</code>. The catch block will be skipped because there is no error.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-14">
+      <h2 id="level-14">Level 14: Practical Programs</h2>
+      <p><strong>What is it?</strong> Combining everything you've learned into full, working Java applications.</p>
+
+      <h3>1. Simple Calculator Logic</h3>
+<pre class="code-block" tabindex="0"><code>
+int a = 10;
+
+int b = 5;
+
+System.out.println(a + b);
+
+System.out.println(a - b);
+</code></pre>
+
+      <h3>2. Student Class Implementation</h3>
+<pre class="code-block" tabindex="0"><code>
+class Student
+{
+
+    String name;
+
+    Student(String n)
+    {
+
+        name = n;
+
+    }
+
+    void display()
+    {
+
+        System.out.println(name);
+
+    }
+
+}
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Open the compiler, combine the Student class, create a <code>main</code> method, instantiate a Student object, and run <code>display()</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <div class="final-section">
+      <h2 style="margin-bottom: 1.5rem; color: var(--text-main); font-weight: 700;">Ready to master Java?</h2>
+      <a href="javaquiz.html" class="btn-main" aria-label="Start Java Quiz">Start Java Quiz ☕</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    updateIcon(htmlElement.getAttribute('data-theme'));
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      updateIcon(newTheme);
+    });
+  </script>
+
+</body>
+</html>

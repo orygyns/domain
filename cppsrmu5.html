@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SRM OODP Unit 5: File Handling & STL (Top 10 Questions) | Orygyns</title>
+  <meta name="description" content="Master Object-Oriented Design Principles (OODP) Unit 5 for SRM exams. Study File Handling, Streams, Standard Template Library (STL), Vector, List, Map, and UML in C++.">
+  <meta name="keywords" content="SRM OODP Unit 5, C++ File Handling, C++ Streams, C++ STL, Vector in C++, List in C++, Map in C++, OOP Questions, C++ Difference between Vector and List, UML Revision, Orygyns Coding Platform">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/cppsrmu5.html">
+
+  <meta property="og:title" content="SRM OODP Unit 5: File Handling & STL (Top 10 Questions) | Orygyns">
+  <meta property="og:description" content="Master Object-Oriented Design Principles (OODP) Unit 5 for SRM exams. Study File Handling, Streams, Standard Template Library (STL), Vector, List, Map, and UML in C++.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/cppsrmu5.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SRM OODP Unit 5: File Handling & STL (Top 10 Questions) | Orygyns">
+  <meta name="twitter:description" content="Master Object-Oriented Design Principles (OODP) Unit 5 for SRM exams. Study File Handling, Streams, Standard Template Library (STL), Vector, List, Map, and UML in C++.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/cppsrmu5.html#webpage",
+        "url": "https://orygyns.in/cppsrmu5.html",
+        "name": "SRM OODP Unit 5 | Orygyns",
+        "description": "Master Object-Oriented Design Principles (OODP) Unit 5 for SRM exams. Contains all 10 important questions covering File Handling and STL."
+      },
+      {
+        "@type": "LearningResource",
+        "name": "SRM OODP Unit 5 Study Guide (10 Questions)",
+        "learningResourceType": "Study Guide",
+        "educationalAlignment": [
+          {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalSubject",
+            "targetName": "Computer Science & OOP"
+          }
+        ],
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        },
+        "about": [
+          {"@type": "Thing", "name": "C++ File Handling"},
+          {"@type": "Thing", "name": "C++ Streams"},
+          {"@type": "Thing", "name": "Standard Template Library (STL)"},
+          {"@type": "Thing", "name": "Vectors, Lists, Maps in C++"},
+          {"@type": "Thing", "name": "UML Diagram Revision"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || localStorage.getItem('orygyns-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #07130d;
+      --bg2-color: #0b1d14;
+      --surface: rgba(15, 31, 23, 0.95);
+      --text-main: #ffffff;
+      --text-muted: #aad7bc;
+      --primary-green: #00ff88;
+      --primary-dark: #00c96b;
+      --nav-bg: rgba(7, 19, 13, 0.95);
+      --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      --border-color: #213d2c;
+      --code-bg: #030a06;
+      --code-text: #00ff88;
+      --diagram-bg: #05100a;
+      --practice-bg: rgba(0, 255, 136, 0.06);
+      --warning-bg: rgba(255, 159, 67, 0.12);
+      --warning-text: #ff9f43;
+      --hover-bg: rgba(255, 255, 255, 0.04);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f3fcf7;
+      --bg2-color: #e6f7ee;
+      --surface: #ffffff;
+      --text-main: #142c1e;
+      --text-muted: #4e6e5a;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(243, 252, 247, 0.95);
+      --card-shadow: 0 8px 24px rgba(22, 163, 74, 0.08);
+      --border-color: #cfead8;
+      --code-bg: #f8fbf9;
+      --code-text: #16a34a;
+      --diagram-bg: #f1faf4;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --warning-bg: rgba(211, 84, 0, 0.08);
+      --warning-text: #d35400;
+      --hover-bg: rgba(22, 163, 74, 0.04);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2820, 44, 30, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; transition: background-color 0.3s ease, color 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 90px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar Styles --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 0.85rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.75rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 0.5px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.1rem; font-size: 0.95rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--code-bg); border: 1px solid var(--border-color); color: var(--text-main); font-size: 1.1rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 10px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 40px; width: 40px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Layout Elements --- */
+    main { flex: 1; padding: 24px 0 64px; max-width: 960px; margin: 0 auto; width: 100%; }
+    
+    .hero { position: relative; overflow: hidden; padding: 60px; border-radius: 35px; background: var(--surface); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); margin-bottom: 3.5rem; text-align: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 800; color: var(--text-main); }
+    .hero h1 span { color: var(--primary-green); }
+    .hero p { color: var(--text-muted); font-size: 1.2rem; max-width: 850px; margin: 0 auto; }
+    .badge-custom { position: absolute; top: 25px; right: 25px; background: linear-gradient(135deg, #ffb347, #ff7b00); color: #000; font-weight: 700; padding: 12px 18px; border-radius: 30px; font-size: 0.9rem; letter-spacing: 0.5px; }
+
+    .breadcrumb-custom { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; font-weight: 500; font-size: 0.95rem; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); opacity: 0.8; }
+
+    /* --- Premium Educational Module Cards --- */
+    .card-custom { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .card-custom:hover { border-color: rgba(0, 255, 136, 0.35); }
+    
+    .topic-title { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 1.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
+    .topic-title h2 { font-size: 1.65rem; color: var(--text-main); font-weight: 700; margin: 0; position: relative; }
+    .topic-title h2::after { content: ''; position: absolute; bottom: -13px; left: 0; width: 40px; height: 4px; background-color: var(--primary-green); border-radius: 2px; }
+    
+    .card-custom h3 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem 0; color: var(--text-main); font-weight: 600; }
+    
+    .priority { font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 30px; background-color: var(--warning-bg); color: var(--warning-text); text-transform: uppercase; letter-spacing: 0.75px; border: 1px solid rgba(255, 159, 67, 0.2); }
+
+    .card-custom p { font-size: 1.05rem; color: var(--text-main); margin-bottom: 1.5rem; opacity: 0.95; }
+    .card-custom ul { padding-left: 22px; font-size: 1.05rem; margin-bottom: 1.5rem; }
+    .card-custom li { margin-bottom: 0.6rem; }
+
+    /* --- Responsive Tables --- */
+    .table-responsive-wrapper { overflow-x: auto; margin-bottom: 2rem; border-radius: 12px; border: 1px solid var(--border-color); }
+    table { width: 100%; border-collapse: collapse; background-color: var(--code-bg); margin: 0; }
+    th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border-color); font-size: 1rem; color: var(--text-main); }
+    th { background-color: var(--bg2-color); font-weight: 700; color: var(--primary-green); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+    tr:last-child td { border-bottom: none; }
+
+    /* --- Code Blocks & Visual UML Architecture Diagram Layouts --- */
+    pre.code-block { margin: 1.75rem 0; background-color: var(--code-bg); border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; tab-size: 4; }
+    pre.code-block code { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.95rem; display: block; padding: 1.5rem; color: var(--code-text); line-height: 1.6; }
+    
+    .diagram { margin: 1.75rem 0; padding: 1.5rem; border-radius: 12px; border: 1px dashed var(--primary-green); background-color: var(--diagram-bg); overflow-x: auto; text-align: center;}
+    .diagram pre { background: transparent; border: none; padding: 0; margin: 0; box-shadow: none; display: inline-block; text-align: left; }
+    .diagram code { font-family: 'Fira Code', 'Courier New', Courier, monospace; color: var(--primary-green); padding: 0; font-size: 1.05rem; font-weight: 600; }
+
+    code.inline-code { font-family: 'Fira Code', 'Courier New', Courier, monospace; background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--code-text); font-size: 0.95rem; }
+
+    /* --- Context Boxes --- */
+    .highlight-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+    .highlight-box h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary-green); margin-bottom: 0.75rem; margin-top: 0; }
+    .highlight-box p { font-size: 1rem; margin-bottom: 0; color: var(--text-main); }
+    .highlight-box ul { margin-bottom: 0; }
+
+    .memory-box { background-color: var(--warning-bg); border-left: 4px solid var(--warning-text); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+    .memory-box h3 { font-size: 1.15rem; font-weight: 700; color: var(--warning-text); margin-bottom: 0.75rem; margin-top: 0; }
+    .memory-box ul { margin-bottom: 0; color: var(--text-main); }
+    .memory-box p { margin-bottom: 0; color: var(--text-main); }
+
+    /* --- Navigation Elements --- */
+    .bottom-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem; margin-top: 3.5rem; }
+    .nav-btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background-color: var(--surface); color: var(--text-main) !important; font-size: 0.95rem; font-weight: 600; border-radius: 10px; border: 1px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; text-align: center; min-width: 160px; }
+    .nav-btn:hover { border-color: var(--primary-green); color: var(--primary-green) !important; transform: translateY(-2px); }
+    .nav-btn.primary { background-color: var(--primary-green); color: #07130d !important; border-color: var(--primary-green); }
+    .nav-btn.primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); color: #07130d !important; }
+
+    /* --- Footer Styles --- */
+    footer { text-align: center; padding: 4.5rem 2rem 2.5rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: color 0.2s ease; opacity: 0.85; }
+    .footer-nav a:hover { color: var(--primary-green); opacity: 1; }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+
+    /* --- Mobile Responsive Optimizations --- */
+    @media (max-width: 768px) {
+      body { padding-top: 80px; }
+      .hero { padding: 35px 20px; }
+      .hero h1 { font-size: 2.25rem; }
+      .badge-custom { top: 15px; right: 15px; padding: 8px 12px; font-size: 0.8rem; }
+      .card-custom { padding: 1.75rem; margin-bottom: 1.75rem; }
+      .topic-title h2 { font-size: 1.4rem; }
+      .bottom-nav { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+      .nav-btn { width: 100%; }
+      .footer-nav { gap: 1.25rem; flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Platform Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Hub Home">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation parameters">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-2 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme state" onclick="toggleTheme()">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumbs">
+      <a href="coding.html#srm">⬅️ Academic Resources</a> <span>/</span> <a href="cpp.html">C++ Course</a> <span>/</span> <span>SRM OODP Unit 5</span>
+    </div>
+
+    <section class="hero reveal">
+      <div class="badge-custom">🔥 Final Unit</div>
+      <h1>SRM OODP <span>Unit 5</span> 📘</h1>
+      <p>Complete semester preparation notes for File Handling, STL Containers, and UML Revision with detailed explanations, top 10 crucial exam questions, viva preparation, and tips.</p>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q1-title">
+      <div class="topic-title">
+        <h2 id="q1-title">Question 1: What is File Handling in C++? Explain its main operations.</h2>
+        <div class="priority">MOST EXPECTED</div>
+      </div>
+      <p><strong>File handling</strong> in C++ is the mechanism used to store data permanently in a secondary storage device (like a hard drive) and retrieve it. It allows C++ programs to communicate with files using input and output streams.</p>
+      
+      <div class="highlight-box">
+        <h3>Main File Operations</h3>
+        <ul>
+          <li><strong>Create File:</strong> Generates a new file in the system.</li>
+          <li><strong>Open File:</strong> Links the stream to the physical file.</li>
+          <li><strong>Read File:</strong> Fetches data from the file to the program.</li>
+          <li><strong>Write File:</strong> Pushes data from the program into the file.</li>
+          <li><strong>Close File:</strong> Safely disconnects the stream and saves changes.</li>
+        </ul>
+      </div>
+
+      <div class="diagram">
+<pre><code>PROGRAM  --->  FILE  --->  STORAGE</code></pre>
+      </div>
+      
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main() {
+    ofstream file;            // Step 1: Create stream object
+    file.open("demo.txt");    // Step 2: Open file
+    file &lt;&lt; "Hello SRM";      // Step 3: Write to file
+    file.close();             // Step 4: Close file
+    return 0;
+}</code></pre>
+
+      <div class="memory-box">
+        <h3>Memory Trick 🧠</h3>
+        <p>
+          <code class="inline-code">ofstream</code> → Write (Output File Stream)<br>
+          <code class="inline-code">ifstream</code> → Read (Input File Stream)<br>
+          <code class="inline-code">fstream</code> → Both (Read & Write)
+        </p>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q2-title">
+      <div class="topic-title">
+        <h2 id="q2-title">Question 2: What are Streams in C++? Explain their types.</h2>
+        <div class="priority">IMPORTANT</div>
+      </div>
+      <p>A <strong>Stream</strong> is an abstraction that represents a device on which input and output operations are performed. A stream acts as a flow of data (sequence of bytes) between the executing program and I/O devices.</p>
+      
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 30%;">Stream Object</th>
+              <th scope="col" style="width: 70%;">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>cin</strong></td>
+              <td>Standard input stream (usually keyboard).</td>
+            </tr>
+            <tr>
+              <td><strong>cout</strong></td>
+              <td>Standard output stream (usually monitor/console).</td>
+            </tr>
+            <tr>
+              <td><strong>ifstream</strong></td>
+              <td>Input file stream class used to read data from files.</td>
+            </tr>
+            <tr>
+              <td><strong>ofstream</strong></td>
+              <td>Output file stream class used to write data to files.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Main Stream Types</h3>
+        <ul>
+          <li><strong>Input Stream:</strong> Flows from a device (keyboard/file) into the main memory.</li>
+          <li><strong>Output Stream:</strong> Flows from main memory to a device (screen/file).</li>
+          <li><strong>File Stream:</strong> Specifically targets disk files to maintain persistent state.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q3-title">
+      <div class="topic-title">
+        <h2 id="q3-title">Question 3: Explain the different File Opening Modes in C++.</h2>
+        <div class="priority">VERY IMPORTANT</div>
+      </div>
+      <p>File opening modes determine how a file will be processed once it is opened. They are defined inside the <code>ios</code> class.</p>
+
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 30%;">Mode Flag</th>
+              <th scope="col" style="width: 70%;">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ios::in</strong></td>
+              <td>Opens the file strictly for <strong>reading</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>ios::out</strong></td>
+              <td>Opens the file for <strong>writing</strong>. If the file exists, it overwrites the content.</td>
+            </tr>
+            <tr>
+              <td><strong>ios::app</strong></td>
+              <td>Opens the file in <strong>append mode</strong>. New data is written to the end of the file.</td>
+            </tr>
+            <tr>
+              <td><strong>ios::binary</strong></td>
+              <td>Opens the file in <strong>binary mode</strong> instead of the default text mode.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="memory-box" style="border-left-color: orange; background-color: rgba(255,166,0,0.08);">
+        <h3 style="color: orange;">Most Asked Exam Point 🎯</h3>
+        <p><strong>Difference between <code>ios::out</code> and <code>ios::app</code>:</strong> <br>
+        <code>ios::out</code> will delete all existing data in the file before writing new data (truncation). <br>
+        <code>ios::app</code> will preserve all existing data and safely add the new data at the very end of the file.</p>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q4-title">
+      <div class="topic-title">
+        <h2 id="q4-title">Question 4: Write a C++ program to Read and Write data from/to a file.</h2>
+        <div class="priority">MOST REPEATED</div>
+      </div>
+      <p>Files are interacted with using the <code>&lt;fstream&gt;</code> library by instantiating stream objects.</p>
+      
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main() {
+    // WRITING TO A FILE
+    ofstream fout;
+    fout.open("data.txt");
+    fout &lt;&lt; "Orygyns Educational Platform";
+    fout.close();
+
+    // READING FROM A FILE
+    ifstream fin;
+    string text;
+    fin.open("data.txt");
+    
+    // Read string from file
+    fin &gt;&gt; text; // Reads word by word
+    cout &lt;&lt; "Data read from file: " &lt;&lt; text &lt;&lt; endl;
+    
+    fin.close();
+    return 0;
+}</code></pre>
+
+      <div class="highlight-box">
+        <h3>Advantages of File Handling</h3>
+        <ul>
+          <li><strong>Permanent data storage:</strong> Data isn't lost when the program ends.</li>
+          <li><strong>Data reuse:</strong> Same data can be accessed multiple times by different programs.</li>
+          <li><strong>Large data handling:</strong> Easy processing of massive datasets that won't fit entirely in RAM.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q5-title">
+      <div class="topic-title">
+        <h2 id="q5-title">Question 5: What is the Standard Template Library (STL)? Explain its components.</h2>
+        <div class="priority">VERY IMPORTANT</div>
+      </div>
+      <p>The <strong>Standard Template Library (STL)</strong> is a powerful set of C++ template classes that provide general-purpose predefined classes and functions for implementing highly efficient data structures and algorithms (like arrays, lists, stacks, trees).</p>
+      
+      <div class="diagram">
+<pre><code>STL
+ |
+ |--- Containers
+ |--- Iterators
+ |--- Algorithms</code></pre>
+      </div>
+
+      <h3>Core Components of STL:</h3>
+      <ul>
+        <li><strong>Containers:</strong> Objects that store data elements. They manage the memory allocation for these elements. (e.g., Vector, List, Map).</li>
+        <li><strong>Algorithms:</strong> Procedures that perform operations on containers like searching, sorting, and reversing. (e.g., <code>sort()</code>, <code>find()</code>).</li>
+        <li><strong>Iterators:</strong> Objects that act like pointers. They are used to step through or iterate over the elements of a container safely.</li>
+      </ul>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q6-title">
+      <div class="topic-title">
+        <h2 id="q6-title">Question 6: Explain Vector in STL with an example.</h2>
+        <div class="priority">MOST EXPECTED</div>
+      </div>
+      
+      <p>A <code>vector</code> is a sequence container that represents a <strong>dynamic array</strong>. Its size can change automatically as elements are added or removed, making it superior to standard arrays.</p>
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; v;
+    
+    // Inserting elements
+    v.push_back(10); 
+    v.push_back(20);
+    v.push_back(30);
+    
+    // Accessing elements
+    cout &lt;&lt; "First element: " &lt;&lt; v[0] &lt;&lt; endl; // Output: 10
+    cout &lt;&lt; "Vector size: " &lt;&lt; v.size() &lt;&lt; endl; // Output: 3
+    
+    return 0;
+}</code></pre>
+
+      <div class="highlight-box">
+        <h3>Advantages of Vectors</h3>
+        <ul>
+          <li>Dynamic size resizing automatically.</li>
+          <li>Easy insertion and deletion at the end using <code>push_back</code> and <code>pop_back</code>.</li>
+          <li>Efficient memory usage and fast random access via indices.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q7-title">
+      <div class="topic-title">
+        <h2 id="q7-title">Question 7: Explain List in STL with an example.</h2>
+        <div class="priority">IMPORTANT</div>
+      </div>
+      
+      <p>A <code>list</code> is a sequence container that allows non-contiguous memory allocation. It represents a <strong>doubly-linked list</strong>, which allows incredibly fast insertions and deletions anywhere within the sequence.</p>
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+#include &lt;list&gt;
+using namespace std;
+
+int main() {
+    list&lt;int&gt; l;
+    
+    // Inserting elements
+    l.push_back(10);  // Adds to the end
+    l.push_back(20);
+    l.push_front(5);  // Adds to the beginning
+    
+    // Iterating through the list
+    cout &lt;&lt; "List elements: ";
+    for(int x : l) {
+        cout &lt;&lt; x &lt;&lt; " ";
+    }
+    // Output: 5 10 20
+    
+    return 0;
+}</code></pre>
+
+      <div class="memory-box">
+        <h3>Easy Trick 🧠</h3>
+        <p>
+        <strong>Vector</strong> → Dynamic Array (Contiguous memory, fast access).<br><br>
+        <strong>List</strong> → Linked List (Non-contiguous memory, fast insertion/deletion).
+        </p>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q8-title">
+      <div class="topic-title">
+        <h2 id="q8-title">Question 8: Explain Map in STL with an example.</h2>
+        <div class="priority">VERY IMPORTANT</div>
+      </div>
+      
+      <p>A <code>map</code> is an associative container that stores elements in <strong>Key-Value pairs</strong>. Keys must be strictly unique, and elements are automatically sorted by the key. It acts like a dictionary.</p>
+      
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+using namespace std;
+
+int main() {
+    map&lt;int, string&gt; m;
+    
+    // Inserting data as Key-Value pairs
+    m[1] = "SRM";
+    m[2] = "Orygyns";
+    m[3] = "C++ Course";
+    
+    // Accessing via Key
+    cout &lt;&lt; "Value at key 1: " &lt;&lt; m[1] &lt;&lt; endl; // Output: SRM
+    
+    return 0;
+}</code></pre>
+
+      <div class="highlight-box">
+        <h3>Main Features of Map</h3>
+        <ul>
+          <li>Key-value storage mapping.</li>
+          <li>Automatic sorting based on the key.</li>
+          <li>Extremely fast searching for values based on their unique keys.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q9-title">
+      <div class="topic-title">
+        <h2 id="q9-title">Question 9: What is the difference between Vector and List?</h2>
+      </div>
+      
+      <p>Knowing when to use a Vector versus a List is a critical concept in C++ STL programming.</p>
+
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 50%;">Vector (Dynamic Array)</th>
+              <th scope="col" style="width: 50%;">List (Doubly Linked List)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stores elements in contiguous memory blocks.</td>
+              <td>Stores elements in non-contiguous memory (nodes).</td>
+            </tr>
+            <tr>
+              <td>Supports incredibly fast random access (e.g., <code>v[3]</code>).</td>
+              <td>Does not support fast random access. Must be traversed sequentially.</td>
+            </tr>
+            <tr>
+              <td>Insertion/Deletion at the middle is slow (requires shifting elements).</td>
+              <td>Insertion/Deletion anywhere is extremely fast (just pointer manipulation).</td>
+            </tr>
+            <tr>
+              <td>Better cache locality and performance for reading data.</td>
+              <td>Better performance for inserting and removing large volumes of data randomly.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q10-title">
+      <div class="topic-title">
+        <h2 id="q10-title">Question 10: Provide a Comprehensive UML Revision.</h2>
+        <div class="priority">SEMESTER IMPORTANT</div>
+      </div>
+      
+      <p>UML (Unified Modeling Language) is crucial for visualizing the design of a system. Here is a summary of the diagrams required for SRM OODP.</p>
+
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Diagram Type</th>
+              <th scope="col">Purpose</th>
+              <th scope="col">Key Elements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Use Case</strong></td>
+              <td>Shows user interaction with the system.</td>
+              <td>Actors, Use Cases (Ovals), Boundaries.</td>
+            </tr>
+            <tr>
+              <td><strong>Class Diagram</strong></td>
+              <td>Shows the static structure of classes.</td>
+              <td>Classes, Attributes, Methods, Visibility (+,-,#).</td>
+            </tr>
+            <tr>
+              <td><strong>Sequence Diagram</strong></td>
+              <td>Shows message flow ordered by time.</td>
+              <td>Lifelines, Activation Boxes, Messages.</td>
+            </tr>
+            <tr>
+              <td><strong>Activity Diagram</strong></td>
+              <td>Shows workflow or process logic.</td>
+              <td>Action nodes, Control flows, Decision diamonds.</td>
+            </tr>
+            <tr>
+              <td><strong>Component Diagram</strong></td>
+              <td>Shows structural software components.</td>
+              <td>Components, Interfaces, Dependencies.</td>
+            </tr>
+            <tr>
+              <td><strong>Deployment Diagram</strong></td>
+              <td>Shows physical hardware structure.</td>
+              <td>Nodes (Servers, PCs), Artifacts, Connections.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:2rem;">System Integration Mapping</h3>
+      <p>A fundamental visualization of how the User, System logic, and File/Database integrate in a software architecture.</p>
+      <div class="diagram">
+<pre><code>USER ---> SYSTEM ---> DATABASE</code></pre>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="sec-memory">
+      <div class="topic-title">
+        <h2 id="sec-memory">🔥 SRM Important Preparation Checklist</h2>
+        <div class="priority">VERY IMPORTANT</div>
+      </div>
+      
+      <div class="highlight-box">
+        <h3>Most Expected Questions</h3>
+        <ul>
+          <li>File handling operations with detailed examples.</li>
+          <li>Complete program to Read and Write to a text file.</li>
+          <li>Functions and exact differences between stream types.</li>
+          <li>Explain the architecture of STL.</li>
+          <li>Provide a working Vector insertion example.</li>
+          <li>Provide a working List iteration example.</li>
+          <li>Demonstrate Map key-value pair implementation.</li>
+          <li>Explain 4 differences between vector and list.</li>
+        </ul>
+      </div>
+
+      <div class="memory-box">
+        <h3>Quick Memory Tricks 🧠</h3>
+        <p>
+          <strong>ofstream</strong> → Write Output<br><br>
+          <strong>ifstream</strong> → Read Input<br><br>
+          <strong>Vector</strong> → Fast Reading (Dynamic Array)<br><br>
+          <strong>List</strong> → Fast Inserting (Linked List)<br><br>
+          <strong>Map</strong> → Dictionary (Key Value Pair)
+        </p>
+      </div>
+    </section>
+
+    <div class="bottom-nav">
+      <a href="cppsrmu4.html" class="nav-btn" aria-label="Go to Previous Unit">← Previous Unit</a>
+      <a href="cpp.html" class="nav-btn primary" aria-label="Go back to main C++ Course">Course Home →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Quick Links Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      if (themeToggleBtn) {
+        themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      localStorage.setItem('orygyns-theme', newTheme);
+      
+      // Sync dynamic legacy selector compatibility if body needs to toggle class explicitly
+      if (newTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+      
+      updateIcon(newTheme);
+    }
+
+    // Dynamic initial loading parameters alignment engine
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('orygyns_theme') || localStorage.getItem('orygyns-theme') || 'dark';
+      htmlElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        updateIcon(savedTheme);
+      });
+    })();
+
+    // Premium Reveal Animations Logic Execution Framework
+    document.addEventListener("DOMContentLoaded", function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.05 });
+
+      reveals.forEach(reveal => {
+        reveal.style.opacity = '0';
+        reveal.style.transform = 'translateY(24px)';
+        reveal.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        observer.observe(reveal);
+      });
+    });
+  </script>
+
+</body>
+</html>

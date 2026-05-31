@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developer Tools Quiz | Orygyns Coding Platform</title>
+  <meta name="description" content="Test your knowledge of essential developer tools, Git, Docker, Cloud Platforms, and Backend Frameworks with the Orygyns Developer Tools Quiz.">
+  <meta name="keywords" content="Developer Tools Quiz, Git Quiz, Docker Quiz, Programming Tools Test, Orygyns Coding Platform, Learn Programming">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/toolsquiz.html">
+
+  <meta property="og:title" content="Developer Tools Quiz | Orygyns Coding Platform">
+  <meta property="og:description" content="Test your knowledge of essential developer tools, Git, Docker, Cloud Platforms, and Backend Frameworks with the Orygyns Developer Tools Quiz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orygyns.in/toolsquiz.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Developer Tools Quiz | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Test your knowledge of essential developer tools, Git, Docker, Cloud Platforms, and Backend Frameworks with the Orygyns Developer Tools Quiz.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/toolsquiz.html#webpage",
+        "url": "https://orygyns.in/toolsquiz.html",
+        "name": "Developer Tools Quiz | Orygyns",
+        "description": "Test your knowledge of essential developer tools, Git, Docker, Cloud Platforms, and Backend Frameworks."
+      },
+      {
+        "@type": "Quiz",
+        "name": "Developer Tools Knowledge Test",
+        "about": {
+          "@type": "Thing",
+          "name": "Software Development Tools"
+        },
+        "educationalAlignment": [
+          {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalSubject",
+            "targetName": "Computer Science"
+          }
+        ],
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #121619;
+      --surface: #1e2429;
+      --text-main: #f5f6fa;
+      --text-muted: #a4b0be;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(18, 22, 25, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --border-color: #2f363d;
+      --error-red: #ef4444;
+      --error-bg: rgba(239, 68, 68, 0.1);
+      --success-bg: rgba(22, 163, 74, 0.1);
+      --hover-bg: rgba(255, 255, 255, 0.05);
+      --code-bg: #111417;
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 246, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f8f9fa;
+      --surface: #ffffff;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --border-color: #e1e4e8;
+      --error-red: #dc2626;
+      --error-bg: rgba(220, 38, 38, 0.08);
+      --success-bg: rgba(22, 163, 74, 0.08);
+      --hover-bg: rgba(0, 0, 0, 0.03);
+      --code-bg: #f1f3f5;
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2845, 52, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: all 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 80px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar overrides --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 1px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.2rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--surface); border: 2px solid var(--border-color); color: var(--text-main); font-size: 1.2rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 42px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Layout --- */
+    main { flex: 1; padding: 40px 0 60px; max-width: 900px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.5s ease; }
+    .page-header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 800; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); }
+
+    .breadcrumb-custom { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; font-weight: 600; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); }
+
+    /* --- Quiz Cards --- */
+    .card-custom { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; animation: fadeInUp 0.6s ease; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .card-custom:hover { transform: translateY(-4px); }
+    .card-custom h2 { font-size: 1.6rem; margin-bottom: 1.5rem; color: var(--primary-green); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; font-weight: 700; }
+
+    /* --- Questions & Options --- */
+    .question-block { margin-bottom: 2.5rem; }
+    .question-block:last-child { margin-bottom: 0; }
+    .q-text { font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-main); }
+    
+    .options-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; padding-left: 0; margin-bottom: 0; }
+    .option-label { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; margin: 0; }
+    .option-label:hover { background-color: var(--hover-bg); border-color: var(--primary-green); }
+    .option-label:focus-within { border-color: var(--primary-green); box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2); }
+    .option-label input[type="radio"] { transform: scale(1.2); accent-color: var(--primary-green); cursor: pointer; margin: 0; }
+
+    /* --- Code/Command Highlight --- */
+    code { font-family: 'Courier New', Courier, monospace; background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--primary-green); font-size: 1.05rem; }
+
+    /* --- Action Box (Strict Alignment) --- */
+    .action-box { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 15px; }
+    .result-text { font-weight: 600; margin: 0 !important; font-size: 1.1rem; }
+    .text-green { color: var(--primary-green) !important; }
+    .text-red { color: var(--error-red) !important; }
+    
+    .btn-main { display: inline-block; padding: 14px 32px; background-color: var(--primary-green); color: #ffffff; font-size: 1.2rem; font-weight: bold; border-radius: 10px; border: none; cursor: pointer; box-shadow: 0 4px 0 var(--primary-dark); transition: transform 0.1s, box-shadow 0.1s; text-align: center; text-decoration: none; }
+    .btn-main:active { transform: translateY(4px); box-shadow: 0 0 0 var(--primary-dark); }
+    .btn-main:hover { color: #ffffff; background-color: #15b850; }
+    .btn-main:disabled { background-color: var(--text-muted); box-shadow: 0 4px 0 #555; cursor: not-allowed; }
+
+    /* --- Results Section --- */
+    #result-section { display: none; animation: fadeInUp 0.5s ease; }
+    .score-banner { text-align: center; padding: 3rem 2rem; background-color: var(--success-bg); border: 2px solid var(--primary-green); border-radius: 16px; margin-bottom: 2.5rem; box-shadow: var(--card-shadow); }
+    .score-banner h2 { color: var(--primary-green); font-size: 3.5rem; margin-bottom: 1rem; border: none; font-weight: 800; }
+    .score-banner p { font-size: 1.3rem; font-weight: 600; color: var(--text-main); margin: 0; }
+
+    .feedback-card { background-color: var(--bg-color); border-left: 5px solid var(--error-red); padding: 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: var(--card-shadow); border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+    .feedback-q { font-weight: bold; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-main); }
+    .feedback-user { color: var(--error-red); margin-bottom: 0.5rem; font-weight: 600; }
+    .feedback-correct { color: var(--primary-green); font-weight: bold; margin-bottom: 1rem; }
+    .feedback-exp { background-color: var(--surface); padding: 12px; border-radius: 8px; font-size: 1rem; border: 1px solid var(--border-color); color: var(--text-muted); line-height: 1.6; }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 4rem 2rem 2rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; transition: color 0.2s ease; }
+    .footer-nav a:hover { color: var(--primary-green); }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* --- Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) { 
+      .page-header h1 { font-size: 2.2rem; } 
+      .card-custom { padding: 1.5rem; }
+      .score-banner h2 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Logo">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    <div class="breadcrumb-custom" aria-label="Breadcrumb">
+      <a href="tools.html">⬅️ Back to Course</a> <span>/</span> <span>Quiz</span>
+    </div>
+
+    <div class="page-header">
+      <h1>Developer Tools Quiz 🛠️</h1>
+      <p>Test your understanding of real-world tools</p>
+    </div>
+
+    <form id="quiz-form" aria-label="Developer Tools Quiz Form">
+      
+      <section class="card-custom" aria-labelledby="level-1-heading">
+        <h2 id="level-1-heading">Level 1: Basics (Easy)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">1. What is the primary purpose of a Code Editor (like VS Code)?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q1" value="a" aria-label="Option A"> To browse the internet securely</label></li>
+            <li><label class="option-label"><input type="radio" name="q1" value="b" aria-label="Option B"> To write, format, and execute code efficiently</label></li>
+            <li><label class="option-label"><input type="radio" name="q1" value="c" aria-label="Option C"> To design graphics and logos</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">2. What does the terminal command <code>cd</code> do?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q2" value="a" aria-label="Option A"> Changes Directory (navigates folders)</label></li>
+            <li><label class="option-label"><input type="radio" name="q2" value="b" aria-label="Option B"> Copies Data from one file to another</label></li>
+            <li><label class="option-label"><input type="radio" name="q2" value="c" aria-label="Option C"> Creates a Database</label></li>
+            <li><label class="option-label"><input type="radio" name="q2" value="d" aria-label="Option D"> Clears the Display</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">3. Why do developers use the Terminal instead of just clicking around with a mouse?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q3" value="a" aria-label="Option A"> It protects the computer from malware</label></li>
+            <li><label class="option-label"><input type="radio" name="q3" value="b" aria-label="Option B"> It is a requirement to write Java code</label></li>
+            <li><label class="option-label"><input type="radio" name="q3" value="c" aria-label="Option C"> It is much faster and essential for managing servers</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" aria-labelledby="level-2-heading">
+        <h2 id="level-2-heading">Level 2: Core Tools (Medium)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">4. What is Git primarily used for?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q4" value="a" aria-label="Option A"> Compiling Java code into applications</label></li>
+            <li><label class="option-label"><input type="radio" name="q4" value="b" aria-label="Option B"> Version control, tracking changes, and team collaboration</label></li>
+            <li><label class="option-label"><input type="radio" name="q4" value="c" aria-label="Option C"> Creating user interfaces</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">5. What does a build tool like Maven or Gradle do?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q5" value="a" aria-label="Option A"> Automates the building process and manages project dependencies</label></li>
+            <li><label class="option-label"><input type="radio" name="q5" value="b" aria-label="Option B"> Automatically writes code for backend servers</label></li>
+            <li><label class="option-label"><input type="radio" name="q5" value="c" aria-label="Option C"> Tests if a website looks good on mobile phones</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">6. Which of the following is a Backend Framework used to build APIs and handle server logic?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q6" value="a" aria-label="Option A"> HTML</label></li>
+            <li><label class="option-label"><input type="radio" name="q6" value="b" aria-label="Option B"> React</label></li>
+            <li><label class="option-label"><input type="radio" name="q6" value="c" aria-label="Option C"> Spring Boot</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" style="border: 2px solid var(--primary-green);" aria-labelledby="level-3-heading">
+        <h2 id="level-3-heading">Level 3: DevOps & Cloud (Important)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">7. What specific problem does Docker solve?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q7" value="a" aria-label="Option A"> The "It works on my machine" problem by containerizing apps</label></li>
+            <li><label class="option-label"><input type="radio" name="q7" value="b" aria-label="Option B"> Slow internet speeds when downloading libraries</label></li>
+            <li><label class="option-label"><input type="radio" name="q7" value="c" aria-label="Option C"> Database hacking vulnerabilities</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">8. What is Kubernetes used for in the real world?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q8" value="a" aria-label="Option A"> Creating virtual machines</label></li>
+            <li><label class="option-label"><input type="radio" name="q8" value="b" aria-label="Option B"> Managing, scaling, and repairing thousands of Docker containers</label></li>
+            <li><label class="option-label"><input type="radio" name="q8" value="c" aria-label="Option C"> Writing SQL queries automatically</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">9. What does CI/CD stand for?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q9" value="a" aria-label="Option A"> Continuous Integration / Continuous Deployment</label></li>
+            <li><label class="option-label"><input type="radio" name="q9" value="b" aria-label="Option B"> Central Information / Core Data</label></li>
+            <li><label class="option-label"><input type="radio" name="q9" value="c" aria-label="Option C"> Code Inspection / Code Deletion</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" aria-labelledby="level-4-heading">
+        <h2 id="level-4-heading">Level 4: Database & Testing</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">10. What is the main difference between SQL and NoSQL databases?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q10" value="a" aria-label="Option A"> SQL is for storing images; NoSQL is for storing text</label></li>
+            <li><label class="option-label"><input type="radio" name="q10" value="b" aria-label="Option B"> SQL uses strict tables (like MySQL); NoSQL uses flexible documents (like MongoDB)</label></li>
+            <li><label class="option-label"><input type="radio" name="q10" value="c" aria-label="Option C"> SQL runs in the browser; NoSQL runs on the server</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">11. What is Postman primarily used for?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q11" value="a" aria-label="Option A"> Delivering emails to users securely</label></li>
+            <li><label class="option-label"><input type="radio" name="q11" value="b" aria-label="Option B"> Storing large video files</label></li>
+            <li><label class="option-label"><input type="radio" name="q11" value="c" aria-label="Option C"> Testing APIs by sending requests and viewing responses</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">12. Why do developers use tools like JUnit?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q12" value="a" aria-label="Option A"> To perform Unit Testing and prevent bugs before release</label></li>
+            <li><label class="option-label"><input type="radio" name="q12" value="b" aria-label="Option B"> To manage user passwords</label></li>
+            <li><label class="option-label"><input type="radio" name="q12" value="c" aria-label="Option C"> To format Java code so it looks clean</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" style="border: 2px solid var(--primary-green);" aria-labelledby="level-5-heading">
+        <h2 id="level-5-heading">Level 5: Real-World Workflow (Very Important)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">13. SCENARIO: You need to safely store user account credentials so they persist even if the server restarts. Which tool do you use?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q13" value="a" aria-label="Option A"> Postman</label></li>
+            <li><label class="option-label"><input type="radio" name="q13" value="b" aria-label="Option B"> Docker</label></li>
+            <li><label class="option-label"><input type="radio" name="q13" value="c" aria-label="Option C"> A Database (like MySQL or MongoDB)</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">14. SCENARIO: You just finished writing a new feature. You want to safely back up this code and share it with your team. Which tool is best?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q14" value="a" aria-label="Option A"> Git & GitHub</label></li>
+            <li><label class="option-label"><input type="radio" name="q14" value="b" aria-label="Option B"> JUnit</label></li>
+            <li><label class="option-label"><input type="radio" name="q14" value="c" aria-label="Option C"> Maven</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">15. SCENARIO: Your application is complete. You want users around the world to access it 24/7 without needing to run a physical server in your bedroom. What is the standard industry solution?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q15" value="a" aria-label="Option A"> Save the project folder on your Desktop</label></li>
+            <li><label class="option-label"><input type="radio" name="q15" value="b" aria-label="Option B"> Deploy it to a Cloud Platform (like AWS, Google Cloud, or Azure)</label></li>
+            <li><label class="option-label"><input type="radio" name="q15" value="c" aria-label="Option C"> Leave VS Code open indefinitely</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <div class="card-custom" style="border: 2px dashed var(--border-color); text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div class="action-box">
+          <button type="submit" class="btn-main" id="submit-btn">Submit Quiz</button>
+          <p class="result-text text-red" id="error-msg" style="display: none; margin-top: 15px !important;" aria-live="polite">Please answer all 15 questions before submitting!</p>
+        </div>
+      </div>
+    </form>
+
+    <section id="result-section" aria-labelledby="final-score-title">
+      <div class="score-banner">
+        <h2 id="final-score-title" aria-live="polite">0/15</h2>
+        <p id="gamification-msg" aria-live="polite">Calculating your developer potential...</p>
+      </div>
+
+      <div class="card-custom" id="feedback-container">
+        <h2 style="color: var(--error-red); border-color: var(--error-red);">Detailed Feedback</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 1.1rem;">Here are the tools and concepts you need to review:</p>
+        <div id="feedback-list" aria-live="polite">
+          </div>
+      </div>
+
+      <div class="action-box" style="align-items: center; width: 100%; margin-top: 2rem;">
+        <button id="retry-btn" class="btn-main">Attempt Again 🔄</button>
+        <p class="result-text text-green" style="margin-top:15px !important;">Your progress has been saved locally.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    updateIcon(htmlElement.getAttribute('data-theme'));
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      updateIcon(newTheme);
+    });
+
+    // Quiz Answer Key & Explanations
+    const quizData = {
+      q1: { ans: "b", text: "To write, format, and execute code efficiently", exp: "Code editors provide syntax highlighting, auto-completion, and debugging to make programming faster." },
+      q2: { ans: "a", text: "Changes Directory (navigates folders)", exp: "The 'cd' command is the terminal equivalent of double-clicking a folder to open it." },
+      q3: { ans: "c", text: "It is much faster and essential for managing servers", exp: "Servers often do not have graphical interfaces (GUIs), so terminal commands are required to operate them." },
+      q4: { ans: "b", text: "Version control, tracking changes, and team collaboration", exp: "Git acts as a time machine for your code and allows multiple developers to work on the same project without deleting each other's work." },
+      q5: { ans: "a", text: "Automates the building process and manages project dependencies", exp: "Tools like Maven download required libraries automatically and compile your raw code into an executable app." },
+      q6: { ans: "c", text: "Spring Boot", exp: "Spring Boot is a powerful Java-based framework used for building backend APIs and server logic." },
+      q7: { ans: "a", text: "The 'It works on my machine' problem by containerizing apps", exp: "Docker bundles your code and its exact environment together so it runs identically on any computer." },
+      q8: { ans: "b", text: "Managing, scaling, and repairing thousands of Docker containers", exp: "Kubernetes automatically restarts failed containers and handles traffic spikes seamlessly." },
+      q9: { ans: "a", text: "Continuous Integration / Continuous Deployment", exp: "CI/CD automates the testing of code and the deployment of that code to live servers." },
+      q10: { ans: "b", text: "SQL uses strict tables (like MySQL); NoSQL uses flexible documents (like MongoDB)", exp: "SQL is great for highly structured, related data. NoSQL is great for flexible, rapidly changing data." },
+      q11: { ans: "c", text: "Testing APIs by sending requests and viewing responses", exp: "Postman acts as a middleman, letting you test backend logic before building a frontend." },
+      q12: { ans: "a", text: "To perform Unit Testing and prevent bugs before release", exp: "JUnit automatically tests individual blocks of Java code to ensure they behave correctly." },
+      q13: { ans: "c", text: "A Database (like MySQL or MongoDB)", exp: "Databases are designed specifically for the secure, long-term storage of user data." },
+      q14: { ans: "a", text: "Git & GitHub", exp: "Git records the code change locally, and GitHub safely stores it in a remote repository for your team to access." },
+      q15: { ans: "b", text: "Deploy it to a Cloud Platform (like AWS, Google Cloud, or Azure)", exp: "Cloud platforms rent out highly reliable, globally distributed servers so your app is always online." }
+    };
+
+    const quizForm = document.getElementById('quiz-form');
+    const resultSection = document.getElementById('result-section');
+    const errorMsg = document.getElementById('error-msg');
+    const feedbackList = document.getElementById('feedback-list');
+    const feedbackContainer = document.getElementById('feedback-container');
+
+    // Retrieve previous attempts
+    let toolsQuizStats = JSON.parse(localStorage.getItem('toolsQuiz')) || { attempts: 0 };
+
+    quizForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(quizForm);
+      let score = 0;
+      let total = 15;
+      let answeredCount = 0;
+      let wrongAnswersHTML = "";
+
+      // Check if all answered
+      for (let key in quizData) {
+        if (formData.has(key)) answeredCount++;
+      }
+
+      if (answeredCount < total) {
+        errorMsg.style.display = "block";
+        return;
+      }
+      
+      errorMsg.style.display = "none";
+
+      // Grading & Feedback Generation
+      for (let key in quizData) {
+        const userAnswerVal = formData.get(key);
+        const correctVal = quizData[key].ans;
+        
+        // Find the label text the user selected
+        const selectedInput = document.querySelector(`input[name="${key}"][value="${userAnswerVal}"]`);
+        const userText = selectedInput ? selectedInput.parentElement.textContent.trim() : "None";
+        const questionText = document.querySelector(`input[name="${key}"]`).closest('.question-block').querySelector('.q-text').innerText;
+
+        if (userAnswerVal === correctVal) {
+          score++;
+        } else {
+          // Generate detailed feedback for wrong answers
+          wrongAnswersHTML += `
+            <div class="feedback-card">
+              <div class="feedback-q">${questionText}</div>
+              <div class="feedback-user">❌ Your Answer: ${userText}</div>
+              <div class="feedback-correct">✅ Correct Answer: ${quizData[key].text}</div>
+              <div class="feedback-exp"><strong>Explanation:</strong> ${quizData[key].exp}</div>
+            </div>
+          `;
+        }
+      }
+
+      // Update UI Stats
+      const percentage = Math.round((score / total) * 100);
+      document.getElementById('final-score-title').innerText = `${score} / ${total} (${percentage}%)`;
+      
+      const gMsg = document.getElementById('gamification-msg');
+      if (percentage >= 80) gMsg.innerHTML = "🔥 Excellent! You think like a real developer!";
+      else if (percentage >= 50) gMsg.innerHTML = "👍 Good progress! Review the tools below to solidify your knowledge.";
+      else gMsg.innerHTML = "💪 Keep exploring tools! The development workflow takes time to understand.";
+
+      // Handle Feedback Display
+      if (wrongAnswersHTML === "") {
+        feedbackContainer.innerHTML = `<div class="score-banner" style="background: var(--success-bg); border-color: var(--primary-green); border-radius: 16px; padding: 2rem;">
+          <h2 style="font-size: 2.2rem; margin:0; color: var(--primary-green); border: none;">Perfect Score! 🏆</h2>
+          <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-main);">You have mastered the developer tools workflow perfectly.</p>
+        </div>`;
+      } else {
+        feedbackList.innerHTML = wrongAnswersHTML;
+      }
+
+      // Save to localStorage
+      toolsQuizStats.score = score;
+      toolsQuizStats.total = total;
+      toolsQuizStats.attempts += 1;
+      toolsQuizStats.lastAttempt = new Date().toLocaleString();
+      localStorage.setItem('toolsQuiz', JSON.stringify(toolsQuizStats));
+
+      // Switch views
+      quizForm.style.display = "none";
+      resultSection.style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Retry Button Logic
+    document.getElementById('retry-btn').addEventListener('click', () => {
+      quizForm.reset();
+      errorMsg.style.display = "none";
+      resultSection.style.display = "none";
+      quizForm.style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SRM OODP Unit 1: Top 10 Important Questions & UML | Orygyns Coding Platform</title>
+  <meta name="description" content="Master Object-Oriented Design Principles (OODP) Unit 1 for SRM exams. Study all 10 important questions, OOP features, UML Diagrams, and C++ basics including Prime, Fibonacci, and Armstrong programs.">
+  <meta name="keywords" content="SRM OODP Unit 1, 10 OOP Questions, OOP Features, Encapsulation, Inheritance, UML Diagrams, Use Case Diagram, Activity Diagram, C++ Basics, C++ Prime Number, C++ Fibonacci, C++ Armstrong, Orygyns">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/cppsrmu1.html">
+
+  <meta property="og:title" content="SRM OODP Unit 1: Top 10 Important Questions & UML | Orygyns Coding Platform">
+  <meta property="og:description" content="Master Object-Oriented Design Principles (OODP) Unit 1 for SRM exams. Study all 10 important questions, OOP features, UML Diagrams, and C++ basics including practical programs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/cppsrmu1.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SRM OODP Unit 1: Top 10 Important Questions & UML | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Master Object-Oriented Design Principles (OODP) Unit 1 for SRM exams. Study all 10 important questions, OOP features, UML Diagrams, and C++ basics including practical programs.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/cppsrmu1.html#webpage",
+        "url": "https://orygyns.in/cppsrmu1.html",
+        "name": "SRM OODP Unit 1 | Orygyns",
+        "description": "Master Object-Oriented Design Principles (OODP) Unit 1 for SRM exams. Contains all 10 important questions and practical C++ programs."
+      },
+      {
+        "@type": "LearningResource",
+        "name": "SRM OODP Unit 1 Study Guide (10 Questions)",
+        "learningResourceType": "Study Guide",
+        "educationalAlignment": [
+          {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalSubject",
+            "targetName": "Computer Science & OOP"
+          }
+        ],
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || localStorage.getItem('orygyns-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #07130d;
+      --bg2-color: #0b1d14;
+      --surface: rgba(15, 31, 23, 0.95);
+      --text-main: #ffffff;
+      --text-muted: #aad7bc;
+      --primary-green: #00ff88;
+      --primary-dark: #00c96b;
+      --nav-bg: rgba(7, 19, 13, 0.95);
+      --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      --border-color: #213d2c;
+      --code-bg: #030a06;
+      --code-text: #00ff88;
+      --diagram-bg: #05100a;
+      --practice-bg: rgba(0, 255, 136, 0.06);
+      --warning-bg: rgba(255, 159, 67, 0.12);
+      --warning-text: #ff9f43;
+      --hover-bg: rgba(255, 255, 255, 0.04);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f3fcf7;
+      --bg2-color: #e6f7ee;
+      --surface: #ffffff;
+      --text-main: #142c1e;
+      --text-muted: #4e6e5a;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(243, 252, 247, 0.95);
+      --card-shadow: 0 8px 24px rgba(22, 163, 74, 0.08);
+      --border-color: #cfead8;
+      --code-bg: #f8fbf9;
+      --code-text: #16a34a;
+      --diagram-bg: #f1faf4;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --warning-bg: rgba(211, 84, 0, 0.08);
+      --warning-text: #d35400;
+      --hover-bg: rgba(22, 163, 74, 0.04);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2820, 44, 30, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; transition: background-color 0.3s ease, color 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 90px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar Styles --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 0.85rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.75rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 0.5px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.1rem; font-size: 0.95rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--code-bg); border: 1px solid var(--border-color); color: var(--text-main); font-size: 1.1rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 10px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 40px; width: 40px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Layout Elements --- */
+    main { flex: 1; padding: 24px 0 64px; max-width: 960px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3.5rem; }
+    .page-header h1 { font-size: 2.75rem; margin-bottom: 0.75rem; color: var(--text-main); font-weight: 800; letter-spacing: -0.5px; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); font-weight: 400; }
+
+    .breadcrumb-custom { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; font-weight: 500; font-size: 0.95rem; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); opacity: 0.8; }
+
+    /* --- Premium Educational Module Cards --- */
+    .card-custom { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .card-custom:hover { border-color: rgba(0, 255, 136, 0.35); }
+    
+    .topic-title { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 1.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
+    .topic-title h2 { font-size: 1.65rem; color: var(--text-main); font-weight: 700; margin: 0; position: relative; }
+    .topic-title h2::after { content: ''; position: absolute; bottom: -13px; left: 0; width: 40px; height: 4px; background-color: var(--primary-green); border-radius: 2px; }
+    
+    .card-custom h3 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem 0; color: var(--text-main); font-weight: 600; }
+    
+    .priority { font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 30px; background-color: var(--warning-bg); color: var(--warning-text); text-transform: uppercase; letter-spacing: 0.75px; border: 1px solid rgba(255, 159, 67, 0.2); }
+
+    .card-custom p { font-size: 1.05rem; color: var(--text-main); margin-bottom: 1.5rem; opacity: 0.95; }
+    .card-custom ul { padding-left: 22px; font-size: 1.05rem; margin-bottom: 1.5rem; }
+    .card-custom li { margin-bottom: 0.6rem; }
+
+    /* --- Responsive Tables --- */
+    .table-responsive-wrapper { overflow-x: auto; margin-bottom: 2rem; border-radius: 12px; border: 1px solid var(--border-color); }
+    table { width: 100%; border-collapse: collapse; background-color: var(--code-bg); margin: 0; }
+    th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border-color); font-size: 1rem; color: var(--text-main); }
+    th { background-color: var(--bg2-color); font-weight: 700; color: var(--primary-green); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+    tr:last-child td { border-bottom: none; }
+
+    /* --- Code Blocks & Visual UML Architecture Diagram Layouts --- */
+    pre.code-block { margin: 1.75rem 0; background-color: var(--code-bg); border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; tab-size: 4; }
+    pre.code-block code { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.95rem; display: block; padding: 1.5rem; color: var(--code-text); line-height: 1.6; }
+    
+    .diagram { margin: 1.75rem 0; padding: 1.5rem; border-radius: 12px; border: 1px dashed var(--primary-green); background-color: var(--diagram-bg); overflow-x: auto; }
+    .diagram pre { background: transparent; border: none; padding: 0; margin: 0; box-shadow: none; }
+    .diagram code { font-family: 'Fira Code', 'Courier New', Courier, monospace; color: var(--primary-green); padding: 0; font-size: 0.95rem; }
+
+    code.inline-code { font-family: 'Fira Code', 'Courier New', Courier, monospace; background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--code-text); font-size: 0.95rem; }
+
+    /* --- Context Boxes --- */
+    .highlight-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+    .highlight-box h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary-green); margin-bottom: 0.75rem; margin-top: 0; }
+    .highlight-box p { font-size: 1rem; margin-bottom: 0; color: var(--text-main); }
+    .highlight-box ul { margin-bottom: 0; }
+
+    .memory-box { background-color: var(--warning-bg); border-left: 4px solid var(--warning-text); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+    .memory-box h3 { font-size: 1.15rem; font-weight: 700; color: var(--warning-text); margin-bottom: 0.75rem; margin-top: 0; }
+    .memory-box ul { margin-bottom: 0; color: var(--text-main); }
+    .memory-box p { margin-bottom: 0; color: var(--text-main); }
+
+    /* --- Navigation Elements --- */
+    .bottom-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem; margin-top: 3.5rem; }
+    .nav-btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background-color: var(--surface); color: var(--text-main) !important; font-size: 0.95rem; font-weight: 600; border-radius: 10px; border: 1px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; text-align: center; min-width: 160px; }
+    .nav-btn:hover { border-color: var(--primary-green); color: var(--primary-green) !important; transform: translateY(-2px); }
+    .nav-btn.primary { background-color: var(--primary-green); color: #07130d !important; border-color: var(--primary-green); }
+    .nav-btn.primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); color: #07130d !important; }
+
+    /* --- Footer Styles --- */
+    footer { text-align: center; padding: 4.5rem 2rem 2.5rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: color 0.2s ease; opacity: 0.85; }
+    .footer-nav a:hover { color: var(--primary-green); opacity: 1; }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+
+    /* --- Mobile Responsive Optimizations --- */
+    @media (max-width: 768px) {
+      body { padding-top: 80px; }
+      .page-header h1 { font-size: 2.15rem; }
+      .card-custom { padding: 1.75rem; margin-bottom: 1.75rem; }
+      .topic-title h2 { font-size: 1.4rem; }
+      .bottom-nav { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+      .nav-btn { width: 100%; }
+      .footer-nav { gap: 1.25rem; flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Platform Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Hub Home">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation parameters">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-2 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme state" onclick="toggleTheme()">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumbs">
+      <a href="coding.html#srm">⬅️ Academic Resources</a> <span>/</span> <a href="cpp.html">C++ Course</a> <span>/</span> <span>SRM OODP Unit 1</span>
+    </div>
+
+    <div class="page-header">
+      <h1>SRM OODP Unit 1 Study Guide 📖</h1>
+      <p>Master all 10 crucial questions covering Object-Oriented Design Principles, C++ code & UML Diagrams for your exam.</p>
+    </div>
+
+    <section class="card-custom reveal" aria-labelledby="q1-title">
+      <div class="topic-title">
+        <h2 id="q1-title">Question 1: What is Object-Oriented Programming (OOP)?</h2>
+        <div class="priority">BASICS</div>
+      </div>
+      <p><strong>Object-Oriented Programming (OOP)</strong> is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).</p>
+      
+      <p><strong>Key Concepts:</strong></p>
+      <ul>
+        <li><strong>Class:</strong> A blueprint or prototype from which objects are created. It defines the variables and methods common to all objects of a certain kind.</li>
+        <li><strong>Object:</strong> A real-world entity that has state and behavior. It is an instance of a class.</li>
+      </ul>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q2-title">
+      <div class="topic-title">
+        <h2 id="q2-title">Question 2: Explain the Core Features of OOP</h2>
+        <div class="priority">FREQUENTLY ASKED</div>
+      </div>
+      
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 25%;">Feature</th>
+              <th scope="col" style="width: 75%;">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Encapsulation</strong></td>
+              <td>Wrapping data and functions together into a single unit (class). Keeps data safe from outside interference and misuse.</td>
+            </tr>
+            <tr>
+              <td><strong>Inheritance</strong></td>
+              <td>Reusing properties and behaviors of a parent class in a child class. Promotes code reusability.</td>
+            </tr>
+            <tr>
+              <td><strong>Polymorphism</strong></td>
+              <td>Ability of a single function, object, or operator to behave differently depending on the context (e.g., Method Overloading).</td>
+            </tr>
+            <tr>
+              <td><strong>Abstraction</strong></td>
+              <td>Hiding internal complex implementation details and showing only the essential features of the object to the user.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Important Note 💡</h3>
+        <p>Ensure you can provide a real-world example for each feature (e.g., Encapsulation = Capsule/Pill, Inheritance = Parent/Child, Polymorphism = A person acting as an employee, father, and customer).</p>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q3-title">
+      <div class="topic-title">
+        <h2 id="q3-title">Question 3: Differentiate between POP and OOP</h2>
+      </div>
+      <p>Procedure Oriented Programming (POP) focuses on functions, while Object-Oriented Programming (OOP) focuses on data.</p>
+
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 50%;">POP (Procedure Oriented)</th>
+              <th scope="col" style="width: 50%;">OOP (Object-Oriented)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Divided into smaller parts called functions.</td>
+              <td>Divided into smaller parts called objects.</td>
+            </tr>
+            <tr>
+              <td>Follows Top-Down approach.</td>
+              <td>Follows Bottom-Up approach.</td>
+            </tr>
+            <tr>
+              <td>Data moves freely around the system.</td>
+              <td>Data is hidden and cannot be accessed by external functions.</td>
+            </tr>
+            <tr>
+              <td>Does not have access specifiers.</td>
+              <td>Has access specifiers like Public, Private, Protected.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q4-title">
+      <div class="topic-title">
+        <h2 id="q4-title">Question 4: What is a UML Use Case Diagram?</h2>
+        <div class="priority">HIGH PRIORITY</div>
+      </div>
+      <p>A <strong>Use Case Diagram</strong> represents the dynamic behavior of a system. It shows the interaction between the user (Actor) and the system (Use Cases).</p>
+      
+      <div class="diagram">
+<pre><code>+--------------------------------+
+|           ATM SYSTEM           |
+|                                |
+| Customer ---> ( Withdraw Cash) |
+| Customer ---> ( Check Balance) |
+| Customer ---> ( Deposit Money) |
++--------------------------------+</code></pre>
+      </div>
+      
+      <ul>
+        <li><strong>Actor:</strong> External entity interacting with the system (e.g., Customer, Admin). Represented by a stick figure.</li>
+        <li><strong>Use Case:</strong> A specific function or action the system performs. Represented by an oval.</li>
+        <li><strong>System Boundary:</strong> The box indicating the scope of the system.</li>
+      </ul>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q5-title">
+      <div class="topic-title">
+        <h2 id="q5-title">Question 5: What is a UML Activity Diagram?</h2>
+      </div>
+      <p>An <strong>Activity Diagram</strong> represents the workflow and execution process of a system. It models the logic from activity to activity, functioning similarly to a complex flowchart.</p>
+      
+      <div class="diagram">
+<pre><code>  [ Start ]
+      |
+      v
+( Insert Card )
+      |
+      v
+( Enter PIN ) ---> [ Invalid? ] ---> ( Reject & Eject )
+      |
+   [ Valid? ]
+      |
+      v
+( Select Account )
+      |
+      v
+  [ Finish ]</code></pre>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q6-title">
+      <div class="topic-title">
+        <h2 id="q6-title">Question 6: What is a UML Class Diagram?</h2>
+      </div>
+      <p>A <strong>Class Diagram</strong> maps out the static structure of a system by detailing its classes, attributes, operations, and the relationships among objects.</p>
+      
+      <div class="diagram">
+<pre><code>+------------------+
+|     Student      |  <-- Class Name
++------------------+
+| - name : string  |  <-- Attributes (Private)
+| - id : int       |
++------------------+
+| + study() : void |  <-- Methods (Public)
+| + exams() : void |
++------------------+</code></pre>
+      </div>
+      <p><strong>Visibility Marks:</strong> <code class="inline-code">+</code> Public, <code class="inline-code">-</code> Private, <code class="inline-code">#</code> Protected.</p>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q7-title">
+      <div class="topic-title">
+        <h2 id="q7-title">Question 7: Explain the Basic Structure of a C++ Program</h2>
+      </div>
+      <p>A standard C++ program includes header files, namespace declarations, and a main function where execution begins.</p>
+
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, Object-Oriented World!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+      <ul>
+        <li><code class="inline-code">#include &lt;iostream&gt;</code> allows input/output operations.</li>
+        <li><code class="inline-code">using namespace std;</code> tells the compiler to use the standard namespace.</li>
+        <li><code class="inline-code">main()</code> is the mandatory entry point of the program.</li>
+      </ul>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q8-title">
+      <div class="topic-title">
+        <h2 id="q8-title">Question 8: Control Structures in C++</h2>
+      </div>
+      <p>Control structures dictate the flow of the program logic. They are divided into decision-making and looping structures.</p>
+      
+      <ul>
+        <li><strong>Selection / Decision Making:</strong> <code class="inline-code">if</code>, <code class="inline-code">if-else</code>, <code class="inline-code">switch</code>. Used to branch execution based on conditions.</li>
+        <li><strong>Iteration / Looping:</strong> <code class="inline-code">for</code>, <code class="inline-code">while</code>, <code class="inline-code">do-while</code>. Used to repeat blocks of code until a condition is met.</li>
+      </ul>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q9-title">
+      <div class="topic-title">
+        <h2 id="q9-title">Question 9: Core C++ Practical Programs</h2>
+        <div class="priority">PRACTICAL EXAM</div>
+      </div>
+      <p>For the practical portion of the exam, you must be comfortable writing these standard logic algorithms in C++:</p>
+      
+      <h3>1. Prime Number Identification</h3>
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n, i, flag = 0;
+    cout &lt;&lt; "Enter a positive integer: ";
+    cin &gt;&gt; n;
+    if (n == 0 || n == 1) flag = 1;
+    for (i = 2; i &lt;= n / 2; ++i) {
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    if (flag == 0)
+        cout &lt;&lt; n &lt;&lt; " is a prime number.";
+    else
+        cout &lt;&lt; n &lt;&lt; " is not a prime number.";
+    return 0;
+}</code></pre>
+
+      <h3>2. Fibonacci Sequence Generator</h3>
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+    cout &lt;&lt; "Enter the number of terms: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Fibonacci Series: ";
+    for (int i = 1; i &lt;= n; ++i) {
+        if(i == 1) { cout &lt;&lt; t1 &lt;&lt; " "; continue; }
+        if(i == 2) { cout &lt;&lt; t2 &lt;&lt; " "; continue; }
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        cout &lt;&lt; nextTerm &lt;&lt; " ";
+    }
+    return 0;
+}</code></pre>
+
+      <h3>3. Armstrong Number Validation</h3>
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num, originalNum, remainder, result = 0;
+    cout &lt;&lt; "Enter a three-digit integer: ";
+    cin &gt;&gt; num;
+    originalNum = num;
+    while (originalNum != 0) {
+        remainder = originalNum % 10;
+        result += remainder * remainder * remainder;
+        originalNum /= 10;
+    }
+    if (result == num)
+        cout &lt;&lt; num &lt;&lt; " is an Armstrong number.";
+    else
+        cout &lt;&lt; num &lt;&lt; " is not an Armstrong number.";
+    return 0;
+}</code></pre>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="q10-title">
+      <div class="topic-title">
+        <h2 id="q10-title">Question 10: Explain Access Specifiers in C++</h2>
+        <div class="priority">HIGH PRIORITY</div>
+      </div>
+      <p><strong>Access specifiers</strong> define how the members (attributes and methods) of a class can be accessed. In C++, there are three main access modifiers used to implement Data Hiding and Encapsulation:</p>
+      
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 20%;">Specifier</th>
+              <th scope="col" style="width: 80%;">Accessibility Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Public</strong></td>
+              <td>Members are accessible from outside the class anywhere the object is visible.</td>
+            </tr>
+            <tr>
+              <td><strong>Private</strong></td>
+              <td>Members cannot be accessed or viewed from outside the class. They can only be accessed by methods inside the same class. (This is the default specifier in C++ classes).</td>
+            </tr>
+            <tr>
+              <td><strong>Protected</strong></td>
+              <td>Members cannot be accessed from outside the class, but they <strong>can</strong> be accessed by child classes (derived classes) during inheritance.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Base {
+  private:
+    int x; // Only accessible within Base
+  protected:
+    int y; // Accessible within Base and derived classes
+  public:
+    int z; // Accessible everywhere
+};
+</code></pre>
+
+      <div class="memory-box">
+        <h3>Night Before Exam Tips 🌙</h3>
+        <ul>
+          <li>Revise the exact definitions of the 4 OOP features.</li>
+          <li>Practice writing the Prime and Armstrong logic programs on paper.</li>
+          <li>Practice drawing one complete Use Case Diagram for a standard system (like an ATM or Library Management).</li>
+          <li>Practice drawing one Class Diagram with proper visibility symbols (+ for Public, - for Private, # for Protected).</li>
+          <li>Double-check your UML symbols (Arrows, Actors, Diamonds).</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="bottom-nav">
+      <a href="cppsrmu0.html" class="nav-btn" aria-label="Go to Previous Unit">← Previous Unit</a>
+      <a href="cpp.html" class="nav-btn primary" aria-label="Go back to main C++ Course">Back to C++ Course</a>
+      <a href="cppsrmu2.html" class="nav-btn" aria-label="Go to Next Unit">Next Unit →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Quick Links Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      if (themeToggleBtn) {
+        themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      localStorage.setItem('orygyns-theme', newTheme);
+      
+      // Sync dynamic legacy selector compatibility if body needs to toggle class explicitly
+      if (newTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+      
+      updateIcon(newTheme);
+    }
+
+    // Dynamic initial loading parameters alignment engine
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('orygyns_theme') || localStorage.getItem('orygyns-theme') || 'dark';
+      htmlElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        updateIcon(savedTheme);
+      });
+    })();
+
+    // Premium Reveal Animations Logic Execution Framework
+    document.addEventListener("DOMContentLoaded", function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.05 });
+
+      reveals.forEach(reveal => {
+        reveal.style.opacity = '0';
+        reveal.style.transform = 'translateY(24px)';
+        reveal.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        observer.observe(reveal);
+      });
+    });
+  </script>
+
+</body>
+</html>

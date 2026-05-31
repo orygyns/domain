@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developer Tools & Technologies | Orygyns Coding Platform</title>
+  <meta name="description" content="Master essential developer tools including IDEs, Terminal, Git, Docker, Cloud Platforms, and Backend Frameworks on the Orygyns Coding Platform.">
+  <meta name="keywords" content="Developer Tools, Git, IDE, Docker, Kubernetes, AWS, SQL, Backend Frameworks, Orygyns, Coding Platform, Learn Programming">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/tools.html">
+
+  <meta property="og:title" content="Developer Tools & Technologies | Orygyns Coding Platform">
+  <meta property="og:description" content="Master essential developer tools including IDEs, Terminal, Git, Docker, Cloud Platforms, and Backend Frameworks on the Orygyns Coding Platform.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/tools.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Developer Tools & Technologies | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Master essential developer tools including IDEs, Terminal, Git, Docker, Cloud Platforms, and Backend Frameworks on the Orygyns Coding Platform.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/tools.html#webpage",
+        "url": "https://orygyns.in/tools.html",
+        "name": "Developer Tools & Technologies | Orygyns",
+        "description": "Master essential developer tools including IDEs, Terminal, Git, Docker, Cloud Platforms, and Backend Frameworks."
+      },
+      {
+        "@type": "Course",
+        "name": "Developer Tools & Technologies",
+        "description": "Comprehensive guide to the tools professional developers use, from Version Control to Cloud Deployment.",
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        },
+        "about": [
+          {"@type": "Thing", "name": "Integrated Development Environments"},
+          {"@type": "Thing", "name": "Git and Version Control"},
+          {"@type": "Thing", "name": "Docker and DevOps"},
+          {"@type": "Thing", "name": "Cloud Computing"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #121619;
+      --surface: #1e2429;
+      --text-main: #f5f6fa;
+      --text-muted: #a4b0be;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(18, 22, 25, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --border-color: #2f363d;
+      --code-bg: #111417;
+      --practice-bg: rgba(22, 163, 74, 0.08);
+      --code-text: #fdcb6e; 
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 246, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f8f9fa;
+      --surface: #ffffff;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --border-color: #e1e4e8;
+      --code-bg: #f1f3f5;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --code-text: #d35400;
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2845, 52, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 80px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar overrides --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 1px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.2rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--surface); border: 2px solid var(--border-color); color: var(--text-main); font-size: 1.2rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 42px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Content Area --- */
+    main { flex: 1; padding: 40px 0 60px; max-width: 900px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.5s ease; }
+    .page-header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 800; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); }
+
+    .breadcrumb-custom { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; font-weight: 600; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); }
+
+    /* --- Lesson Cards --- */
+    .lesson-card { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; animation: fadeInUp 0.6s ease; }
+    .lesson-card:hover { transform: translateY(-4px); }
+    .lesson-card.highlight-card { border: 2px solid var(--primary-green); }
+    
+    .lesson-card h2 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-green); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; font-weight: 700; }
+    .lesson-card h3 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem 0; color: var(--text-main); font-weight: 600; }
+    .lesson-card p { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-muted); }
+    .lesson-card ul { padding-left: 20px; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .lesson-card li { margin-bottom: 0.5rem; }
+    .lesson-card strong { color: var(--text-main); }
+
+    /* --- Command/Code Blocks --- */
+    .cmd-block { background-color: var(--code-bg); padding: 0.2rem 0.5rem; border-radius: 6px; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--code-text); border: 1px solid var(--border-color); display: inline-block; word-break: break-all; }
+
+    /* --- Interactive Elements --- */
+    .practice-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .practice-box h4 { color: var(--primary-green); margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 700; }
+    .practice-box p { color: var(--text-main); margin: 0; font-weight: 500; }
+
+    /* --- Action Box Alignment Rules (Strict) --- */
+    .action-box { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 1.5rem; }
+    .success-text { color: var(--primary-green) !important; font-weight: 600; margin: 0 !important; opacity: 0; transition: opacity 0.3s ease; }
+
+    /* --- Buttons --- */
+    .btn-main { display: inline-block; padding: 10px 24px; background-color: transparent; color: var(--primary-green); border: 2px solid var(--primary-green); font-size: 1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .btn-main:hover { background-color: var(--primary-green); color: #fff; transform: translateY(-2px); }
+
+    .final-section { text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 2px dashed var(--border-color); animation: fadeInUp 0.8s ease; }
+    .final-section .btn-main { background-color: var(--primary-green); color: #ffffff; font-size: 1.2rem; padding: 16px 40px; box-shadow: 0 6px 0 var(--primary-dark); border: none; border-radius: 30px; }
+    .final-section .btn-main:hover { background-color: #15b850; }
+    .final-section .btn-main:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--primary-dark); }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 4rem 2rem 2rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; transition: color 0.2s ease; }
+    .footer-nav a:hover { color: var(--primary-green); }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* --- Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) { 
+      .page-header h1 { font-size: 2.2rem; } 
+      .lesson-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Logo">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumb">
+      <a href="learn.html">⬅️ Back to Courses</a> <span>/</span> <span>Developer Tools</span>
+    </div>
+
+    <div class="page-header">
+      <h1>Developer Tools & Technologies 🛠️</h1>
+      <p>Everything you need to become a real developer</p>
+    </div>
+
+    <section class="lesson-card" aria-labelledby="level-1">
+      <h2 id="level-1">Level 1: Code Editors & IDEs</h2>
+      <p><strong>What is it?</strong> Software designed specifically for writing, formatting, and executing code.</p>
+      
+      <ul>
+        <li><strong>Tools:</strong> VS Code (Lightweight), IntelliJ IDEA (Powerful for Java).</li>
+        <li><strong>Why it matters:</strong> Provides syntax highlighting, auto-completion, extensions, and debugging.</li>
+        <li><strong>Where it is used:</strong> Every single day on your local computer to write software.</li>
+        <li><strong>Problem solved:</strong> Makes coding faster, prevents typos, and makes reading code easier.</li>
+      </ul>
+
+      <p><strong>Scenario:</strong> Instead of writing Java in Notepad, an IDE highlights errors in red before you even run the code.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Download VS Code or IntelliJ IDEA and write a simple "Hello World" program.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 1 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-2">
+      <h2 id="level-2">Level 2: Terminal & Command Line</h2>
+      <p><strong>What is it?</strong> A text-based interface used to give direct instructions to your computer's operating system.</p>
+      
+      <ul>
+        <li><strong>Why it matters:</strong> It is faster than using a mouse and essential for server management.</li>
+        <li><strong>Where it is used:</strong> Running scripts, managing files, and deploying applications.</li>
+      </ul>
+
+      <p><strong>Important Commands:</strong></p>
+      <ul>
+        <li><code class="cmd-block">cd</code> - Change directory (navigate folders)</li>
+        <li><code class="cmd-block">ls</code> - List files in the current folder</li>
+        <li><code class="cmd-block">mkdir</code> - Make a new directory (folder)</li>
+      </ul>
+
+      <p><strong>Scenario:</strong> Navigating into your project folder without clicking through your file explorer.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Open your terminal (Command Prompt/Terminal) and type <code>mkdir MyProject</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 2 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card highlight-card" aria-labelledby="level-3">
+      <h2 id="level-3">Level 3: Version Control (Very Important)</h2>
+      <p><strong>What is it?</strong> A system that records changes to a file or set of files over time.</p>
+      
+      <ul>
+        <li><strong>Tools:</strong> Git (The tool), GitHub (The website that hosts Git repositories).</li>
+        <li><strong>Why it matters:</strong> Backup, Collaboration, and History (Time travel for your code).</li>
+        <li><strong>Where it is used:</strong> Used by every software team in the world to manage code.</li>
+        <li><strong>Problem solved:</strong> Prevents the "I broke the code and can't go back" nightmare.</li>
+      </ul>
+
+      <p><strong>Important Commands:</strong></p>
+      <ul>
+        <li><code class="cmd-block">git init</code> - Start tracking a project</li>
+        <li><code class="cmd-block">git add .</code> - Stage changes</li>
+        <li><code class="cmd-block">git commit -m "msg"</code> - Save the changes with a message</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a free GitHub account and explore some open-source repositories.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 3 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-4">
+      <h2 id="level-4">Level 4: Build Tools</h2>
+      <p><strong>What is it?</strong> Programs that automate the creation of executable applications from source code.</p>
+      
+      <ul>
+        <li><strong>Tools:</strong> Maven, Gradle.</li>
+        <li><strong>Why it matters:</strong> Dependency management and build automation.</li>
+        <li><strong>Where it is used:</strong> Mostly in Java or large-scale enterprise applications.</li>
+        <li><strong>Problem solved:</strong> Stops you from manually downloading and linking dozens of 3rd-party libraries (JAR files).</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Look up what a <code>pom.xml</code> file is in Maven. It’s where you list your dependencies!</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 4 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card highlight-card" aria-labelledby="level-5">
+      <h2 id="level-5">Level 5: Backend Frameworks (Very Important)</h2>
+      <p><strong>What is it?</strong> Pre-written code that provides a foundation for developing server-side applications.</p>
+      
+      <ul>
+        <li><strong>Tools:</strong> Spring Boot (Java), Node.js (JavaScript runtime).</li>
+        <li><strong>Why it matters:</strong> Server-side development, database communication, and building APIs.</li>
+        <li><strong>Where it is used:</strong> Running the logical core of an app (like processing a payment or logging in a user).</li>
+        <li><strong>Problem solved:</strong> You don't have to reinvent the wheel for basic server security and routing.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Search for "Spring Boot Hello World API" and see how few lines of code it takes to start a web server.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 5 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-6">
+      <h2 id="level-6">Level 6: Databases</h2>
+      <p><strong>What is it?</strong> An organized collection of structured information or data.</p>
+      
+      <ul>
+        <li><strong>SQL (Relational):</strong> MySQL, PostgreSQL (Data stored in strict tables).</li>
+        <li><strong>NoSQL (Non-Relational):</strong> MongoDB (Data stored in flexible documents).</li>
+        <li><strong>Why it matters:</strong> Long-term data storage.</li>
+        <li><strong>Problem solved:</strong> Keeps user data, product listings, and chat histories safe even when the server restarts.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Try writing a basic SQL query like <code class="cmd-block">SELECT * FROM users;</code> to see how data is fetched.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 6 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card highlight-card" aria-labelledby="level-7">
+      <h2 id="level-7">Level 7: DevOps (Very Important)</h2>
+      <p><strong>What is DevOps?</strong> A set of practices that combines software development (Dev) and IT operations (Ops).</p>
+      
+      <ul>
+        <li><strong>Docker:</strong> Containerization. Packages code and dependencies into one box. 
+          <br><em>Problem solved: Fixes the famous "It works on my machine" issue.</em></li>
+        <li><strong>Kubernetes:</strong> Manages thousands of Docker containers.
+          <br><em>Problem solved: Handles scaling (high traffic) and automatic restarts if a server fails.</em></li>
+        <li><strong>CI/CD:</strong> Continuous Integration & Continuous Deployment.
+          <br><em>Problem solved: Automates code testing and pushes updates to live servers without human error.</em></li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Install Docker Desktop and run a pre-made image like an Nginx web server with one click.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 7 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-8">
+      <h2 id="level-8">Level 8: Cloud Platforms</h2>
+      <p><strong>What is it?</strong> On-demand delivery of computing power, database storage, and applications via the internet.</p>
+      
+      <ul>
+        <li><strong>Platforms:</strong> AWS, Google Cloud, Azure.</li>
+        <li><strong>Why it matters:</strong> Hosting apps globally and infinite scalability.</li>
+        <li><strong>Problem solved:</strong> You don't need to buy, power, or maintain physical server computers in your house.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Explore the AWS Free Tier and see how many services you can use for free.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 8 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-9">
+      <h2 id="level-9">Level 9: Testing Tools</h2>
+      <p><strong>What is it?</strong> Software designed to ensure your code works exactly as intended before users see it.</p>
+      
+      <ul>
+        <li><strong>Tools:</strong> Postman (API Testing), JUnit (Unit Testing for Java).</li>
+        <li><strong>Why it matters:</strong> Prevents bugs from reaching production.</li>
+        <li><strong>Problem solved:</strong> Allows you to test a login API without needing a physical webpage interface.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Download Postman and send a GET request to a public API (like a weather API) to see the JSON response.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 9 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-10">
+      <h2 id="level-10">Level 10: Frontend Tools</h2>
+      <p><strong>What is it?</strong> The technologies used to build what the user actually interacts with.</p>
+      
+      <ul>
+        <li><strong>Core:</strong> HTML (Structure), CSS (Style), JS (Logic).</li>
+        <li><strong>Frameworks:</strong> React, Angular, Vue.</li>
+        <li><strong>Why it matters:</strong> UI building and crafting user experiences.</li>
+        <li><strong>Problem solved:</strong> Frameworks make building complex, single-page applications (SPAs) highly organized and fast.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Right-click this page and hit "Inspect" to see the HTML/CSS making up this very site.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 10 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand this tool!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card highlight-card" aria-labelledby="level-11">
+      <h2 id="level-11">Level 11: The Development Workflow (Very Important)</h2>
+      <p><strong>How it all connects:</strong> Professional software is built like an assembly line.</p>
+      
+      <p style="font-size: 1.2rem; margin: 1.5rem 0; font-weight: bold; color: var(--text-main); line-height: 2; text-align: center;">
+        Write Code (IDE) <br>
+        ⬇️ <br>
+        Save Versions (Git/GitHub) <br>
+        ⬇️ <br>
+        Compile & Test (Maven/JUnit) <br>
+        ⬇️ <br>
+        Create API (Spring Boot/Node) <br>
+        ⬇️ <br>
+        Store Data (SQL/MongoDB) <br>
+        ⬇️ <br>
+        Containerize (Docker) <br>
+        ⬇️ <br>
+        Deploy to Internet (AWS/Cloud)
+      </p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Memorize this flow. This is the exact lifecycle of apps like Netflix and Spotify.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 11 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You understand the workflow!</p>
+      </div>
+    </section>
+
+    <section class="lesson-card" aria-labelledby="level-12">
+      <h2 id="level-12">Level 12: Why These Tools Matter (Most Important)</h2>
+      <p><strong>The Reality of Software Engineering:</strong></p>
+      
+      <ul>
+        <li><strong>Beyond just typing code:</strong> Real developers spend time architecting, debugging, and deploying. Knowing the syntax of Java isn't enough; you need the tools to build it.</li>
+        <li><strong>Productivity:</strong> Tools like Docker, Git, and IDEs automate the boring stuff so you can focus on problem-solving.</li>
+        <li><strong>Job Requirements:</strong> Every tech company assumes you know Version Control, basic Terminal commands, and how APIs work. This roadmap makes you hirable.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Pick ONE tool from this page today (like Git or Docker) and watch a 10-minute beginner tutorial.</p>
+      </div>
+
+      <div class="action-box">
+        <button class="btn-main" aria-label="Mark Level 12 as understood">Explore More ▶</button>
+        <p class="success-text" aria-live="polite">✅ You are ready to become a developer!</p>
+      </div>
+    </section>
+
+    <div class="final-section">
+      <h2 style="margin-bottom: 1.5rem; color: var(--text-main); font-weight: 700;">Ready to test your knowledge?</h2>
+      <a href="toolsquiz.html" class="btn-main" aria-label="Start Developer Tools Quiz">Start Tools Quiz 🛠️</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    // --- Theme Toggle Logic ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    updateIcon(htmlElement.getAttribute('data-theme'));
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      updateIcon(newTheme);
+    });
+
+    // --- Interactive "Explore More" Buttons ---
+    const exploreButtons = document.querySelectorAll('.btn-main');
+    exploreButtons.forEach(btn => {
+        if(btn.textContent.includes('Explore More')) {
+            btn.addEventListener('click', function() {
+                const actionBox = this.parentElement;
+                const successText = actionBox.querySelector('.success-text');
+                
+                // Show success text
+                successText.style.opacity = '1';
+                
+                // Optional: disable button after clicking
+                this.style.pointerEvents = 'none';
+                this.style.opacity = '0.7';
+            });
+        }
+    });
+  </script>
+
+</body>
+</html>

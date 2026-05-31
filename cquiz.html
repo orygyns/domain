@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>C Programming Quiz | Orygyns Coding Platform</title>
+  <meta name="description" content="Test your knowledge of C programming, memory management, pointers, arrays, and loops with the Orygyns C Programming Quiz.">
+  <meta name="keywords" content="C Quiz, C Programming Test, Learn C, C Practice, Pointers Quiz, Memory Management Quiz, Orygyns Coding Platform, Programming Assessment">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/cquiz.html">
+
+  <meta property="og:title" content="C Programming Quiz | Orygyns Coding Platform">
+  <meta property="og:description" content="Test your knowledge of C programming, memory management, pointers, arrays, and loops with the Orygyns C Programming Quiz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orygyns.in/cquiz.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="C Programming Quiz | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Test your knowledge of C programming, memory management, pointers, arrays, and loops with the Orygyns C Programming Quiz.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/cquiz.html#webpage",
+        "url": "https://orygyns.in/cquiz.html",
+        "name": "C Programming Quiz | Orygyns",
+        "description": "Test your knowledge of C programming, memory management, pointers, arrays, and loops."
+      },
+      {
+        "@type": "Quiz",
+        "name": "C Programming Assessment",
+        "about": {
+          "@type": "Thing",
+          "name": "C Programming Language"
+        },
+        "educationalAlignment": [
+          {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalSubject",
+            "targetName": "Computer Science"
+          }
+        ],
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #121619;
+      --surface: #1e2429;
+      --text-main: #f5f6fa;
+      --text-muted: #a4b0be;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(18, 22, 25, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --border-color: #2f363d;
+      --code-bg: #111417;
+      --code-text: #50fa7b;
+      --error-red: #ef4444;
+      --error-bg: rgba(239, 68, 68, 0.1);
+      --success-bg: rgba(22, 163, 74, 0.1);
+      --hover-bg: rgba(255, 255, 255, 0.05);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 246, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f8f9fa;
+      --surface: #ffffff;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --border-color: #e1e4e8;
+      --code-bg: #f1f3f5;
+      --code-text: #0984e3;
+      --error-red: #dc2626;
+      --error-bg: rgba(220, 38, 38, 0.08);
+      --success-bg: rgba(22, 163, 74, 0.08);
+      --hover-bg: rgba(0, 0, 0, 0.03);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2845, 52, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: all 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 80px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar overrides --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 1px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.2rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--surface); border: 2px solid var(--border-color); color: var(--text-main); font-size: 1.2rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 42px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Layout --- */
+    main { flex: 1; padding: 40px 0 60px; max-width: 900px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.5s ease; }
+    .page-header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 800; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); }
+
+    .breadcrumb-custom { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; font-weight: 600; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); }
+
+    /* --- Quiz Cards --- */
+    .card-custom { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; animation: fadeInUp 0.6s ease; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .card-custom:hover { transform: translateY(-4px); }
+    .card-custom h2 { font-size: 1.6rem; margin-bottom: 1.5rem; color: var(--primary-green); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; font-weight: 700; }
+
+    /* --- Questions & Options --- */
+    .question-block { margin-bottom: 2.5rem; border: none; padding: 0; }
+    .question-block:last-child { margin-bottom: 0; }
+    .q-text { font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-main); display: block; }
+    
+    .options-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; padding-left: 0; margin-bottom: 0; }
+    .option-label { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; margin: 0; }
+    .option-label:hover { background-color: var(--hover-bg); border-color: var(--primary-green); }
+    .option-label:focus-within { border-color: var(--primary-green); box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2); }
+    .option-label input[type="radio"] { transform: scale(1.2); accent-color: var(--primary-green); cursor: pointer; margin: 0; }
+
+    /* --- Code/Command Highlight --- */
+    .code-block { background-color: var(--code-bg); padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.1rem; overflow-x: auto; border: 1px solid var(--border-color); margin: 1rem 0; line-height: 1.8; color: var(--text-main); }
+    .code-block code { color: var(--code-text); }
+    code.inline-code { font-family: 'Courier New', Courier, monospace; background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--code-text); font-size: 1.05rem; }
+
+    /* --- Action Box --- */
+    .action-box { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 15px; }
+    .result-text { font-weight: 600; margin: 0 !important; font-size: 1.1rem; }
+    .text-green { color: var(--primary-green) !important; }
+    .text-red { color: var(--error-red) !important; }
+    
+    .btn-main { display: inline-block; padding: 14px 32px; background-color: var(--primary-green); color: #ffffff; font-size: 1.2rem; font-weight: bold; border-radius: 10px; border: none; cursor: pointer; box-shadow: 0 4px 0 var(--primary-dark); transition: transform 0.1s, box-shadow 0.1s; text-align: center; text-decoration: none; }
+    .btn-main:active { transform: translateY(4px); box-shadow: 0 0 0 var(--primary-dark); }
+    .btn-main:hover { color: #ffffff; background-color: #15b850; }
+    .btn-main:disabled { background-color: var(--text-muted); box-shadow: 0 4px 0 #555; cursor: not-allowed; }
+
+    /* --- Results Section --- */
+    #result-section { display: none; animation: fadeInUp 0.5s ease; }
+    .score-banner { text-align: center; padding: 3rem 2rem; background-color: var(--success-bg); border: 2px solid var(--primary-green); border-radius: 16px; margin-bottom: 2.5rem; box-shadow: var(--card-shadow); }
+    .score-banner h2 { color: var(--primary-green); font-size: 3.5rem; margin-bottom: 1rem; border: none; font-weight: 800; }
+    .score-banner p { font-size: 1.3rem; font-weight: 600; color: var(--text-main); margin: 0; }
+
+    .feedback-card { background-color: var(--bg-color); border-left: 5px solid var(--error-red); padding: 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; box-shadow: var(--card-shadow); border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+    .feedback-q { font-weight: bold; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-main); }
+    .feedback-user { color: var(--error-red); margin-bottom: 0.5rem; font-weight: 600; }
+    .feedback-correct { color: var(--primary-green); font-weight: bold; margin-bottom: 1rem; }
+    .feedback-exp { background-color: var(--surface); padding: 12px; border-radius: 8px; font-size: 1rem; border: 1px solid var(--border-color); color: var(--text-muted); line-height: 1.6; }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 4rem 2rem 2rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; transition: color 0.2s ease; }
+    .footer-nav a:hover { color: var(--primary-green); }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* --- Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) { 
+      .page-header h1 { font-size: 2.2rem; } 
+      .card-custom { padding: 1.5rem; }
+      .score-banner h2 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Logo">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    <div class="breadcrumb-custom" aria-label="Breadcrumb">
+      <a href="c.html">⬅️ Back to Course</a> <span>/</span> <span>C Quiz</span>
+    </div>
+
+    <div class="page-header">
+      <h1>C Programming Quiz 💻</h1>
+      <p>Test your understanding of C structures and memory logic</p>
+    </div>
+
+    <form id="quiz-form" aria-label="C Programming Quiz Form">
+      
+      <section class="card-custom" aria-labelledby="level-1-heading">
+        <h2 id="level-1-heading">Level 1: Basics (Easy)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">1. Every standard C program begins its execution from which function?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q1" value="a" aria-label="Option A"> start()</label></li>
+            <li><label class="option-label"><input type="radio" name="q1" value="b" aria-label="Option B"> main()</label></li>
+            <li><label class="option-label"><input type="radio" name="q1" value="c" aria-label="Option C"> init()</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">2. Which header file must be included to use the <code class="inline-code">printf()</code> function?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q2" value="a" aria-label="Option A"> &lt;stdio.h&gt;</label></li>
+            <li><label class="option-label"><input type="radio" name="q2" value="b" aria-label="Option B"> &lt;stdlib.h&gt;</label></li>
+            <li><label class="option-label"><input type="radio" name="q2" value="c" aria-label="Option C"> &lt;string.h&gt;</label></li>
+            <li><label class="option-label"><input type="radio" name="q2" value="d" aria-label="Option D"> &lt;math.h&gt;</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">3. Which format specifier is used to print an integer variable?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q3" value="a" aria-label="Option A"> %f</label></li>
+            <li><label class="option-label"><input type="radio" name="q3" value="b" aria-label="Option B"> %c</label></li>
+            <li><label class="option-label"><input type="radio" name="q3" value="c" aria-label="Option C"> %d</label></li>
+            <li><label class="option-label"><input type="radio" name="q3" value="d" aria-label="Option D"> %s</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" aria-labelledby="level-2-heading">
+        <h2 id="level-2-heading">Level 2: Control Flow (Medium)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">4. What does the modulus operator <code class="inline-code">%</code> do in C?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q4" value="a" aria-label="Option A"> Calculates the percentage of a number</label></li>
+            <li><label class="option-label"><input type="radio" name="q4" value="b" aria-label="Option B"> Returns the remainder of a division</label></li>
+            <li><label class="option-label"><input type="radio" name="q4" value="c" aria-label="Option C"> Performs division and returns a float</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">5. In an <code class="inline-code">if-else</code> statement, when does the <code class="inline-code">else</code> block execute?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q5" value="a" aria-label="Option A"> Only when the 'if' condition is true</label></li>
+            <li><label class="option-label"><input type="radio" name="q5" value="b" aria-label="Option B"> When the 'if' condition evaluates to false</label></li>
+            <li><label class="option-label"><input type="radio" name="q5" value="c" aria-label="Option C"> It executes every time</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">6. Which loop is generally considered best when the exact number of iterations is known beforehand?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q6" value="a" aria-label="Option A"> while loop</label></li>
+            <li><label class="option-label"><input type="radio" name="q6" value="b" aria-label="Option B"> do-while loop</label></li>
+            <li><label class="option-label"><input type="radio" name="q6" value="c" aria-label="Option C"> for loop</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" style="border: 2px solid var(--primary-green);" aria-labelledby="level-3-heading">
+        <h2 id="level-3-heading">Level 3: Core Memory & Structures (Important)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">7. What is the primary purpose of writing custom functions in C?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q7" value="a" aria-label="Option A"> To execute reusable blocks of code and keep the program modular</label></li>
+            <li><label class="option-label"><input type="radio" name="q7" value="b" aria-label="Option B"> To automatically allocate system RAM</label></li>
+            <li><label class="option-label"><input type="radio" name="q7" value="c" aria-label="Option C"> To make the program run infinitely</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">8. Given the array <code class="inline-code">int arr[3] = {10, 20, 30};</code>, what is the value stored at <code class="inline-code">arr[0]</code>?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q8" value="a" aria-label="Option A"> 20</label></li>
+            <li><label class="option-label"><input type="radio" name="q8" value="b" aria-label="Option B"> 30</label></li>
+            <li><label class="option-label"><input type="radio" name="q8" value="c" aria-label="Option C"> 10</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">9. Which special character is automatically used to terminate a string array in C?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q9" value="a" aria-label="Option A"> \n</label></li>
+            <li><label class="option-label"><input type="radio" name="q9" value="b" aria-label="Option B"> \0 (Null character)</label></li>
+            <li><label class="option-label"><input type="radio" name="q9" value="c" aria-label="Option C"> EOF</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" aria-labelledby="level-4-heading">
+        <h2 id="level-4-heading">Level 4: Advanced Memory (Pointers)</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">10. What is a pointer in C?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q10" value="a" aria-label="Option A"> A variable that stores the mathematical square of a number</label></li>
+            <li><label class="option-label"><input type="radio" name="q10" value="b" aria-label="Option B"> A variable that stores the physical memory address of another variable</label></li>
+            <li><label class="option-label"><input type="radio" name="q10" value="c" aria-label="Option C"> A keyword used to point to the end of a file</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">11. Which operator is used to get the memory address of a variable?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q11" value="a" aria-label="Option A"> * (Asterisk)</label></li>
+            <li><label class="option-label"><input type="radio" name="q11" value="b" aria-label="Option B"> &amp; (Ampersand)</label></li>
+            <li><label class="option-label"><input type="radio" name="q11" value="c" aria-label="Option C"> % (Modulus)</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">12. What does "dereferencing" a pointer mean?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q12" value="a" aria-label="Option A"> Accessing the actual value stored at the memory address the pointer holds</label></li>
+            <li><label class="option-label"><input type="radio" name="q12" value="b" aria-label="Option B"> Deleting the pointer from memory</label></li>
+            <li><label class="option-label"><input type="radio" name="q12" value="c" aria-label="Option C"> Resetting the pointer to NULL</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="card-custom" aria-labelledby="level-5-heading">
+        <h2 id="level-5-heading">Level 5: Structs & Problem Solving</h2>
+        
+        <fieldset class="question-block">
+          <legend class="q-text">13. In "Call by Reference", what exactly is passed to the function?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q13" value="a" aria-label="Option A"> A copy of the variable's value</label></li>
+            <li><label class="option-label"><input type="radio" name="q13" value="b" aria-label="Option B"> The memory address of the variable</label></li>
+            <li><label class="option-label"><input type="radio" name="q13" value="c" aria-label="Option C"> The name of the variable as a string</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">14. What is the primary purpose of a <code class="inline-code">struct</code> in C?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q14" value="a" aria-label="Option A"> To group different variables of varying data types under a single unified name</label></li>
+            <li><label class="option-label"><input type="radio" name="q14" value="b" aria-label="Option B"> To create a loop that structures memory</label></li>
+            <li><label class="option-label"><input type="radio" name="q14" value="c" aria-label="Option C"> To perform complex math equations</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="question-block">
+          <legend class="q-text">15. What is the definition of an Algorithm in problem solving?</legend>
+          <ul class="options-list">
+            <li><label class="option-label"><input type="radio" name="q15" value="a" aria-label="Option A"> Step-by-step written logical instructions used to solve a problem before coding</label></li>
+            <li><label class="option-label"><input type="radio" name="q15" value="b" aria-label="Option B"> A type of database used in C</label></li>
+            <li><label class="option-label"><input type="radio" name="q15" value="c" aria-label="Option C"> A visual diagram of memory allocation</label></li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <div class="card-custom" style="border: 2px dashed var(--border-color); text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div class="action-box" style="align-items: center;">
+          <button type="submit" class="btn-main" id="submit-btn">Submit Quiz</button>
+          <p class="result-text text-red" id="error-msg" style="display: none; margin-top: 15px !important;" aria-live="polite">Please answer all 15 questions before submitting!</p>
+        </div>
+      </div>
+    </form>
+
+    <section id="result-section" aria-labelledby="final-score-title">
+      <div class="score-banner">
+        <h2 id="final-score-title" aria-live="polite">0/15</h2>
+        <p id="gamification-msg" aria-live="polite">Calculating your C skills...</p>
+      </div>
+
+      <div class="card-custom" id="feedback-container">
+        <h2 style="color: var(--error-red); border-color: var(--error-red);">Detailed Feedback</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 1.1rem;">Here are the concepts you need to review:</p>
+        <div id="feedback-list" aria-live="polite">
+          </div>
+      </div>
+
+      <div class="action-box" style="align-items: center; width: 100%; margin-top: 2rem;">
+        <button id="retry-btn" class="btn-main">Attempt Again 🔄</button>
+        <p class="result-text text-green" style="margin-top:15px !important;">Your progress has been saved locally.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    updateIcon(htmlElement.getAttribute('data-theme'));
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      updateIcon(newTheme);
+    });
+
+    // Quiz Answer Key & Explanations based on standard C rules and previous file analysis
+    const quizData = {
+      q1: { ans: "b", text: "main()", exp: "Every C program begins its execution by looking for the main() function." },
+      q2: { ans: "a", text: "<stdio.h>", exp: "Standard Input Output (stdio.h) contains functions like printf and scanf." },
+      q3: { ans: "c", text: "%d", exp: "The %d format specifier is used to display or scan integer values in C." },
+      q4: { ans: "b", text: "Returns the remainder of a division", exp: "The modulus operator (%) calculates the remainder after integer division." },
+      q5: { ans: "b", text: "When the 'if' condition evaluates to false", exp: "The else block is the fallback that runs when the initial if condition is not met." },
+      q6: { ans: "c", text: "for loop", exp: "A for loop is best when you know exactly how many iterations you need beforehand." },
+      q7: { ans: "a", text: "To execute reusable blocks of code and keep the program modular", exp: "Functions prevent code duplication and make programs easier to test and read." },
+      q8: { ans: "c", text: "10", exp: "Array indices start at 0. Therefore, arr[0] accesses the very first element." },
+      q9: { ans: "b", text: "\\0 (Null character)", exp: "Strings in C are character arrays that must be terminated by a null character (\\0)." },
+      q10: { ans: "b", text: "A variable that stores the physical memory address of another variable", exp: "Pointers point to memory locations rather than holding standard values." },
+      q11: { ans: "b", text: "& (Ampersand)", exp: "The reference operator (&) returns the memory address of the variable it precedes." },
+      q12: { ans: "a", text: "Accessing the actual value stored at the memory address the pointer holds", exp: "Dereferencing uses the * operator to interact with the value inside the pointed memory." },
+      q13: { ans: "b", text: "The memory address of the variable", exp: "Call by Reference passes pointers (addresses) so the original variable can be modified." },
+      q14: { ans: "a", text: "To group different variables of varying data types under a single unified name", exp: "Structs let you bundle related variables (like an ID int and a Name string) together." },
+      q15: { ans: "a", text: "Step-by-step written logical instructions used to solve a problem before coding", exp: "Algorithms represent the logical foundation mapped out prior to writing the syntax." }
+    };
+
+    const quizForm = document.getElementById('quiz-form');
+    const resultSection = document.getElementById('result-section');
+    const errorMsg = document.getElementById('error-msg');
+    const feedbackList = document.getElementById('feedback-list');
+    const feedbackContainer = document.getElementById('feedback-container');
+
+    // Retrieve previous attempts
+    let cQuizStats = JSON.parse(localStorage.getItem('cQuiz')) || { attempts: 0 };
+
+    quizForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(quizForm);
+      let score = 0;
+      let total = 15;
+      let answeredCount = 0;
+      let wrongAnswersHTML = "";
+
+      // Check if all answered
+      for (let key in quizData) {
+        if (formData.has(key)) answeredCount++;
+      }
+
+      if (answeredCount < total) {
+        errorMsg.style.display = "block";
+        return;
+      }
+      
+      errorMsg.style.display = "none";
+
+      // Grading & Feedback Generation
+      for (let key in quizData) {
+        const userAnswerVal = formData.get(key);
+        const correctVal = quizData[key].ans;
+        
+        // Find the label text the user selected
+        const selectedInput = document.querySelector(`input[name="${key}"][value="${userAnswerVal}"]`);
+        const userText = selectedInput ? selectedInput.parentElement.textContent.trim() : "None";
+        const questionText = document.querySelector(`input[name="${key}"]`).closest('.question-block').querySelector('.q-text').innerText;
+
+        if (userAnswerVal === correctVal) {
+          score++;
+        } else {
+          // Generate detailed feedback for wrong answers
+          wrongAnswersHTML += `
+            <div class="feedback-card">
+              <div class="feedback-q">${questionText}</div>
+              <div class="feedback-user">❌ Your Answer: ${userText}</div>
+              <div class="feedback-correct">✅ Correct Answer: ${quizData[key].text}</div>
+              <div class="feedback-exp"><strong>Explanation:</strong> ${quizData[key].exp}</div>
+            </div>
+          `;
+        }
+      }
+
+      // Update UI Stats
+      const percentage = Math.round((score / total) * 100);
+      document.getElementById('final-score-title').innerText = `${score} / ${total} (${percentage}%)`;
+      
+      const gMsg = document.getElementById('gamification-msg');
+      if (percentage >= 80) gMsg.innerHTML = "🔥 Excellent! You have strong C logic.";
+      else if (percentage >= 50) gMsg.innerHTML = "👍 Good job! Review the feedback to master the rest.";
+      else gMsg.innerHTML = "💪 Keep practicing! Programming takes time to click.";
+
+      // Handle Feedback Display
+      if (wrongAnswersHTML === "") {
+        feedbackContainer.innerHTML = `<div class="score-banner" style="background: var(--success-bg); border-color: var(--primary-green); border-radius: 16px; padding: 2rem;">
+          <h2 style="font-size: 2.2rem; margin:0; color: var(--primary-green); border: none;">Perfect Score! 🏆</h2>
+          <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-main);">You have mastered these concepts beautifully.</p>
+        </div>`;
+      } else {
+        feedbackList.innerHTML = wrongAnswersHTML;
+      }
+
+      // Save to localStorage
+      cQuizStats.score = score;
+      cQuizStats.total = total;
+      cQuizStats.attempts += 1;
+      cQuizStats.lastAttempt = new Date().toLocaleString();
+      localStorage.setItem('cQuiz', JSON.stringify(cQuizStats));
+
+      // Switch views
+      quizForm.style.display = "none";
+      resultSection.style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Retry Button Logic
+    document.getElementById('retry-btn').addEventListener('click', () => {
+      quizForm.reset();
+      errorMsg.style.display = "none";
+      resultSection.style.display = "none";
+      quizForm.style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  </script>
+
+</body>
+</html>

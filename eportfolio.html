@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Professional E-Portfolio Development Services | Orygyns</title>
+    <meta name="description" content="Get a professionally designed e-portfolio website for students, professionals, chartered accountants, job seekers, creators, and entrepreneurs. Showcase achievements, projects, skills, and experience with Orygyns.">
+    <meta name="keywords" content="E Portfolio Website, Student Portfolio, Professional Portfolio, Digital Portfolio, Resume Website, Personal Branding, Career Portfolio, Portfolio Development, Portfolio Designer, Orygyns">
+    <meta name="author" content="Rajan Aathreya">
+    <meta name="theme-color" content="#030305">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://orygyns.in/eportfolio.html">
+
+    <meta property="og:title" content="Professional E-Portfolio Development Services | Orygyns">
+    <meta property="og:description" content="Premium e-portfolio websites designed for students, professionals, and future leaders.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orygyns.in/eportfolio.html">
+    <meta property="og:image" content="https://orygyns.in/theme.png">
+    <meta property="og:site_name" content="Orygyns">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional E-Portfolio Development Services | Orygyns">
+    <meta name="twitter:description" content="Premium e-portfolio websites designed for students, professionals, and future leaders.">
+    <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "E-Portfolio Development",
+          "provider": {
+            "@type": "Organization",
+            "name": "Orygyns Technologies and Consultancy"
+          },
+          "description": "Professional e-portfolio design and development services for students, professionals, creators, and businesses."
+        },
+        {
+          "@type": "Organization",
+          "name": "Orygyns Technologies and Consultancy",
+          "alternateName": "Orygyns",
+          "founder": {
+            "@type": "Person",
+            "name": "Rajan Aathreya"
+          },
+          "url": "https://orygyns.in"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Professional E-Portfolio Development",
+          "url": "https://orygyns.in/eportfolio.html"
+        }
+      ]
+    }
+    </script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==================================================
+           GLOBAL & VARIABLES
+           ================================================== */
+        :root {
+            --bg-color: #030305;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent-1: #6366f1; /* Indigo */
+            --accent-2: #a855f7; /* Purple */
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --glass-hover: rgba(255, 255, 255, 0.04);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #222227; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-1); }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; }
+        p { color: var(--text-secondary); line-height: 1.7; font-weight: 400; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-text-accent {
+            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ==================================================
+           AMBIENT BACKGROUND & EFFECTS
+           ================================================== */
+        .ambient-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.25;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: var(--accent-1); }
+        .blob-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: var(--accent-2); animation-delay: -5s; }
+        .blob-3 { top: 40%; left: 50%; width: 40vw; height: 40vw; background: #06b6d4; opacity: 0.15; animation-delay: -10s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(8%, 8%) scale(1.05); }
+        }
+
+        /* Refined, Minimal Cursor Glow */
+        .cursor-glow {
+            position: fixed;
+            width: 200px; 
+            height: 200px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, rgba(168, 85, 247, 0.02) 40%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            transition: opacity 0.4s ease;
+        }
+
+        @media (max-width: 991px) {
+            .cursor-glow { display: none; }
+        }
+
+        /* Loading Screen */
+        #loader {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: var(--bg-color);
+            z-index: 10000;
+            display: flex; justify-content: center; align-items: center;
+            transition: opacity 0.6s ease;
+        }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 2px solid var(--glass-border);
+            border-top-color: var(--accent-1);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* ==================================================
+           UI COMPONENTS (GLASSMORPHISM & BUTTONS)
+           ================================================== */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .glass-panel:hover {
+            background: var(--glass-hover);
+            border-color: rgba(255,255,255,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            color: white;
+            border: none;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+        }
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.4);
+            color: white;
+        }
+
+        .btn-outline-glass {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-outline-glass:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(255,255,255,0.4);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* ==================================================
+           NAVBAR
+           ================================================== */
+        .navbar {
+            padding: 24px 0;
+            transition: all 0.4s ease;
+            position: fixed;
+            top: 0; z-index: 1000;
+        }
+        .navbar.scrolled {
+            padding: 16px 0;
+            background: rgba(3, 3, 5, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .navbar-brand { font-weight: 800; font-size: 1.4rem; letter-spacing: 2px; color: white !important; }
+        .nav-link { color: var(--text-secondary) !important; font-weight: 500; font-size: 0.9rem; margin: 0 12px; transition: color 0.3s; }
+        .nav-link:hover, .nav-link.active { color: white !important; }
+
+        /* ==================================================
+           SECTIONS
+           ================================================== */
+        section { padding: 140px 0; position: relative; }
+
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+        .hero-title { font-size: clamp(2.8rem, 5.5vw, 4.8rem); line-height: 1.15; margin-bottom: 28px; font-weight: 800; }
+        .hero-subtitle { font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 620px; margin-bottom: 44px; color: #9ca3af; }
+
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.45s; }
+
+        /* About Section */
+        .feature-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            display: flex; justify-content: center; align-items: center;
+            font-size: 1.3rem;
+            color: var(--accent-1);
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+        .glass-panel:hover .feature-icon {
+            color: white;
+            background: var(--accent-1);
+            border-color: var(--accent-1);
+        }
+
+        /* ==================================================
+           PREMIUM REFINED SHOWCASE CARD
+           ================================================== */
+        .browser-mockup {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            background: rgba(10, 10, 15, 0.4);
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .browser-mockup::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent, rgba(255,255,255,0.03));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            transition: all 0.6s ease;
+        }
+
+        .browser-header {
+            display: flex; gap: 8px; padding: 16px 20px;
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; opacity: 0.7; }
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        
+        .portfolio-preview {
+            height: 260px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background: #0d0d11;
+        }
+        
+        .preview-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        /* Premium Hover Effects */
+        .browser-mockup:hover {
+            transform: translateY(-8px);
+            border-color: rgba(168, 85, 247, 0.25);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.15);
+        }
+        
+        .browser-mockup:hover .preview-img {
+            transform: scale(1.05);
+        }
+        
+        .browser-mockup:hover::before {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(168, 85, 247, 0.4));
+        }
+        
+        .portfolio-info { padding: 36px; background: rgba(5, 5, 8, 0.4); }
+        .portfolio-role { color: var(--accent-1); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;}
+        .portfolio-info h3 { font-size: 1.75rem; margin-bottom: 16px; font-weight: 700; }
+
+        /* Form */
+        .form-control {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 16px 20px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .form-control:focus {
+            background: rgba(255,255,255,0.04);
+            border-color: var(--accent-1);
+            color: white;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.1);
+        }
+        select.form-control {
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            background: #020204;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top w-100" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/" aria-label="Orygyns Home">ORYGYNS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1); border: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#showcase">Portfolios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-10 offset-lg-1 text-center">
+                    <h1 class="hero-title reveal gradient-text">Premium E-Portfolios That Define Your Identity</h1>
+                    <p class="hero-subtitle reveal delay-1 mx-auto">Professionally crafted digital portfolios designed for students, professionals, creators, and future leaders.</p>
+                    <div class="reveal delay-2 d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="#showcase" class="btn-premium" aria-label="View our portfolio showcase">View Portfolios</a>
+                        <a href="#contact" class="btn-outline-glass" aria-label="Contact us to get your portfolio designed">Get Yours Designed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="text-center mb-5 pb-3 reveal">
+                <h6 class="gradient-text-accent text-uppercase fw-bold letter-spacing-1 mb-2" style="font-size: 0.85rem; letter-spacing: 2px;">Digital Presence</h6>
+                <h2 class="display-5 fw-bold mb-3">Why E-Portfolios Matter</h2>
+                <p class="mx-auto" style="max-width: 620px;">A modern digital portfolio is no longer optional. It's your professional identity, showcasing your true potential beyond a standard paper resume.</p>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-4 reveal">
+                    <div class="glass-panel h-100">
+                        <div class="feature-icon"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i></div>
+                        <h4 class="mb-3 text-white fw-semibold h5">Resume Showcase</h4>
+                        <p class="mb-0 text-sm">Transform static text into an interactive journey detailing your career and education highlights seamlessly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-1">
+                    <div class="glass-panel h-100">
+                        <div class="feature-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
+                        <h4 class="mb-3 text-white fw-semibold h5">Certificates & Skills</h4>
+                        <p class="mb-0 text-sm">Visually validate your core competence expertise with beautiful modules built for modern skill arrays.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-2">
+                    <div class="glass-panel h-100">
+                        <div class="feature-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+                        <h4 class="mb-3 text-white fw-semibold h5">Projects & Achievements</h4>
+                        <p class="mb-0 text-sm">Display your finest milestones and live work directly inside smooth case-study sections built to impress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" style="background: rgba(2,2,4,0.4); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="text-center mb-5 pb-4 reveal">
+                <h6 class="gradient-text-accent text-uppercase fw-bold mb-2" style="font-size: 0.85rem; letter-spacing: 2px;">Our Work</h6>
+                <h2 class="display-5 fw-bold mb-3">Live Portfolio Showcase</h2>
+                <p class="mx-auto" style="max-width: 620px;">Explore our meticulously crafted premium designs tailored specifically to elevate professional identities.</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-6 reveal">
+                    <div class="browser-mockup d-flex flex-column h-100">
+                        <div class="browser-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="portfolio-preview">
+                            <img src="aadhi.png" class="preview-img" alt="Rajan Aathreya Professional E-Portfolio Website Preview">
+                        </div>
+                        <div class="portfolio-info flex-grow-1 d-flex flex-column justify-content-between">
+                            <div>
+                                <p class="portfolio-role">Technology, Leadership & Digital Solutions</p>
+                                <h3>Rajan Aathreya</h3>
+                                <p class="mb-4">A modern professional portfolio showcasing technical skills, leadership experience, achievements, projects, and academic excellence.</p>
+                            </div>
+                            <div>
+                                <a href="https://aadhi9307.github.io/rajanaathreya.github.io/" target="_blank" rel="noopener noreferrer" class="btn-outline-glass w-100 text-center py-3" aria-label="View Rajan Aathreya Portfolio (opens in a new tab)">View Portfolio <i class="fa-solid fa-arrow-up-right-from-square ms-2" style="font-size: 0.8rem;" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal delay-1">
+                    <div class="browser-mockup d-flex flex-column h-100">
+                        <div class="browser-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="portfolio-preview">
+                            <img src="saha.png" class="preview-img" alt="Devi Sahasra Creative E-Portfolio Website Preview">
+                        </div>
+                        <div class="portfolio-info flex-grow-1 d-flex flex-column justify-content-between">
+                            <div>
+                                <p class="portfolio-role">Creative Portfolio & Academic Showcase</p>
+                                <h3>Devi Sahasra</h3>
+                                <p class="mb-4">A clean and elegant personal E-Portfolio highlighting academic achievements, creativity, skills, and future aspirations.</p>
+                            </div>
+                            <div>
+                                <a href="https://devisahasraa.github.io/Devi-Sahasra/" target="_blank" rel="noopener noreferrer" class="btn-outline-glass w-100 text-center py-3" aria-label="View Devi Sahasra Portfolio (opens in a new tab)">View Portfolio <i class="fa-solid fa-arrow-up-right-from-square ms-2" style="font-size: 0.8rem;" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 reveal">
+                    <h2 class="display-5 fw-bold mb-4">Unlock Your True Potential</h2>
+                    <p class="mb-4">An optimized digital portfolio acts as a lifelong competitive edge for corporate placements, executive roles, and premium branding opportunities.</p>
+                    <ul class="list-unstyled pe-lg-4">
+                        <li class="mb-3 d-flex align-items-center text-white"><i class="fa-solid fa-circle-check text-white opacity-50 me-3" aria-hidden="true"></i> Better placement opportunities</li>
+                        <li class="mb-3 d-flex align-items-center text-white"><i class="fa-solid fa-circle-check text-white opacity-50 me-3" aria-hidden="true"></i> Premium professional identity</li>
+                        <li class="mb-3 d-flex align-items-center text-white"><i class="fa-solid fa-circle-check text-white opacity-50 me-3" aria-hidden="true"></i> Global accessibility & seamless sharing</li>
+                        <li class="mb-3 d-flex align-items-center text-white"><i class="fa-solid fa-circle-check text-white opacity-50 me-3" aria-hidden="true"></i> Established industry credibility</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="row g-4">
+                        <div class="col-sm-6 reveal delay-1">
+                            <div class="glass-panel p-4 text-center">
+                                <i class="fa-solid fa-earth-americas fa-xl mb-3 gradient-text-accent" aria-hidden="true"></i>
+                                <h5 class="mb-0 text-white fw-medium h6">Global Reach</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 reveal delay-2">
+                            <div class="glass-panel p-4 text-center">
+                                <i class="fa-solid fa-rocket fa-xl mb-3 gradient-text-accent" aria-hidden="true"></i>
+                                <h5 class="mb-0 text-white fw-medium h6">Future-Ready</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 reveal delay-3">
+                            <div class="glass-panel p-4 text-center">
+                                <i class="fa-solid fa-chart-line fa-xl mb-3 gradient-text-accent" aria-hidden="true"></i>
+                                <h5 class="mb-0 text-white fw-medium h6">Career Growth</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 reveal delay-1">
+                            <div class="glass-panel p-4 text-center">
+                                <i class="fa-solid fa-id-badge fa-xl mb-3 gradient-text-accent" aria-hidden="true"></i>
+                                <h5 class="mb-0 text-white fw-medium h6">Brand Identity</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" style="background: rgba(255,255,255,0.015); border-top: 1px solid var(--glass-border);">
+        <div class="container text-center">
+            <h2 class="display-6 fw-bold mb-5 reveal">Why Choose ORYGYNS?</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6 reveal">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fa-solid fa-pen-nib mb-3 text-white opacity-75 fs-4" aria-hidden="true"></i>
+                        <h5 class="h6 text-white mb-2">Custom Layouts</h5>
+                        <p class="text-sm mb-0 style-desc">Tailored to reflect your unique trajectory and skill structure.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal delay-1">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fa-solid fa-mobile-screen mb-3 text-white opacity-75 fs-4" aria-hidden="true"></i>
+                        <h5 class="h6 text-white mb-2">Responsive Design</h5>
+                        <p class="text-sm mb-0 style-desc">Flawless responsive architecture built for every display scale.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal delay-2">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fa-solid fa-bolt mb-3 text-white opacity-75 fs-4" aria-hidden="true"></i>
+                        <h5 class="h6 text-white mb-2">Fast Architecture</h5>
+                        <p class="text-sm mb-0 style-desc">Highly optimized asset loading pipelines and zero friction.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal delay-3">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fa-solid fa-wand-magic-sparkles mb-3 text-white opacity-75 fs-4" aria-hidden="true"></i>
+                        <h5 class="h6 text-white mb-2">Premium UI/UX</h5>
+                        <p class="text-sm mb-0 style-desc">Cinematic spacing, micro-interactions, and premium aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-panel reveal">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold mb-2">Start Your Journey</h2>
+                            <p>Contact us to secure your custom high-end digital architecture today.</p>
+                        </div>
+                        
+                        <form id="contactForm" onsubmit="sendEmail(event)">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label text-sm text-secondary small fw-medium">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label text-sm text-secondary small fw-medium">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required placeholder="john@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="purpose" class="form-label text-sm text-secondary small fw-medium">Purpose</label>
+                                    <select class="form-control" id="purpose" required>
+                                        <option value="" disabled selected>Select an option...</option>
+                                        <option value="Student Portfolio">Student / Graduate Portfolio</option>
+                                        <option value="Professional Portfolio">Professional Career Portfolio</option>
+                                        <option value="Creative Portfolio">Creative / Freelance Portfolio</option>
+                                        <option value="Other">Other Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label text-sm text-secondary small fw-medium">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required placeholder="Tell us about your custom design requirements..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn-premium w-100 py-3" aria-label="Send Request via Email">Send Request via Email</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h4 class="fw-bold mb-3 navbar-brand">ORYGYNS</h4>
+            <p class="small text-secondary mb-0">© 2026 ORYGYNS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init({
+            publicKey: "K3bq4FKvJPt3ORTm6"
+        });
+
+        // 1. Remove Loader smoothly
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 600);
+        });
+
+        // 2. Refined, Fluid Cursor Glow Tracking
+        const cursor = document.getElementById('cursorGlow');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            // Smooth easing interaction
+            let dx = mouseX - cursorX;
+            let dy = mouseY - cursorY;
+            cursorX += dx * 0.1;
+            cursorY += dy * 0.1;
+            
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // 3. Navbar Scroll Mechanics & High Performance Intersection Highlights
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 180) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 4. Smooth Intersection Observer Execution
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+
+        // 5. Secure Form Redirection Assembly - EmailJS Integration
+        function sendEmail(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Sending...";
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const purpose = document.getElementById('purpose').value;
+            const message = document.getElementById('message').value;
+            
+            const templateParams = {
+                name: name,
+                email: email,
+                purpose: purpose,
+                message: message
+            };
+            
+            emailjs.send(
+                "aadhi_9307",
+                "template_7ukf3kw",
+                templateParams
+            ).then(function() {
+                alert("Inquiry submitted successfully. We will contact you shortly.");
+                form.reset();
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }).catch(function(error) {
+                console.error(error);
+                alert("Failed to submit inquiry. Please try again.");
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>

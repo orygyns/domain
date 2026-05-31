@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>C++ Programming Course | Orygyns Coding Platform</title>
+  <meta name="description" content="Master C++ programming from basics to Object-Oriented Programming (OOP) and the Standard Template Library (STL). Learn classes, vectors, arrays, strings, and memory management with Orygyns.">
+  <meta name="keywords" content="C++ Course, Learn C++, C++ Programming, OOP in C++, C++ Vectors, C++ Classes, C++ STL, Orygyns Coding Platform, Programming Education">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/cpp.html">
+
+  <meta property="og:title" content="C++ Programming Course | Orygyns Coding Platform">
+  <meta property="og:description" content="Master C++ programming from basics to Object-Oriented Programming (OOP) and the Standard Template Library (STL). Learn classes, vectors, arrays, strings, and memory management with Orygyns.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/cpp.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="C++ Programming Course | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Master C++ programming from basics to Object-Oriented Programming (OOP) and the Standard Template Library (STL). Learn classes, vectors, arrays, strings, and memory management with Orygyns.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/cpp.html#webpage",
+        "url": "https://orygyns.in/cpp.html",
+        "name": "C++ Programming Course | Orygyns",
+        "description": "Master C++ programming from basics to Object-Oriented Programming (OOP) and the Standard Template Library (STL)."
+      },
+      {
+        "@type": "Course",
+        "name": "Complete C++ Course",
+        "description": "Master C++ from basics to Object-Oriented Programming, and explore Vectors and STL.",
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        },
+        "about": [
+          {"@type": "Thing", "name": "C++ Programming"},
+          {"@type": "Thing", "name": "Object-Oriented Programming"},
+          {"@type": "Thing", "name": "C++ Vectors"},
+          {"@type": "Thing", "name": "Constructors and Destructors"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #121619;
+      --surface: #1e2429;
+      --text-main: #f5f6fa;
+      --text-muted: #a4b0be;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(18, 22, 25, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --border-color: #2f363d;
+      --code-bg: #111417;
+      --practice-bg: rgba(22, 163, 74, 0.08);
+      --code-text: #50fa7b; /* Matrix green/C++ vibe */
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 246, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f8f9fa;
+      --surface: #ffffff;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --border-color: #e1e4e8;
+      --code-bg: #f1f3f5;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --code-text: #0984e3;
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2845, 52, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 80px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar overrides --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 1px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.2rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--surface); border: 2px solid var(--border-color); color: var(--text-main); font-size: 1.2rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 42px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Content Area --- */
+    main { flex: 1; padding: 40px 0 60px; max-width: 900px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.5s ease; }
+    .page-header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 800; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); }
+
+    .breadcrumb-custom { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; font-weight: 600; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); }
+
+    /* --- Lesson Cards --- */
+    .card-custom { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; animation: fadeInUp 0.6s ease; }
+    .card-custom:hover { transform: translateY(-4px); }
+    .card-custom.highlight-card { border: 2px solid var(--primary-green); }
+    
+    .card-custom h2 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-green); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; font-weight: 700; }
+    .card-custom h3 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem 0; color: var(--text-main); font-weight: 600; }
+    .card-custom p { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-muted); }
+    .card-custom ul { padding-left: 20px; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .card-custom li { margin-bottom: 0.5rem; }
+    .card-custom strong { color: var(--text-main); }
+
+    /* --- Code Blocks (Strictly Formatted) --- */
+    .code-block { background-color: var(--code-bg); padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; overflow-x: auto; border: 1px solid var(--border-color); margin: 1.5rem 0; line-height: 1.8; color: var(--text-main); tab-size: 4; }
+    .code-block code { color: var(--code-text); }
+
+    /* --- Interactive Elements --- */
+    .practice-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .practice-box h4 { color: var(--primary-green); margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 700; }
+    .practice-box p { color: var(--text-main); margin: 0; font-weight: 500; }
+
+    /* --- Action Box Alignment Rules --- */
+    .action-box { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 1.5rem; }
+    .success-text { color: var(--primary-green) !important; font-weight: 600; margin: 0 !important; }
+
+    /* --- Buttons --- */
+    .btn-main { display: inline-block; padding: 10px 24px; background-color: transparent; color: var(--primary-green); border: 2px solid var(--primary-green); font-size: 1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .btn-main:hover { background-color: var(--primary-green); color: #fff; transform: translateY(-2px); }
+
+    .srm-btn { background: linear-gradient(135deg, var(--primary-green), var(--primary-dark)); color: white !important; padding: 16px 22px; border-radius: 18px; font-size: 1rem; font-weight: 700; border: none; cursor: pointer; box-shadow: 0 10px 30px rgba(22, 163, 74, 0.35), 0 0 12px rgba(22, 163, 74, 0.2); transition: all 0.3s ease; text-decoration: none; display: inline-block; margin-top: 1rem; }
+    .srm-btn:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 16px 35px rgba(22, 163, 74, 0.45), 0 0 18px rgba(22, 163, 74, 0.3); }
+
+    .final-section { text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 2px dashed var(--border-color); animation: fadeInUp 0.8s ease; }
+    .final-section .btn-main { background-color: var(--primary-green); color: #ffffff; font-size: 1.2rem; padding: 16px 40px; box-shadow: 0 6px 0 var(--primary-dark); border: none; border-radius: 30px; }
+    .final-section .btn-main:hover { background-color: #15b850; color: #fff; }
+    .final-section .btn-main:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--primary-dark); }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 4rem 2rem 2rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; transition: color 0.2s ease; }
+    .footer-nav a:hover { color: var(--primary-green); }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* --- Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) { 
+      .page-header h1 { font-size: 2.2rem; } 
+      .card-custom { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Logo">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumb">
+      <a href="learn.html">⬅️ Back to Courses</a> <span>/</span> <span>C++ Course</span>
+    </div>
+
+    <div class="page-header">
+      <h1>Complete C++ Course 🚀</h1>
+      <p>Master C++ from basics to advanced Object-Oriented Programming & STL</p>
+    </div>
+
+    <section class="card-custom" aria-labelledby="level-1">
+      <h2 id="level-1">Level 1: Introduction to C++</h2>
+      <p><strong>What is it?</strong> C++ is a powerful, high-performance programming language that adds Object-Oriented features to the C language.</p>
+      
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li><strong>High Performance:</strong> Used for game engines, operating systems, and high-frequency trading.</li>
+        <li><strong>Object-Oriented:</strong> Supports classes, inheritance, polymorphism, and encapsulation.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Did you know? Unreal Engine, a leading game development engine, is built primarily on C++.</p>
+      </div>
+
+      <div class="action-box">
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-2">
+      <h2 id="level-2">Level 2: Basic Program Structure</h2>
+      <p><strong>What is it?</strong> A simple C++ program structure with basic input/output functionality using the standard library.</p>
+
+<pre class="code-block" tabindex="0"><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Hello World";
+    return 0;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><code>#include &lt;iostream&gt;</code>: Includes the standard input-output stream library.</li>
+        <li><code>using namespace std;</code>: Avoids needing to prefix standard functions with <code>std::</code>.</li>
+        <li><code>cout</code>: Outputs text to the console.</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Change "Hello World" to your own name and run the code in the compiler.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You wrote your first C++ program!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-3">
+      <h2 id="level-3">Level 3: Variables & Data Types</h2>
+      <p><strong>What is it?</strong> Variables are used to store data in memory. You must declare the data type before using a variable.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int age = 18;
+float pi = 3.14f;
+char grade = 'A';
+string name = "Rajan";
+
+cout &lt;&lt; age &lt;&lt; " " &lt;&lt; name;
+</code></pre>
+
+      <p><strong>Explanation:</strong> <code>int</code> stores whole numbers. <code>float</code> stores decimals. <code>char</code> stores single characters.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create variables for your graduation year and your target percentage.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-4">
+      <h2 id="level-4">Level 4: Operators</h2>
+      <p><strong>What is it?</strong> Symbols used to perform arithmetic or logic on variables.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int x = 10;
+int y = 5;
+
+int result = x + y;
+cout &lt;&lt; result;
+</code></pre>
+
+      <p><strong>Explanation:</strong> C++ supports standard math operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code> (modulo/remainder).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Modify the code to calculate <code>(10 + 5) * 2</code> and print the result.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-5">
+      <h2 id="level-5">Level 5: Conditionals</h2>
+      <p><strong>What is it?</strong> Logic that allows the program to make decisions based on specific conditions.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int x = 10;
+
+if (x &gt; 0)
+{
+    cout &lt;&lt; "Positive";
+}
+else
+{
+    cout &lt;&lt; "Negative or Zero";
+}
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Add an <code>else if</code> block to explicitly check if <code>x == 0</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-6">
+      <h2 id="level-6">Level 6: Loops</h2>
+      <p><strong>What is it?</strong> Loops execute a block of code repeatedly as long as a condition remains true.</p>
+
+<pre class="code-block" tabindex="0"><code>
+for (int i = 0; i &lt; 5; i++)
+{
+    cout &lt;&lt; i &lt;&lt; endl;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> A <code>for</code> loop is ideal when you know exactly how many times you want to iterate.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Change the loop to count from 10 down to 1.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-7">
+      <h2 id="level-7">Level 7: Functions & Overloading</h2>
+      <p><strong>What is it?</strong> Functions isolate reusable logic. Overloading allows multiple functions to share the same name with different parameters.</p>
+
+<pre class="code-block" tabindex="0"><code>
+int add(int a, int b) {
+    return a + b;
+}
+
+float add(float a, float b) {
+    return a + b;
+}
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Write a <code>main()</code> function to call your <code>add</code> functions with integers and floats to test them.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-8">
+      <h2 id="level-8">Level 8: Arrays & Strings</h2>
+      <p><strong>What is it?</strong> Arrays hold multiple values of the same type. Strings hold text (arrays of characters).</p>
+
+<pre class="code-block" tabindex="0"><code>
+int arr[3] = {1, 2, 3};
+
+for (int i = 0; i &lt; 3; i++)
+{
+    cout &lt;&lt; arr[i];
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> You can access array elements using their index, starting from 0. In C++, you can also use <code>#include &lt;string&gt;</code> for advanced string manipulation.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a string variable with your name and print its length using <code>name.length()</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom highlight-card" aria-labelledby="level-9">
+      <h2 id="level-9">Level 9: Object-Oriented Programming (OOP)</h2>
+      <p><strong>What is OOP?</strong> Programming using objects and classes to model real-world behavior.</p>
+      
+      <ul>
+        <li><strong>Encapsulation:</strong> Hiding internal data state.</li>
+        <li><strong>Abstraction:</strong> Exposing only essential features.</li>
+        <li><strong>Inheritance:</strong> Reusing properties of an existing class.</li>
+        <li><strong>Polymorphism:</strong> One action occurring in different ways (like method overloading).</li>
+      </ul>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Think of real-world objects (like a Bank Account) and list what properties (data) and actions (methods) it would have.</p>
+      </div>
+
+      <div class="action-box">
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-10">
+      <h2 id="level-10">Level 10: Classes & Objects</h2>
+      <p><strong>What is it?</strong> A Class is a blueprint. An Object is an instance of that class.</p>
+
+<pre class="code-block" tabindex="0"><code>
+class Car
+{
+public:
+    string brand;
+    void show()
+    {
+        cout &lt;&lt; brand;
+    }
+};
+
+int main()
+{
+    Car c1;
+    c1.brand = "BMW";
+    c1.show();
+    return 0;
+}
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a second Car object named <code>c2</code> and give it the brand "Audi". Call <code>c2.show()</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-11">
+      <h2 id="level-11">Level 11: Constructors & Destructors</h2>
+      <p><strong>What is it?</strong> Special functions that run automatically when an object is created (Constructor) or destroyed (Destructor).</p>
+
+<pre class="code-block" tabindex="0"><code>
+class Car
+{
+public:
+    Car()
+    {
+        cout &lt;&lt; "Created";
+    }
+    ~Car()
+    {
+        cout &lt;&lt; "Destroyed";
+    }
+};
+</code></pre>
+
+      <p><strong>Explanation:</strong> The Constructor shares the exact same name as the class. The Destructor also shares the name, but has a tilde <code>~</code> in front.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Instantiate an object of Car inside <code>main()</code> and watch both messages print automatically.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-12">
+      <h2 id="level-12">Level 12: STL (Vectors)</h2>
+      <p><strong>What is it?</strong> The Standard Template Library (STL) provides powerful pre-built data structures. Vectors are dynamic arrays.</p>
+
+<pre class="code-block" tabindex="0"><code>
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    vector&lt;int&gt; v;
+    v.push_back(10);
+    cout &lt;&lt; v[0];
+    return 0;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> A <code>vector</code> is like an array, but it can automatically shrink and grow in size. <code>push_back</code> adds an element to the end.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Add 5 elements to a vector using a loop, then print them all out.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-13">
+      <h2 id="level-13">Level 13: Exception Handling</h2>
+      <p><strong>What is it?</strong> Safely managing runtime errors so the program doesn't crash abruptly.</p>
+
+<pre class="code-block" tabindex="0"><code>
+try
+{
+    int age = 15;
+    if (age &lt; 18)
+    {
+        throw "Access Denied";
+    }
+}
+catch (const char* msg)
+{
+    cout &lt;&lt; msg;
+}
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Change age to 20 and see that the error is no longer thrown.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="level-14">
+      <h2 id="level-14">Level 14: Practical Programs</h2>
+      <p><strong>What is it?</strong> Bringing concepts together to build real logic scripts.</p>
+
+      <h3>1. Sum of Array Elements</h3>
+<pre class="code-block" tabindex="0"><code>
+int arr[3] = {10, 20, 30};
+int sum = 0;
+
+for (int i = 0; i &lt; 3; i++)
+{
+    sum = sum + arr[i];
+}
+
+cout &lt;&lt; sum;
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Combine these logic snippets inside a <code>main()</code> function to run them completely.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <div class="text-center" style="margin-top: 3rem; margin-bottom: 2rem;">
+      <h3 style="color: var(--text-main); font-weight: 700; margin-bottom: 1rem;">Academic SRM Resources Available</h3>
+      <a href="coding.html#srm" class="srm-btn" aria-label="Access SRM Academic Resources">Access SRM Resources 📚</a>
+    </div>
+
+    <div class="final-section">
+      <h2 style="margin-bottom: 1.5rem; color: var(--text-main);">Ready to master C++?</h2>
+      <a href="CPPquiz.html" class="btn-main" aria-label="Start C++ Quiz">Start C++ Quiz 🚀</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    updateIcon(htmlElement.getAttribute('data-theme'));
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      updateIcon(newTheme);
+    });
+  </script>
+
+</body>
+</html>

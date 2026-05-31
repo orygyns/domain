@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Custom Project Development & Technical Solutions | Orygyns</title>
+    <meta name="description" content="Orygyns provides project development, technical consulting, collaboration, frontend development, UI/UX implementation, web solutions, and custom technology services for students, startups, businesses, and organizations.">
+    <meta name="keywords" content="Project Development, Custom Software Development, Technical Solutions, Frontend Development, UI UX Development, Website Development, Project Collaboration, Student Projects, Startup Development, Orygyns">
+    <meta name="author" content="Rajan Aathreya">
+    <meta name="theme-color" content="#08080c">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://orygyns.in/prodev.html">
+
+    <meta property="og:title" content="Custom Project Development & Technical Solutions | Orygyns">
+    <meta property="og:description" content="Project development, collaboration, frontend engineering, UI/UX implementation, and custom digital solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orygyns.in/prodev.html">
+    <meta property="og:image" content="https://orygyns.in/theme.png">
+    <meta property="og:site_name" content="Orygyns">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Project Development & Technical Solutions | Orygyns">
+    <meta name="twitter:description" content="Project development, collaboration, frontend engineering, UI/UX implementation, and custom digital solutions.">
+    <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Project Development & Technical Solutions",
+          "provider": {
+            "@type": "Organization",
+            "name": "Orygyns Technologies and Consultancy"
+          },
+          "description": "Custom project development, frontend engineering, technical consulting, collaboration, UI/UX implementation, and digital solutions."
+        },
+        {
+          "@type": "Organization",
+          "name": "Orygyns Technologies and Consultancy",
+          "alternateName": "Orygyns",
+          "founder": {
+            "@type": "Person",
+            "name": "Rajan Aathreya"
+          },
+          "url": "https://orygyns.in"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Project Development & Collaboration",
+          "url": "https://orygyns.in/prodev.html",
+          "description": "Custom project execution, collaboration, frontend development, and technical consulting services."
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* ==================================================
+           DESIGN VARIABLES & RESET
+           ================================================== */
+        :root {
+            --bg-dark: #08080c;
+            --bg-card: rgba(255, 255, 255, 0.015);
+            --border-color: rgba(255, 255, 255, 0.04);
+            --border-hover: rgba(255, 255, 255, 0.12);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #6366f1;
+            --section-padding: 100px 0;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+        /* General Utilities */
+        .text-muted-custom {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* ==================================================
+           COMPONENTS & INTERFACE STYLING
+           ================================================== */
+        /* Minimalist Glass Card */
+        .minimal-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px 30px;
+            height: 100%;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .minimal-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-hover);
+        }
+
+        /* Subtle Functional Icons */
+        .card-icon {
+            font-size: 20px;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* Standardized Minimal Buttons */
+        .btn-clean-primary {
+            background: #fff;
+            color: #000;
+            border: 1px solid #fff;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-clean-primary:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        .btn-clean-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-clean-secondary:hover {
+            background: rgba(255, 255, 255, 0.02);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Controlled Micro-Animation Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================================================
+           SECTIONS LAYOUT MAP
+           ================================================== */
+        /* Transparent Navigation Bar */
+        .navbar {
+            background: transparent;
+            padding: 24px 0;
+            transition: background-color 0.3s, border-color 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(8, 8, 12, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.05em;
+            color: #fff !important;
+        }
+        .nav-link {
+            color: var(--text-secondary) !important;
+            font-size: 13px;
+            font-weight: 400;
+            margin-left: 24px;
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #fff !important;
+        }
+
+        /* Hero Container Architecture */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .hero-grid {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+        }
+        .hero-ambient-blur {
+            position: absolute;
+            top: 25%; left: 35%; width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+            filter: blur(40px);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            color: var(--text-secondary);
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        /* Projects Presentation Deck */
+        .browser-mockup {
+            background: #0d0d12;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.3s ease;
+        }
+        .browser-mockup:hover {
+            border-color: var(--border-hover);
+        }
+        .browser-topbar {
+            background: #12121a;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .browser-circles { display: flex; gap: 6px; }
+        .browser-circle { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+        .browser-address {
+            margin-left: 16px;
+            font-size: 11px;
+            font-family: monospace;
+            color: rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.02);
+            padding: 2px 14px;
+            border-radius: 4px;
+        }
+        .browser-display {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #101016 0%, #08080c 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .browser-display i { font-size: 24px; color: rgba(255,255,255,0.15); }
+        .project-meta { padding: 28px 24px; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-meta h5 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+        .project-meta p { font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.5; }
+
+        /* Minimal Technical Contact Module */
+        .form-control {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            padding: 14px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.02);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: none;
+            color: #fff;
+        }
+        .form-control::placeholder { color: rgba(255, 255, 255, 0.2); }
+        .form-label { font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px; }
+
+        /* Simple Footer Structure */
+        footer { border-top: 1px solid var(--border-color); padding: 50px 0; background: #050508; }
+
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="120">
+
+    <div id="loader" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#08080c; z-index:9999; display:flex; justify-content:center; align-items:center; transition: opacity 0.4s ease, visibility 0.4s;">
+        <div class="spinner"></div>
+    </div>
+
+    <nav id="navbar" class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/" aria-label="Orygyns Home">ORYGYNS</a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white-50" style="font-size: 1.1rem;" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-ambient-blur"></div>
+        </div>
+        <div class="container text-center hero-content reveal">
+            <h1>Collaborative Development &<br>Project Execution</h1>
+            <p>Working on real projects, collaborations, and technical solutions with clean execution and modern design.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#contact" class="btn-clean-primary" aria-label="Start a Project">Start a Project</a>
+                <a href="#about" class="btn-clean-secondary" aria-label="Collaborate">Collaborate</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="padding: var(--section-padding); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="row g-4 align-items-center mb-5 reveal">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Built Through Collaboration</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-muted-custom mb-0">We are entirely open to collaborating with developers, designers, creators, and teams. From contributing to ongoing production systems to supporting frontend execution and handling practical technical tasks, our goal is clear development execution that elevates early-stage digital products.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="minimal-card">
+                        <i class="fa-solid fa-git-pull-request card-icon" aria-hidden="true"></i>
+                        <h5 class="h6 mb-2">Project Contributions</h5>
+                        <p class="text-muted-custom fs-7 mb-0">Direct support for ongoing products, processing tasks, and stable component integration.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="minimal-card">
+                        <i class="fa-solid fa-bezier-curve card-icon" aria-hidden="true"></i>
+                        <h5 class="h6 mb-2">UI/UX Development</h5>
+                        <p class="text-muted-custom fs-7 mb-0">Converting minimalist visual systems and design files into functional layout parameters.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="minimal-card">
+                        <i class="fa-solid fa-terminal card-icon" aria-hidden="true"></i>
+                        <h5 class="h6 mb-2">Frontend Engineering</h5>
+                        <p class="text-muted-custom fs-7 mb-0">Writing responsive, performance-tuned web spaces using clean semantic principles.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="minimal-card">
+                        <i class="fa-solid fa-users card-icon" aria-hidden="true"></i>
+                        <h5 class="h6 mb-2">Team Collaboration</h5>
+                        <p class="text-muted-custom fs-7 mb-0">Interfacing alongside independent engineers and startups to balance developmental workflow loads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="padding: var(--section-padding); background: #050508; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="row mb-5 reveal">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Capabilities</h2>
+                    <p class="text-muted-custom mb-0" style="max-width: 500px; margin: 0 auto;">A balance of technical implementation and architectural clarity.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="p-2">
+                        <i class="fa-solid fa-code text-white-50 mb-3" style="font-size:16px;" aria-hidden="true"></i>
+                        <h6 class="mb-2 fw-medium">Web Development</h6>
+                        <p class="text-muted-custom fs-7 mb-0">Clean components and semantic layouts tailored explicitly around scalable platform deployments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="p-2">
+                        <i class="fa-solid fa-compass-drafting text-white-50 mb-3" style="font-size:16px;" aria-hidden="true"></i>
+                        <h6 class="mb-2 fw-medium">UI/UX Design</h6>
+                        <p class="text-muted-custom fs-7 mb-0">High-fidelity typography scales and minimalist layout systems focusing on spatial clarity.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="p-2">
+                        <i class="fa-solid fa-layer-group text-white-50 mb-3" style="font-size:16px;" aria-hidden="true"></i>
+                        <h6 class="mb-2 fw-medium">Frontend Systems</h6>
+                        <p class="text-muted-custom fs-7 mb-0">Optimized client-side rendering passing all critical cross-device stability milestones.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="p-2">
+                        <i class="fa-solid fa-handshake text-white-50 mb-3" style="font-size:16px;" aria-hidden="true"></i>
+                        <h6 class="mb-2 fw-medium">Project Collaboration</h6>
+                        <p class="text-muted-custom fs-7 mb-0">Synchronous development methodologies built to interface with your current tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="row mb-5 reveal">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Project Deliveries</h2>
+                    <p class="text-muted-custom mb-0" style="max-width: 500px; margin: 0 auto;">Real setups executed with standard clean production architectures.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="browser-mockup">
+                        <div class="browser-topbar">
+                            <div class="browser-circles"><span class="browser-circle"></span><span class="browser-circle"></span><span class="browser-circle"></span></div>
+                            <div class="browser-address">vyasagroup.com</div>
+                        </div>
+                        <div class="browser-display"><i class="fa-solid fa-landmark" aria-hidden="true"></i></div>
+                        <div class="project-meta">
+                            <h5>Vyasa Group</h5>
+                            <p class="text-muted-custom fs-7 mb-4">Corporate presence framework mapped specifically for clean entity communication and structured information density.</p>
+                            <a href="https://vyasagroup.com" target="_blank" rel="noopener noreferrer" class="btn-clean-secondary text-center w-100 mt-auto" aria-label="Visit Vyasa Group Website">Visit Site <i class="fa-solid fa-arrow-up-right-from-square ms-1" style="font-size:10px;" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="browser-mockup">
+                        <div class="browser-topbar">
+                            <div class="browser-circles"><span class="browser-circle"></span><span class="browser-circle"></span><span class="browser-circle"></span></div>
+                            <div class="browser-address">brahminbazaar.com</div>
+                        </div>
+                        <div class="browser-display"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
+                        <div class="project-meta">
+                            <h5>Brahmin Bazaar</h5>
+                            <p class="text-muted-custom fs-7 mb-4">Digital product application layout managing secure customer navigation pathways and catalog state elements.</p>
+                            <a href="https://brahminbazaar.com" target="_blank" rel="noopener noreferrer" class="btn-clean-secondary text-center w-100 mt-auto" aria-label="Visit Brahmin Bazaar Website">Visit Site <i class="fa-solid fa-arrow-up-right-from-square ms-1" style="font-size:10px;" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="browser-mockup">
+                        <div class="browser-topbar">
+                            <div class="browser-circles"><span class="browser-circle"></span><span class="browser-circle"></span><span class="browser-circle"></span></div>
+                            <div class="browser-address">orygyns.in</div>
+                        </div>
+                        <div class="browser-display"><i class="fa-solid fa-cubes" aria-hidden="true"></i></div>
+                        <div class="project-meta">
+                            <h5>ORYGYNS Hub</h5>
+                            <p class="text-muted-custom fs-7 mb-4">Central visual indexing network serving as our operational platform interface and architectural directory tracker.</p>
+                            <a href="https://orygyns.in" target="_blank" rel="noopener noreferrer" class="btn-clean-secondary text-center w-100 mt-auto" aria-label="Visit ORYGYNS Hub Website">Visit Site <i class="fa-solid fa-arrow-up-right-from-square ms-1" style="font-size:10px;" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: var(--section-padding); border-top: 1px solid var(--border-color); background: #050508;">
+        <div class="container">
+            <div class="row justify-content-center reveal">
+                <div class="col-lg-6 col-md-8">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">Project Intake</h2>
+                        <p class="text-muted-custom mb-0">Provide basic setup constraints and outline your developmental objectives.</p>
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="clientName" class="form-label">Name</label>
+                            <input type="text" class="form-control shadow-none" id="clientName" placeholder="Your name or company" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="clientEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control shadow-none" id="clientEmail" placeholder="name@domain.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="clientMessage" class="form-label">Project Details</label>
+                            <textarea class="form-control shadow-none" id="clientMessage" rows="5" placeholder="Briefly write your goals, parameters, or timeline requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-clean-primary w-100 py-3 mt-2" aria-label="Submit Collaboration Inquiry">Submit Collaboration Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="text-muted-custom fs-7 mb-0 opacity-50">&copy; 2026 ORYGYNS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init({
+            publicKey: "K3bq4FKvJPt3ORTm6"
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. Preloader Fadeout Utility
+            window.addEventListener('load', () => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.style.visibility = 'hidden';
+                    }, 400);
+                }
+            });
+
+            // 2. Sticky Navigation Alpha Blend on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Calm Scroll Reveal Intersection Observer setup
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.02, rootMargin: "0px 0px -20px 0px" });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 4. Clean Native System Mailbox Form Router Replaced with EmailJS
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerText;
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = "Sending...";
+                    
+                    const name = document.getElementById('clientName').value;
+                    const email = document.getElementById('clientEmail').value;
+                    const details = document.getElementById('clientMessage').value;
+
+                    const templateParams = {
+                        name: name,
+                        email: email,
+                        message: details
+                    };
+
+                    emailjs.send(
+                        "aadhi_9307",
+                        "template_7ukf3kw",
+                        templateParams
+                    ).then(function() {
+                        alert("Inquiry submitted successfully. We will contact you shortly.");
+                        contactForm.reset();
+                        submitBtn.innerText = originalBtnText;
+                        submitBtn.disabled = false;
+                    }).catch(function(error) {
+                        console.error(error);
+                        alert("Failed to submit inquiry. Please try again.");
+                        submitBtn.innerText = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>C Programming Course | Orygyns Coding Platform</title>
+  <meta name="description" content="Master C Programming from scratch. Learn problem solving, variables, control structures, loops, arrays, functions, strings, and pointers with hands-on compiler exercises.">
+  <meta name="keywords" content="C Programming, Learn C, C Tutorial, Pointers in C, Arrays in C, C Functions, Programming Course, Online Compiler, Coding Exercises, Orygyns">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/c.html">
+
+  <meta property="og:title" content="C Programming Course | Orygyns Coding Platform">
+  <meta property="og:description" content="Master C Programming from scratch with clear text tutorials, structural breakdowns, logic-building examples, and interactive coding tools.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/c.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="C Programming Course | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Master C Programming from scratch with clear text tutorials, structural breakdowns, logic-building examples, and interactive coding tools.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/c.html#webpage",
+        "url": "https://orygyns.in/c.html",
+        "name": "C Programming Course | Orygyns",
+        "description": "Master C Programming from scratch with Orygyns. Learn variables, loops, arrays, functions, and pointers."
+      },
+      {
+        "@type": "Course",
+        "name": "Complete C Programming Course",
+        "description": "Comprehensive guide to mastering structure, logic, operations, memory allocation, and core algorithm design inside the C programming language.",
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        },
+        "about": [
+          {"@type": "Thing", "name": "C Programming"},
+          {"@type": "Thing", "name": "Problem Solving Basics"},
+          {"@type": "Thing", "name": "Pointers and Memory Allocation"},
+          {"@type": "Thing", "name": "Data Structures in C"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #121619;
+      --surface: #1e2429;
+      --text-main: #f5f6fa;
+      --text-muted: #a4b0be;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(18, 22, 25, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --border-color: #2f363d;
+      --code-bg: #111417;
+      --code-text: #50fa7b;
+      --practice-bg: rgba(22, 163, 74, 0.08);
+      --hover-bg: rgba(255, 255, 255, 0.05);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 246, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f8f9fa;
+      --surface: #ffffff;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --border-color: #e1e4e8;
+      --code-bg: #f1f3f5;
+      --code-text: #0984e3;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --hover-bg: rgba(0, 0, 0, 0.03);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2845, 52, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.65; transition: all 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 85px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar overrides --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 1px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.2rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--surface); border: 2px solid var(--border-color); color: var(--text-main); font-size: 1.2rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 42px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Layout --- */
+    main { flex: 1; padding: 20px 0 60px; max-width: 960px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3.5rem; animation: fadeInUp 0.5s ease; }
+    .page-header h1 { font-size: 3rem; margin-bottom: 0.75rem; color: var(--text-main); font-weight: 800; letter-spacing: -0.5px; }
+    .page-header p { font-size: 1.25rem; color: var(--text-muted); }
+
+    .breadcrumb-custom { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; font-weight: 600; font-size: 1rem; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); }
+
+    /* --- Content Modules / Cards --- */
+    .card-custom { background-color: var(--surface); padding: 3rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 3rem; animation: fadeInUp 0.6s ease; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .card-custom:hover { transform: translateY(-2px); border-color: rgba(22, 163, 74, 0.4); }
+    .card-custom h2 { font-size: 1.8rem; margin-bottom: 1.25rem; color: var(--text-main); font-weight: 800; position: relative; padding-bottom: 0.5rem; }
+    .card-custom h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 4px; background-color: var(--primary-green); border-radius: 2px; }
+    .card-custom p { font-size: 1.1rem; color: var(--text-main); margin-bottom: 1.5rem; }
+    .card-custom ul { padding-left: 20px; font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+    /* --- Code / Formatting Block --- */
+    .code-block { background-color: var(--code-bg); padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; overflow-x: auto; border: 1px solid var(--border-color); margin: 1.5rem 0; line-height: 1.8; color: #f8f8f2; tab-size: 4; }
+    .code-block code { color: var(--code-text); }
+    code.inline-code { display: inline; padding: 2px 6px; border-radius: 4px; background-color: var(--code-bg); border: 1px solid var(--border-color); color: var(--code-text); font-size: 1.05rem; font-family: 'Courier New', Courier, monospace; }
+
+    /* --- Interactive Practice & Action Boxes --- */
+    .practice-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 1.75rem 0; }
+    .practice-box h4 { font-size: 1.2rem; font-weight: 700; color: var(--primary-green); margin-bottom: 0.5rem; }
+    .practice-box p { font-size: 1.05rem; margin-bottom: 0; color: var(--text-main); }
+
+    .action-box { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+    .success-text { color: var(--primary-green); font-weight: 600; font-size: 1.05rem; margin: 0; }
+
+    /* --- Buttons --- */
+    .btn-main { display: inline-block; padding: 12px 28px; background-color: var(--primary-green); color: #ffffff !important; font-size: 1.1rem; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 0 var(--primary-dark); transition: all 0.1s ease; text-align: center; }
+    .btn-main:active { transform: translateY(4px); box-shadow: 0 0 0 var(--primary-dark); }
+    .btn-main:hover { background-color: #15b850; transform: translateY(-1px); }
+
+    /* --- Final Section --- */
+    .final-section { text-align: center; padding: 4rem 2rem; background-color: var(--surface); border: 1px solid var(--border-color); box-shadow: var(--card-shadow); border-radius: 20px; margin-top: 4rem; animation: fadeInUp 0.7s ease; }
+    .final-section h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--text-main); }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 4rem 2rem 2rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; transition: color 0.2s ease; }
+    .footer-nav a:hover { color: var(--primary-green); }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* --- Keyframe Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.3rem; }
+      .card-custom { padding: 1.75rem; margin-bottom: 2rem; }
+      .final-section { padding: 2.5rem 1.5rem; }
+      .action-box { flex-direction: column; align-items: stretch; text-align: center; }
+      .btn-main { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Platform Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Hub">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation parameters">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-2 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme state">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumbs">
+      <a href="learn.html">⬅️ Back to Courses</a> <span>/</span> <span>C Course</span>
+    </div>
+
+    <div class="page-header">
+      <h1>Complete C Programming Course 💻</h1>
+      <p>Master execution structures, dynamic pointers, structural elements, and logical problem-solving frameworks</p>
+    </div>
+
+    <section class="card-custom" aria-labelledby="sec1-title">
+      <h2 id="sec1-title">Level 1: Problem Solving Basics</h2>
+      <p><strong>What is it?</strong> Breaking a complex problem into smaller, logical steps before writing code.</p>
+      <ul>
+        <li><strong>Algorithm:</strong> Step-by-step written instructions.</li>
+        <li><strong>Flowchart:</strong> A visual diagram of your algorithm using standard shapes.</li>
+      </ul>
+      
+      <h3>Example: Logic for Greatest of 3 Numbers</h3>
+<pre class="code-block" tabindex="0"><code>// 1. Take three numbers A, B, C
+// 2. Check if A > B and A > C. If yes, A is greatest.
+// 3. Check if B > A and B > C. If yes, B is greatest.
+// 4. Otherwise, C is greatest.
+</code></pre>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Write an algorithm on paper to check if a number is Even or Odd.</p>
+      </div>
+
+      <div class="action-box">
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec2-title">
+      <h2 id="sec2-title">Level 2: Introduction to C</h2>
+      <p><strong>What is it?</strong> C is a foundational programming language used to build operating systems and fast software.</p>
+      
+<pre class="code-block" tabindex="0"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World");
+    return 0;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> <code class="inline-code">#include &lt;stdio.h&gt;</code> imports input/output functions. Every C program begins execution from the <code class="inline-code">main()</code> function.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Open your text console compiler interface and alter the string value to feature your own name inside the argument block.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec3-title">
+      <h2 id="sec3-title">Level 3: Variables and Data Types</h2>
+      <p><strong>What is it?</strong> Variables are storage containers for data. In C, you must explicitly declare a variable's data type before using it.</p>
+
+<pre class="code-block" tabindex="0"><code>int age = 20;
+float pi = 3.14;
+char grade = 'A';
+
+printf("Age: %d, Pi: %.2f, Grade: %c\n", age, pi, grade);
+</code></pre>
+
+      <p><strong>Explanation:</strong> Format specifiers like <code class="inline-code">%d</code> (integer), <code class="inline-code">%f</code> (float), and <code class="inline-code">%c</code> (character) are used inside <code>printf</code> to output variable data.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a program that calculates the area of a circle using floating-point variables.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec4-title">
+      <h2 id="sec4-title">Level 4: Operators</h2>
+      <p><strong>What is it?</strong> Symbols that tell the compiler to perform specific mathematical or logical manipulations.</p>
+
+<pre class="code-block" tabindex="0"><code>int a = 10;
+int b = 5;
+
+int sum = a + b;
+int diff = a - b;
+int rem = a % b; // Modulus (remainder)
+</code></pre>
+
+      <p><strong>Explanation:</strong> C provides arithmetic operators (+, -, *, /, %), relational operators (==, !=, >, <), and logical operators (&&, ||, !).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Modify the code to calculate <code>(10 + 5) * 2</code>.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec5-title">
+      <h2 id="sec5-title">Level 5: Conditional Statements</h2>
+      <p><strong>What is it?</strong> Allows your program to make decisions based on conditions (True/False).</p>
+
+<pre class="code-block" tabindex="0"><code>int x = 10;
+
+if (x > 0) {
+    printf("Positive");
+} else {
+    printf("Negative or Zero");
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> If the condition inside the brackets <code>(x > 0)</code> is true, the first block runs. Otherwise, the <code>else</code> block runs.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Write an <code>if-else</code> block to check if someone is eligible to vote (age >= 18).</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec6-title">
+      <h2 id="sec6-title">Level 6: Loops</h2>
+      <p><strong>What is it?</strong> Loops automatically run the same block of code multiple times.</p>
+
+<pre class="code-block" tabindex="0"><code>for (int i = 0; i < 5; i++) {
+    printf("Loop iteration: %d\n", i);
+}
+
+int count = 0;
+while (count < 3) {
+    printf("While loop: %d\n", count);
+    count++;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> A <code>for</code> loop is used when the number of iterations is known. A <code>while</code> loop runs as long as the condition remains true.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Write a loop that counts down from 10 to 1.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec7-title">
+      <h2 id="sec7-title">Level 7: Functions</h2>
+      <p><strong>What is it?</strong> Functions are self-contained blocks of code that perform a specific task, allowing code reuse.</p>
+
+<pre class="code-block" tabindex="0"><code>int calculateSquare(int side) {
+    return side * side;
+}
+
+int main() {
+    int result = calculateSquare(6);
+    printf("Square: %d\n", result);
+    return 0;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> The function <code>calculateSquare</code> takes an argument, processes it, and returns a value to the caller.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Construct a custom function to calculate the sum of two integers passed as arguments.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec8-title">
+      <h2 id="sec8-title">Level 8: Arrays</h2>
+      <p><strong>What is it?</strong> A single variable that holds multiple values of the exact same data type sequentially.</p>
+
+<pre class="code-block" tabindex="0"><code>int arr[3] = {10, 20, 30};
+
+for (int i = 0; i < 3; i++) {
+    printf("%d\n", arr[i]);
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> Arrays start counting at index 0. <code>arr[0]</code> is the first element.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create an array of 5 numbers and calculate their total sum using a loop.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec9-title">
+      <h2 id="sec9-title">Level 9: Strings</h2>
+      <p><strong>What is it?</strong> A string is a 1D Array of characters that ends with a special null character (<code>\0</code>).</p>
+
+<pre class="code-block" tabindex="0"><code>char str[10] = "Hello";
+printf("%s\n", str);
+</code></pre>
+
+      <p><strong>Explanation:</strong> You must <code>#include &lt;string.h&gt;</code> to use functions like <code>strlen(str)</code> (finds length) and <code>strcpy(dest, src)</code> (copies string).</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Write a program to input a string using <code>scanf</code> and print its length.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec10-title">
+      <h2 id="sec10-title">Level 10: Pointers</h2>
+      <p><strong>What is it?</strong> Pointers are special variables that store memory addresses of other variables.</p>
+
+<pre class="code-block" tabindex="0"><code>int value = 42;
+int *ptr = &amp;value;
+
+printf("Address: %p\n", (void*)ptr);
+printf("Value at address: %d\n", *ptr);
+</code></pre>
+
+      <p><strong>Explanation:</strong> The reference operator <code>&amp;</code> fetches raw memory addresses, while dereferencing via asterisks <code>*</code> accesses the value stored there.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Declare a pointer to a float variable and print its memory address.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec11-title">
+      <h2 id="sec11-title">Level 11: Call by Value vs Call by Reference</h2>
+      <p><strong>What is it?</strong> The two different ways to pass data into functions.</p>
+
+<pre class="code-block" tabindex="0"><code>void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> Call by Value passes a <em>copy</em>. Call by Reference passes the <em>address</em> using pointers, meaning the original variable gets changed.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Write a <code>main()</code> function to call <code>swap(&amp;x, &amp;y)</code> and print the results.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <section class="card-custom" aria-labelledby="sec12-title">
+      <h2 id="sec12-title">Level 12: Structures</h2>
+      <p><strong>What is it?</strong> A user-defined data type that groups different types of variables under a single name.</p>
+
+<pre class="code-block" tabindex="0"><code>struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {1, "Rajan", 95.5};
+    printf("ID: %d, Name: %s, Marks: %.1f\n", s1.id, s1.name, s1.marks);
+    return 0;
+}
+</code></pre>
+
+      <p><strong>Explanation:</strong> Structures are useful for representing complex entities (like a Student or an Employee) that contain multiple data points of varying types.</p>
+
+      <div class="practice-box">
+        <h4>Try This 🔥</h4>
+        <p>Create a structure for a <code>Book</code> containing title, author, and price, then display it.</p>
+      </div>
+
+      <div class="action-box">
+        <a href="compiler.html" class="btn-main" aria-label="Try Code in Compiler">Try in Compiler ▶</a>
+        <p class="success-text" aria-live="polite">✅ You learned this concept!</p>
+      </div>
+    </section>
+
+    <div class="final-section">
+      <h2>Ready to test your logic?</h2>
+      <p class="text-muted" style="margin-bottom: 2rem; font-size: 1.15rem;">Validate your programmatic concepts by attempting our complete logic verification assessment suite.</p>
+      <a href="cquiz.html" class="btn-main" aria-label="Start C Programming Quiz">Start C Quiz 🚀</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Quick Links Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    updateIcon(htmlElement.getAttribute('data-theme'));
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      updateIcon(newTheme);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SRM OODP Unit 2: Classes, Constructors & UML Interaction Diagrams | Orygyns Coding Platform</title>
+  <meta name="description" content="Master SRM OODP Unit 2. Study Classes, Objects, Constructors, Operator Overloading, Sequence Diagrams, and Collaboration Diagrams with detailed ATM System examples.">
+  <meta name="keywords" content="SRM OODP Unit 2, C++ Constructors, Operator Overloading, Sequence Diagram, Collaboration Diagram, UML Interaction Diagrams, C++ OOP, ATM Management System UML, Orygyns">
+  <meta name="author" content="Rajan Aathreya">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://orygyns.in/cppsrmu2.html">
+
+  <meta property="og:title" content="SRM OODP Unit 2: Classes, Constructors & UML Interaction Diagrams | Orygyns Coding Platform">
+  <meta property="og:description" content="Master SRM OODP Unit 2. Study Classes, Objects, Constructors, Operator Overloading, Sequence Diagrams, and Collaboration Diagrams with detailed ATM System examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orygyns.in/cppsrmu2.html">
+  <meta property="og:image" content="https://orygyns.in/theme.png">
+  <meta property="og:site_name" content="Orygyns">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SRM OODP Unit 2: Classes, Constructors & UML Interaction Diagrams | Orygyns Coding Platform">
+  <meta name="twitter:description" content="Master SRM OODP Unit 2. Study Classes, Objects, Constructors, Operator Overloading, Sequence Diagrams, and Collaboration Diagrams with detailed ATM System examples.">
+  <meta name="twitter:image" content="https://orygyns.in/theme.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://orygyns.in/#organization",
+        "name": "Orygyns Technologies and Consultancy",
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://orygyns.in/#educationalOrganization",
+        "name": "Orygyns Technologies and Consultancy",
+        "founder": {
+          "@type": "Person",
+          "name": "Rajan Aathreya"
+        },
+        "url": "https://orygyns.in"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://orygyns.in/cppsrmu2.html#webpage",
+        "url": "https://orygyns.in/cppsrmu2.html",
+        "name": "SRM OODP Unit 2 | Orygyns",
+        "description": "Master Object-Oriented Design Principles (OODP) Unit 2 for SRM exams. Contains study guides for Constructors, Operator Overloading, and UML Interaction Diagrams."
+      },
+      {
+        "@type": "LearningResource",
+        "name": "SRM OODP Unit 2 Study Guide",
+        "learningResourceType": "Study Guide",
+        "educationalAlignment": [
+          {
+            "@type": "AlignmentObject",
+            "alignmentType": "educationalSubject",
+            "targetName": "Computer Science & OOP"
+          }
+        ],
+        "provider": {
+          "@id": "https://orygyns.in/#educationalOrganization"
+        },
+        "about": [
+          {"@type": "Thing", "name": "C++ Constructors"},
+          {"@type": "Thing", "name": "Operator Overloading"},
+          {"@type": "Thing", "name": "UML Sequence Diagrams"},
+          {"@type": "Thing", "name": "UML Collaboration Diagrams"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    const savedTheme = localStorage.getItem('orygyns_theme') || localStorage.getItem('orygyns-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <style>
+    /* --- CSS Variables for Theming --- */
+    :root[data-theme="dark"] {
+      --bg-color: #07130d;
+      --bg2-color: #0b1d14;
+      --surface: rgba(15, 31, 23, 0.95);
+      --text-main: #ffffff;
+      --text-muted: #aad7bc;
+      --primary-green: #00ff88;
+      --primary-dark: #00c96b;
+      --nav-bg: rgba(7, 19, 13, 0.95);
+      --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      --border-color: #213d2c;
+      --code-bg: #030a06;
+      --code-text: #00ff88;
+      --diagram-bg: #05100a;
+      --practice-bg: rgba(0, 255, 136, 0.06);
+      --warning-bg: rgba(255, 159, 67, 0.12);
+      --warning-text: #ff9f43;
+      --hover-bg: rgba(255, 255, 255, 0.04);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    :root[data-theme="light"] {
+      --bg-color: #f3fcf7;
+      --bg2-color: #e6f7ee;
+      --surface: #ffffff;
+      --text-main: #142c1e;
+      --text-muted: #4e6e5a;
+      --primary-green: #16a34a;
+      --primary-dark: #15803d;
+      --nav-bg: rgba(243, 252, 247, 0.95);
+      --card-shadow: 0 8px 24px rgba(22, 163, 74, 0.08);
+      --border-color: #cfead8;
+      --code-bg: #f8fbf9;
+      --code-text: #16a34a;
+      --diagram-bg: #f1faf4;
+      --practice-bg: rgba(22, 163, 74, 0.05);
+      --warning-bg: rgba(211, 84, 0, 0.08);
+      --warning-text: #d35400;
+      --hover-bg: rgba(22, 163, 74, 0.04);
+      --toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2820, 44, 30, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* --- Global Styles --- */
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; transition: background-color 0.3s ease, color 0.3s ease; display: flex; flex-direction: column; min-height: 100vh; padding-top: 90px; }
+    a { text-decoration: none; color: var(--primary-green); transition: color 0.2s ease; }
+    a:hover { color: var(--primary-dark); }
+
+    /* --- Navbar Styles --- */
+    .navbar { background-color: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 0.85rem 0; transition: background-color 0.3s, border-color 0.3s; }
+    .logo { font-size: 1.75rem; font-weight: 800; color: var(--primary-green) !important; letter-spacing: 0.5px; }
+    .navbar-nav .nav-link { font-weight: 600; color: var(--text-main) !important; transition: color 0.2s; padding: 0.5rem 1.1rem; font-size: 0.95rem; }
+    .navbar-nav .nav-link:hover { color: var(--primary-green) !important; }
+    .navbar-toggler { border-color: var(--border-color); }
+    .navbar-toggler-icon { background-image: var(--toggler-icon); }
+
+    .theme-toggle { background: var(--code-bg); border: 1px solid var(--border-color); color: var(--text-main); font-size: 1.1rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 10px; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; height: 40px; width: 40px; }
+    .theme-toggle:hover { border-color: var(--primary-green); transform: scale(1.05); }
+
+    /* --- Main Layout Elements --- */
+    main { flex: 1; padding: 24px 0 64px; max-width: 960px; margin: 0 auto; width: 100%; }
+    .page-header { text-align: center; margin-bottom: 3.5rem; }
+    .page-header h1 { font-size: 2.75rem; margin-bottom: 0.75rem; color: var(--text-main); font-weight: 800; letter-spacing: -0.5px; }
+    .page-header p { font-size: 1.2rem; color: var(--text-muted); font-weight: 400; }
+
+    .breadcrumb-custom { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; font-weight: 500; font-size: 0.95rem; }
+    .breadcrumb-custom a { color: var(--text-muted); }
+    .breadcrumb-custom a:hover { color: var(--primary-green); }
+    .breadcrumb-custom span { color: var(--text-main); opacity: 0.8; }
+
+    /* --- Premium Educational Module Cards --- */
+    .card-custom { background-color: var(--surface); padding: 2.5rem; border-radius: 16px; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); margin-bottom: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .card-custom:hover { border-color: rgba(0, 255, 136, 0.35); }
+    
+    .topic-title { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 1.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; }
+    .topic-title h2 { font-size: 1.65rem; color: var(--text-main); font-weight: 700; margin: 0; position: relative; }
+    .topic-title h2::after { content: ''; position: absolute; bottom: -13px; left: 0; width: 40px; height: 4px; background-color: var(--primary-green); border-radius: 2px; }
+    
+    .priority { font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 30px; background-color: var(--warning-bg); color: var(--warning-text); text-transform: uppercase; letter-spacing: 0.75px; border: 1px solid rgba(255, 159, 67, 0.2); }
+
+    .card-custom p { font-size: 1.05rem; color: var(--text-main); margin-bottom: 1.5rem; opacity: 0.95; }
+    .card-custom ul { padding-left: 22px; font-size: 1.05rem; margin-bottom: 1.5rem; }
+    .card-custom li { margin-bottom: 0.6rem; }
+    
+    h3 { font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-top: 1.5rem; margin-bottom: 1rem; }
+    h4 { font-size: 1.15rem; font-weight: 600; color: var(--primary-green); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+    /* --- Responsive Tables --- */
+    .table-responsive-wrapper { overflow-x: auto; margin-bottom: 2rem; border-radius: 12px; border: 1px solid var(--border-color); }
+    table { width: 100%; border-collapse: collapse; background-color: var(--code-bg); margin: 0; }
+    th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border-color); font-size: 1rem; color: var(--text-main); }
+    th { background-color: var(--bg2-color); font-weight: 700; color: var(--primary-green); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+    tr:last-child td { border-bottom: none; }
+
+    /* --- Code Blocks & Visual UML Architecture Diagram Layouts --- */
+    pre.code-block { margin: 1.75rem 0; background-color: var(--code-bg); border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; tab-size: 4; }
+    pre.code-block code { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.95rem; display: block; padding: 1.5rem; color: var(--code-text); line-height: 1.6; }
+    
+    .diagram { margin: 1.75rem 0; padding: 1.5rem; border-radius: 12px; border: 1px dashed var(--primary-green); background-color: var(--diagram-bg); overflow-x: auto; }
+    .diagram pre { background: transparent; border: none; padding: 0; margin: 0; box-shadow: none; }
+    .diagram code { font-family: 'Fira Code', 'Courier New', Courier, monospace; color: var(--primary-green); padding: 0; font-size: 0.95rem; }
+
+    code.inline-code { font-family: 'Fira Code', 'Courier New', Courier, monospace; background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--code-text); font-size: 0.95rem; }
+
+    /* --- Context Boxes --- */
+    .highlight-box { background-color: var(--practice-bg); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+    .highlight-box h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary-green); margin-bottom: 0.75rem; margin-top: 0; }
+    .highlight-box p { font-size: 1rem; margin-bottom: 0; color: var(--text-main); }
+    .highlight-box ul { margin-bottom: 0; }
+
+    .memory-box { background-color: var(--warning-bg); border-left: 4px solid var(--warning-text); padding: 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+    .memory-box h3 { font-size: 1.15rem; font-weight: 700; color: var(--warning-text); margin-bottom: 0.75rem; margin-top: 0; }
+    .memory-box ul { margin-bottom: 0; color: var(--text-main); }
+
+    /* --- Navigation Elements --- */
+    .bottom-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem; margin-top: 3.5rem; }
+    .nav-btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background-color: var(--surface); color: var(--text-main) !important; font-size: 0.95rem; font-weight: 600; border-radius: 10px; border: 1px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; text-align: center; min-width: 160px; }
+    .nav-btn:hover { border-color: var(--primary-green); color: var(--primary-green) !important; transform: translateY(-2px); }
+    .nav-btn.primary { background-color: var(--primary-green); color: #07130d !important; border-color: var(--primary-green); }
+    .nav-btn.primary:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); color: #07130d !important; }
+
+    /* --- Footer Styles --- */
+    footer { text-align: center; padding: 4.5rem 2rem 2.5rem; background-color: var(--surface); border-top: 1px solid var(--border-color); margin-top: auto; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-nav a { color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: color 0.2s ease; opacity: 0.85; }
+    .footer-nav a:hover { color: var(--primary-green); opacity: 1; }
+    footer p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+
+    /* --- Mobile Responsive Optimizations --- */
+    @media (max-width: 768px) {
+      body { padding-top: 80px; }
+      .page-header h1 { font-size: 2.15rem; }
+      .card-custom { padding: 1.75rem; margin-bottom: 1.75rem; }
+      .topic-title h2 { font-size: 1.4rem; }
+      .bottom-nav { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+      .nav-btn { width: 100%; }
+      .footer-nav { gap: 1.25rem; flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Platform Navigation">
+    <div class="container">
+      <a class="navbar-brand logo" href="coding.html" aria-label="Orygyns Hub Home">Orygyns</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation parameters">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compiler.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coding.html#srm">Academic Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-2 mt-lg-0">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme state" onclick="toggleTheme()">☀️</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" role="main">
+    
+    <div class="breadcrumb-custom" aria-label="Breadcrumbs">
+      <a href="coding.html#srm">⬅️ Academic Resources</a> <span>/</span> <a href="cpp.html">C++ Course</a> <span>/</span> <span>SRM OODP Unit 2</span>
+    </div>
+
+    <div class="page-header">
+      <h1>SRM OODP Unit 2 Study Guide 📖</h1>
+      <p>Master Classes, Constructors, Operator Overloading, and UML Interaction Diagrams with detailed ATM System examples.</p>
+    </div>
+
+    <section class="card-custom reveal" aria-labelledby="sec1-title">
+      <div class="topic-title">
+        <h2 id="sec1-title">1. Classes and Objects</h2>
+        <div class="priority">BASICS</div>
+      </div>
+      <p>A <strong>Class</strong> is a user-defined data type that holds its own data members and member functions. An <strong>Object</strong> is an instance of a class.</p>
+      
+<pre class="code-block" tabindex="0"><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Student {
+private:
+    int id;       // Hidden from outside
+public:
+    string name;  // Accessible from outside
+
+    // Method to set ID securely
+    void setId(int studentId) {
+        id = studentId;
+    }
+    // Method to get ID securely
+    int getId() {
+        return id;
+    }
+};
+
+int main() {
+    Student s1;
+    s1.name = "Rajan";
+    s1.setId(101);
+    cout &lt;&lt; "Name: " &lt;&lt; s1.name &lt;&lt; ", ID: " &lt;&lt; s1.getId() &lt;&lt; endl;
+    return 0;
+}</code></pre>
+      
+      <p><strong>Access Specifiers:</strong></p>
+      <ul>
+        <li><strong>Private:</strong> Members cannot be accessed (or viewed) from outside the class. (Default in C++).</li>
+        <li><strong>Public:</strong> Members are accessible from outside the class.</li>
+        <li><strong>Protected:</strong> Members cannot be accessed from outside the class, but can be accessed in inherited classes.</li>
+      </ul>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="sec2-title">
+      <div class="topic-title">
+        <h2 id="sec2-title">2. Constructors & Destructors</h2>
+        <div class="priority">FREQUENTLY ASKED</div>
+      </div>
+      <p>A <strong>Constructor</strong> is a special member function that is automatically executed when an object is created. It has the exact same name as the class and no return type.</p>
+      <p>A <strong>Destructor</strong> is executed when the object is destroyed or goes out of scope. It has a tilde (<code class="inline-code">~</code>) before the class name.</p>
+      
+<pre class="code-block" tabindex="0"><code>class Book {
+public:
+    // 1. Default Constructor
+    Book() {
+        cout &lt;&lt; "Default Constructor Called" &lt;&lt; endl;
+    }
+    
+    // 2. Parameterized Constructor
+    Book(string title) {
+        cout &lt;&lt; "Parameterized Constructor Called for " &lt;&lt; title &lt;&lt; endl;
+    }
+    
+    // 3. Copy Constructor
+    Book(const Book &amp;obj) {
+        cout &lt;&lt; "Copy Constructor Called" &lt;&lt; endl;
+    }
+    
+    // Destructor
+    ~Book() {
+        cout &lt;&lt; "Destructor Called" &lt;&lt; endl;
+    }
+};</code></pre>
+
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Type of Constructor</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Default</strong></td>
+              <td>Takes no arguments. Initializes objects with standard default values.</td>
+            </tr>
+            <tr>
+              <td><strong>Parameterized</strong></td>
+              <td>Takes arguments. Used to initialize objects with specific values at creation.</td>
+            </tr>
+            <tr>
+              <td><strong>Copy</strong></td>
+              <td>Initializes an object using another object of the same class.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="sec3-title">
+      <div class="topic-title">
+        <h2 id="sec3-title">3. Operator Overloading</h2>
+        <div class="priority">HIGH PRIORITY</div>
+      </div>
+      <p><strong>Operator Overloading</strong> allows C++ operators (like +, -, *, ==) to have user-defined meanings on user-defined types (classes).</p>
+
+<pre class="code-block" tabindex="0"><code>class Complex {
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i = 0) {
+        real = r;   imag = i;
+    }
+    
+    // Overloading the '+' operator
+    Complex operator + (Complex const &amp;obj) {
+        Complex res;
+        res.real = real + obj.real;
+        res.imag = imag + obj.imag;
+        return res;
+    }
+    
+    void print() {
+        cout &lt;&lt; real &lt;&lt; " + i" &lt;&lt; imag &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Complex c1(10, 5), c2(2, 4);
+    Complex c3 = c1 + c2; // Calls the overloaded + operator
+    c3.print();           // Output: 12 + i9
+    return 0;
+}</code></pre>
+
+      <div class="highlight-box">
+        <h3>Operators that CANNOT be overloaded:</h3>
+        <ul>
+          <li>Scope resolution operator <code class="inline-code">::</code></li>
+          <li>Sizeof operator <code class="inline-code">sizeof</code></li>
+          <li>Member selector <code class="inline-code">.</code></li>
+          <li>Member pointer selector <code class="inline-code">.*</code></li>
+          <li>Ternary operator <code class="inline-code">?:</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="sec4-title">
+      <div class="topic-title">
+        <h2 id="sec4-title">4. UML Interaction Diagrams</h2>
+      </div>
+      <p>Interaction diagrams show how objects interact with each other to perform a specific behavior. The two main types are Sequence Diagrams and Collaboration (Communication) Diagrams.</p>
+      
+      <h3>Sequence Diagram</h3>
+      <p>A Sequence Diagram emphasizes the <strong>time ordering</strong> of messages. It shows objects as lifelines (vertical dashed lines) and the messages exchanged between them over time.</p>
+      
+      <div class="diagram">
+<pre><code>Actor          ATM Machine          Bank Server
+  |                 |                    |
+  |---Insert Card--&gt;|                    |
+  |                 |----Verify Card----&gt;|
+  |                 |&lt;----Card OK--------|
+  |&lt;--Prompt PIN----|                    |
+  |---Enter PIN----&gt;|                    |
+  |                 |----Verify PIN-----&gt;|
+  |                 |&lt;----PIN OK---------|
+  |                 |                    |</code></pre>
+      </div>
+      
+      <ul>
+        <li><strong>Lifeline:</strong> Represents an individual participant in the interaction.</li>
+        <li><strong>Activation Box:</strong> A rectangle on the lifeline indicating the time period an object is performing an action.</li>
+        <li><strong>Message:</strong> Horizontal arrows indicating communication between objects.</li>
+      </ul>
+
+      <h3>Collaboration Diagram (Communication Diagram)</h3>
+      <p>A Collaboration Diagram emphasizes the <strong>structural organization</strong> of the objects that send and receive messages. Sequence numbers are used to determine the order of messages.</p>
+
+      <div class="diagram">
+<pre><code>                       1: insertCard()
+                       4: enterPin()
+                       8: withdrawCash()
+  +---------------+------------------------&gt;+---------------+
+  |  :Customer    |                         |     :ATM      |
+  +---------------+&lt;------------------------+---------------+
+                       5: promptPin()               | ^
+                                                    | | 2: verifyCard()
+                                                    | | 3: cardOk()
+                                                    | | 6: verifyPin()
+                                                    | | 7: pinOk()
+                                                    v |
+                                            +---------------+
+                                            | :Bank Server  |
+                                            +---------------+</code></pre>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="sec5-title">
+      <div class="topic-title">
+        <h2 id="sec5-title">5. Difference between Sequence and Collaboration Diagram</h2>
+      </div>
+      
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 50%;">Sequence Diagram</th>
+              <th scope="col" style="width: 50%;">Collaboration Diagram</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Emphasizes the <strong>time sequence</strong> of messages.</td>
+              <td>Emphasizes the <strong>structural relationship</strong> among objects.</td>
+            </tr>
+            <tr>
+              <td>Objects are arranged horizontally; time flows vertically.</td>
+              <td>Objects are arranged freely as a network/graph.</td>
+            </tr>
+            <tr>
+              <td>Uses lifelines and activation boxes.</td>
+              <td>Does not use lifelines; uses links and sequence numbers (1, 1.1, 2).</td>
+            </tr>
+            <tr>
+              <td>Better for visualizing the flow of control over time.</td>
+              <td>Better for visualizing all the effects on a specific object and object connections.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card-custom reveal" aria-labelledby="sec6-title">
+      <div class="topic-title">
+        <h2 id="sec6-title">6. Draw UML Interaction Diagram (Scenarios)</h2>
+        <div class="priority">PRACTICAL EXAM</div>
+      </div>
+      
+      <p>For your exams, you should be prepared to draw Interaction Diagrams (Sequence and Collaboration) for various standard scenarios. Below is a comprehensive example for the <strong>ATM Management System</strong>.</p>
+      
+      <h3>Example: ATM Management System Interaction</h3>
+      <p>This details the interaction mapping for a standard Cash Withdrawal scenario.</p>
+
+      <h4>Sequence Diagram (Time-focused)</h4>
+      <div class="diagram">
+<pre><code>Customer               ATM Machine            Bank Server
+   |                        |                      |
+   |--- 1: Insert Card ----&gt;|                      |
+   |                        |--- 2: Verify Card --&gt;|
+   |                        |&lt;-- 3: Card OK -------|
+   |&lt;-- 4: Prompt PIN ------|                      |
+   |--- 5: Enter PIN ------&gt;|                      |
+   |                        |--- 6: Verify PIN ---&gt;|
+   |                        |&lt;-- 7: PIN OK --------|
+   |&lt;-- 8: Show Options ----|                      |
+   |--- 9: Withdraw Cash --&gt;|                      |
+   |                        |--- 10: Check Funds -&gt;|
+   |                        |&lt;-- 11: Sufficient ---|
+   |&lt;-- 12: Dispense Cash --|                      |
+   |                        |                      |</code></pre>
+      </div>
+
+      <h4>Collaboration / Communication Diagram (Structure-focused)</h4>
+      <div class="diagram">
+<pre><code>                      1: Insert Card
+                      5: Enter PIN
+                      9: Withdraw Cash
+ +--------------+ -------------------------&gt; +--------------+
+ |   :Customer  |                            |    :ATM      |
+ +--------------+ &lt;------------------------- +--------------+
+                      4: Prompt PIN                |  ^
+                      8: Show Options              |  | 2: Verify Card
+                     12: Dispense Cash             |  | 3: Card OK
+                                                   |  | 6: Verify PIN
+                                                   |  | 7: PIN OK
+                                                   |  | 10: Check Funds
+                                                   |  | 11: Sufficient
+                                                   v  |
+                                             +--------------+
+                                             | :Bank Server |
+                                             +--------------+</code></pre>
+      </div>
+
+      <div class="highlight-box" style="margin-top: 3rem;">
+        <h3>Other Most Expected UML Scenarios</h3>
+        <ul>
+          <li>Library Management System</li>
+          <li>Hospital Management System</li>
+          <li>Online Shopping System</li>
+          <li>Banking / Account Management System</li>
+        </ul>
+      </div>
+
+      <div class="memory-box">
+        <h3>Night Before Exam Tips 🌙</h3>
+        <ul>
+          <li>Revise constructor types carefully (Default, Parameterized, Copy).</li>
+          <li>Practice writing the syntax for <strong>Operator Overloading</strong> (e.g., adding two complex numbers).</li>
+          <li>Practice drawing one Sequence Diagram (ensure you include lifelines, activation boxes, and actors).</li>
+          <li>Remember UML symbols for interaction diagrams.</li>
+          <li>Focus on repeated SRM questions like the differences between Sequence and Collaboration diagrams.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="bottom-nav">
+      <a href="cppsrmu1.html" class="nav-btn" aria-label="Go to Previous Unit">← Previous Unit</a>
+      <a href="cpp.html" class="nav-btn primary" aria-label="Go back to main C++ Course">Back to C++ Course</a>
+      <a href="cppsrmu3.html" class="nav-btn" aria-label="Go to Next Unit">Next Unit →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer Quick Links Navigation">
+        <a href="coding.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="coding.html#srm">Academic Resources</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p>© 2026 Orygyns Technologies and Consultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    function updateIcon(theme) {
+      if (themeToggleBtn) {
+        themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('orygyns_theme', newTheme);
+      localStorage.setItem('orygyns-theme', newTheme);
+      
+      // Sync dynamic legacy selector compatibility if body needs to toggle class explicitly
+      if (newTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+      
+      updateIcon(newTheme);
+    }
+
+    // Dynamic initial loading parameters alignment engine
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('orygyns_theme') || localStorage.getItem('orygyns-theme') || 'dark';
+      htmlElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        updateIcon(savedTheme);
+      });
+    })();
+
+    // Premium Reveal Animations Logic Execution Framework
+    document.addEventListener("DOMContentLoaded", function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.05 });
+
+      reveals.forEach(reveal => {
+        reveal.style.opacity = '0';
+        reveal.style.transform = 'translateY(24px)';
+        reveal.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        observer.observe(reveal);
+      });
+    });
+  </script>
+
+</body>
+</html>
