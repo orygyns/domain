@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFKPR2V43L"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-NFKPR2V43L');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Orygyns Website Development | Professional Website Design & Digital Experiences</title>
-    <meta name="description" content="Professional website development services by Orygyns. We design modern, responsive, high-performance websites, portfolios, business websites, landing pages, and digital experiences.">
-    <meta name="keywords" content="Website Development, Web Design, Website Designer, Business Website, Portfolio Website, Responsive Website, Landing Page Design, UI UX Design, Orygyns, Web Development Services">
+
+    <title>Orygyns | Professional Website Design, Portfolio & Pricing</title>
+    <meta name="description" content="Orygyns designs modern, responsive, SEO-ready websites for boutiques, gyms, cafes, consultants, startups, and local businesses. Explore our live projects, demos, and affordable pricing.">
+    <meta name="keywords" content="Website Development, Web Design, Website Designer, Business Website, Portfolio Website, Responsive Website, Affordable Website Packages, Website Pricing, Orygyns, Web Development Services">
     <meta name="author" content="Rajan Aathreya">
     <meta name="theme-color" content="#030303">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://orygyns.in/website.html">
 
     <meta property="og:title" content="Orygyns Website Development">
-    <meta property="og:description" content="Premium website development services for businesses, startups, professionals, and organizations.">
+    <meta property="og:description" content="Premium, affordable website development for boutiques, gyms, cafes, consultants, startups, and local businesses.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://orygyns.in/website.html">
     <meta property="og:image" content="https://orygyns.in/theme.png">
@@ -32,7 +21,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Orygyns Website Development">
-    <meta name="twitter:description" content="Premium website development services for businesses, startups, professionals, and organizations.">
+    <meta name="twitter:description" content="Premium, affordable website development for boutiques, gyms, cafes, consultants, startups, and local businesses.">
     <meta name="twitter:image" content="https://orygyns.in/theme.png">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -52,7 +41,7 @@
             "@type": "Organization",
             "name": "Orygyns Technologies and Consultancy"
           },
-          "description": "Professional website development and digital experience design services."
+          "description": "Affordable, professional website development for boutiques, gyms, cafes, consultants, startups, and local businesses."
         },
         {
           "@type": "Organization",
@@ -72,15 +61,15 @@
       ]
     }
     </script>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* ==========================================================================
            GLOBAL VARIABLES & RESET
@@ -127,16 +116,17 @@
             letter-spacing: -0.02em;
             color: var(--text-main);
         }
-        
+
         a { text-decoration: none; color: inherit; }
         a:hover { color: inherit; }
 
         ul { list-style: none; padding: 0; margin: 0; }
 
+        img { max-width: 100%; }
+
         /* ==========================================================================
            UTILITIES & EFFECTS
            ========================================================================== */
-        /* Subtle Cursor Glow Effect */
         #cursor-glow {
             position: fixed;
             top: 0; left: 0; width: 220px; height: 220px;
@@ -145,7 +135,6 @@
             z-index: 9999; mix-blend-mode: screen; transition: opacity 0.5s ease;
         }
 
-        /* Loader */
         #loader {
             position: fixed; inset: 0; background: var(--bg-color); z-index: 10000;
             display: flex; justify-content: center; align-items: center;
@@ -158,17 +147,15 @@
         }
         @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        /* Scroll Reveal Framework */
         .reveal {
             opacity: 0; transform: translateY(30px);
             transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Buttons Overriding Bootstrap */
         .btn-custom {
             display: inline-flex; align-items: center; justify-content: center;
-            padding: 16px 36px; font-family: var(--font-head); font-size: 0.95rem; font-weight: 500;
+            padding: 14px 30px; font-family: var(--font-head); font-size: 0.88rem; font-weight: 500;
             border-radius: 100px; transition: var(--transition); cursor: pointer;
             border: 1px solid transparent; letter-spacing: 0.02em; text-decoration: none;
         }
@@ -176,6 +163,13 @@
         .btn-primary-custom:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15); color: #000000; }
         .btn-secondary-custom { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); color: #ffffff; }
         .btn-secondary-custom:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-3px); color: #ffffff; }
+
+        .btn-custom-sm {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 12px 28px; font-family: var(--font-head); font-size: 0.85rem; font-weight: 500;
+            border-radius: 100px; transition: var(--transition); cursor: pointer;
+            border: 1px solid transparent; letter-spacing: 0.02em; text-decoration: none; width: 100%;
+        }
 
         /* Background Animated Graphics */
         .bg-shapes {
@@ -189,7 +183,7 @@
         .blob-1 { top: -10%; left: -10%; width: 600px; height: 600px; background: rgba(120, 140, 255, 0.2); }
         .blob-2 { bottom: 15%; right: -5%; width: 700px; height: 700px; background: rgba(255, 110, 110, 0.15); animation-delay: -6s; }
         .blob-3 { top: 45%; left: 35%; width: 500px; height: 500px; background: rgba(255, 255, 255, 0.04); animation-duration: 30s; }
-        
+
         @keyframes floatAmbient {
             0% { transform: translate(0, 0) scale(1); }
             100% { transform: translate(60px, 80px) scale(1.15); }
@@ -225,192 +219,177 @@
            ========================================================================== */
         #home { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding-top: 100px; }
         .hero-title {
-            font-size: clamp(3.2rem, 7vw, 6.5rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 24px;
+            font-size: clamp(2rem, 4.6vw, 3.9rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 16px;
             background: linear-gradient(180deg, #ffffff 30%, #8a8a8a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             opacity: 0; transform: translateY(30px); animation: elegantFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+            max-width: 760px; margin-left: auto; margin-right: auto;
         }
         .hero-subtitle {
-            font-size: clamp(1.05rem, 1.6vw, 1.35rem); color: var(--text-muted); line-height: 1.6; margin-bottom: 48px; max-width: 680px;
+            font-size: clamp(0.92rem, 1.1vw, 1.05rem); color: var(--text-muted); line-height: 1.55; margin-bottom: 30px; max-width: 540px;
             margin-left: auto; margin-right: auto; font-weight: 400; opacity: 0; transform: translateY(30px); animation: elegantFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s;
         }
         .hero-cta {
-            display: flex; gap: 20px; justify-content: center; opacity: 0; transform: translateY(30px); animation: elegantFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s;
+            display: flex; gap: 14px; justify-content: center; opacity: 0; transform: translateY(30px); animation: elegantFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s;
         }
+        .hero-badges {
+            display: flex; gap: 14px 24px; justify-content: center; flex-wrap: wrap; margin-top: 32px;
+            opacity: 0; transform: translateY(30px); animation: elegantFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 1s;
+        }
+        .hero-badges span { display: flex; align-items: center; gap: 7px; font-size: 0.76rem; color: var(--text-muted); font-weight: 500; }
+        .hero-badges span i { color: #ffffff; font-size: 0.7rem; }
         @keyframes elegantFadeUp { to { opacity: 1; transform: translateY(0); } }
 
         /* ==========================================================================
-           DEMO WEBSITE SHOWCASE SECTION
+           SHARED: SECTION HEADER / MEDIA FRAME / FALLBACK
            ========================================================================== */
-        #demos { padding: 120px 0; position: relative; }
-        .section-header h2 { font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 700; margin-bottom: 18px; }
-        .section-header p { color: var(--text-muted); font-size: 1.15rem; max-width: 550px; margin: 0 auto; font-weight: 400; }
-        
-        .demo-slider-container { width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; display: flex; gap: 4vw; padding: 20px 6vw 80px 6vw; scrollbar-width: none; }
-        .demo-slider-container::-webkit-scrollbar { display: none; }
-        
-        .demo-wrapper {
-            min-width: 85vw; height: 82vh; min-height: 680px; scroll-snap-align: center; background: #0d0d0d; border-radius: 24px;
-            border: 1px solid var(--glass-border); position: relative; box-shadow: var(--premium-shadow); display: flex; flex-direction: column;
-            overflow: hidden; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s ease, box-shadow 0.6s ease;
+        .section-header h2 { font-size: clamp(2.1rem, 4vw, 3.4rem); font-weight: 700; margin-bottom: 16px; }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 560px; margin: 0 auto; font-weight: 400; }
+
+        .media-frame { width: 100%; overflow: hidden; background: #0d0d0d; position: relative; }
+        .media-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .media-fallback {
+            width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+            color: var(--text-muted); font-size: 0.85rem; font-weight: 500; position: absolute; inset: 0;
         }
-        .demo-wrapper:hover { transform: scale(1.02); border-color: rgba(255, 255, 255, 0.15); box-shadow: 0 45px 90px rgba(0, 0, 0, 0.9); }
-        
-        /* Premium Browser Window Frame UI */
-        .browser-header { height: 46px; background: #121212; border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; padding: 0 20px; z-index: 10; }
-        .browser-dots { display: flex; gap: 8px; align-items: center; }
-        .browser-dot { width: 11px; height: 11px; border-radius: 50%; }
-        .dot-r { background: #ff5f56; }
-        .dot-y { background: #ffbd2e; }
-        .dot-g { background: #27c93f; }
-        
-        .browser-url { margin-left: 30px; background: #060606; border-radius: 6px; padding: 6px 20px; font-size: 0.8rem; color: #666666; flex-grow: 1; max-width: 500px; margin-inline: auto; text-align: center; font-family: var(--font-body); letter-spacing: 0.02em; display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(255,255,255,0.02); }
-        .browser-url i { font-size: 0.7rem; color: #444; }
-        
-        .browser-actions { display: flex; align-items: center; gap: 12px; }
-        .fullscreen-toggle { background: transparent; border: none; color: #555555; cursor: pointer; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; justify-content: center; padding: 4px; }
-        .fullscreen-toggle:hover { color: #ffffff; transform: scale(1.1); }
-
-        /* Demo Core Viewport */
-        .demo-content { flex-grow: 1; overflow-y: auto; overflow-x: hidden; background: #ffffff; scroll-behavior: smooth; position: relative; }
-        .demo-content::-webkit-scrollbar { width: 5px; }
-        .demo-content::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 4px; }
-
-        /* A. PREMIUM CAFE DEMO */
-        .cafe-theme { --c-bg: #f9f6f0; --c-text: #2a2421; --c-accent: #55624a; --c-light-bg: #f0eae1; --c-serif: 'Playfair Display', serif; background: var(--c-bg); color: var(--c-text); font-family: var(--font-body); }
-        .cafe-theme h1, .cafe-theme h2, .cafe-theme h3, .cafe-theme .cafe-logo { font-family: var(--c-serif) !important; color: var(--c-text); }
-        .cafe-nav { display: flex; justify-content: space-between; padding: 24px 50px; align-items: center; background: rgba(249, 246, 240, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 5; border-bottom: 1px solid rgba(42,36,33,0.05); }
-        .cafe-logo { font-size: 1.6rem; font-weight: 600; letter-spacing: 1px; }
-        .cafe-links { display: flex; gap: 30px; font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
-        .cafe-links span { cursor: pointer; transition: color 0.3s; }
-        .cafe-links span:hover { color: var(--c-accent); }
-        .cafe-hero { text-align: center; padding: 120px 40px; position: relative; background: radial-gradient(circle at 50% 30%, #f3ede2 0%, var(--c-bg) 70%); overflow: hidden; }
-        .cafe-hero-ambient { position: absolute; width: 300px; height: 300px; background: rgba(85, 98, 74, 0.06); filter: blur(60px); top: 10%; left: 15%; border-radius: 50%; }
-        .cafe-hero h1 { font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 400; margin-bottom: 20px; font-style: italic; }
-        .cafe-hero p { font-size: 1.1rem; color: #60554f; margin-bottom: 35px; max-width: 540px; margin-inline: auto; line-height: 1.6; }
-        .cafe-action-btn { background: var(--c-accent); color: #ffffff; padding: 12px 30px; border-radius: 0; font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s; display: inline-block; cursor: pointer; border: none; }
-        .cafe-action-btn:hover { background: #3d4735; transform: translateY(-2px); }
-        .cafe-section { padding: 80px 50px; position: relative; }
-        .cafe-title { text-align: center; font-size: 2.4rem; margin-bottom: 50px; font-weight: 400; position: relative; }
-        .cafe-title::after { content: ''; display: block; width: 40px; height: 1px; background: var(--c-accent); margin: 15px auto 0; }
-        .cafe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .cafe-card { background: #ffffff; padding: 35px 25px; border-radius: 0; text-align: center; box-shadow: 0 10px 30px rgba(42,36,33,0.03); border: 1px solid rgba(42,36,33,0.02); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .cafe-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(42,36,33,0.07); }
-        .cafe-card-icon { font-size: 1.8rem; color: var(--c-accent); margin-bottom: 20px; display: block; }
-        .cafe-card h3 { font-size: 1.3rem; font-weight: 400; margin-bottom: 10px; }
-        .cafe-card p { font-size: 0.95rem; color: #6a605a; line-height: 1.5; margin: 0;}
-        .cafe-about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; background: var(--c-light-bg); padding: 60px; margin-top: 40px; }
-        .cafe-about-text h2 { text-align: left; margin-bottom: 25px; font-size: 2.4rem; }
-        .cafe-about-text p { line-height: 1.7; color: #554d47; font-size: 1rem; }
-        .cafe-faq-container { display: flex; flex-direction: column; gap: 15px; }
-        .cafe-faq-container details { background: var(--c-bg); padding: 18px 24px; transition: all 0.3s; }
-        .cafe-faq-container summary { font-weight: 500; font-size: 0.95rem; outline: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .cafe-faq-container summary::-webkit-details-marker { display: none; }
-        .cafe-faq-container details p { margin-top: 12px; font-size: 0.9rem; color: #6a605a; line-height: 1.6; margin-bottom: 0;}
-        .cafe-map-section { background: var(--c-bg); border: 1px solid rgba(0,0,0,0.05); border-radius: 0; padding: 15px; margin-top: 60px; box-shadow: 0 15px 35px rgba(0,0,0,0.02); }
-        .cafe-map-frame { width: 100%; height: 300px; border: none; background: #eadecd; display: flex; align-items: center; justify-content: center; font-family: var(--font-body); color: #7a6e65; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; }
-        .cafe-footer { background: #221d1b; color: #eae4db; text-align: center; padding: 40px; margin-top: 80px; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0;}
-
-        /* B. PREMIUM GYM DEMO */
-        .gym-theme { --g-bg: #070708; --g-text: #ffffff; --g-accent: #ff5500; --g-card: #111113; background: var(--g-bg); color: var(--g-text); font-family: var(--font-body); }
-        .gym-theme h1, .gym-theme h2, .gym-theme h3, .gym-theme h4, .gym-theme h5 { font-family: var(--font-body) !important; color: var(--g-text); }
-        .gym-nav { display: flex; justify-content: space-between; padding: 24px 50px; align-items: center; background: rgba(7, 7, 8, 0.9); position: sticky; top: 0; z-index: 5; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.03); }
-        .gym-logo { font-size: 1.6rem; color: #ffffff; font-style: italic; font-weight: 900; }
-        .gym-logo span { color: var(--g-accent); }
-        .gym-links { display: flex; gap: 25px; font-size: 0.8rem; font-weight: 500; color: #999; }
-        .gym-links span { cursor: pointer; transition: color 0.3s; }
-        .gym-links span:hover { color: #fff; }
-        .gym-hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; padding: 0 60px; position: relative; overflow: hidden; }
-        .gym-hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900; text-transform: uppercase; line-height: 1; margin-bottom: 20px; letter-spacing: -1px; }
-        .gym-hero h1 span { color: var(--g-accent); }
-        .gym-hero p { font-size: 1.15rem; color: #909094; margin-bottom: 35px; max-width: 480px; line-height: 1.5; }
-        .gym-btn-action { background: var(--g-accent); color: #fff; padding: 14px 32px; text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; border: none; transform: skewX(-8deg); display: inline-block; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 25px rgba(255,85,0,0.3); }
-        .gym-btn-action:hover { background: #e04b00; transform: skewX(-8deg) translateY(-2px); box-shadow: 0 15px 30px rgba(255,85,0,0.45); }
-        .gym-section { padding: 80px 50px; }
-        .gym-title-block { margin-bottom: 50px; border-left: 4px solid var(--g-accent); padding-left: 20px; }
-        .gym-title { font-size: 2.2rem; text-transform: uppercase; font-weight: 900; letter-spacing: 1px; margin-bottom: 0;}
-        .gym-subtitle { color: #666; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; margin-bottom: 0;}
-        .gym-stats { display: flex; gap: 25px; margin-bottom: 80px; }
-        .gym-stat { flex: 1; background: var(--g-card); padding: 35px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
-        .gym-stat h3 { font-size: 3rem; font-weight: 900; color: var(--g-accent); margin-bottom: 5px; }
-        .gym-stat p { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin: 0; }
-        .gym-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .gym-info-col h4 { font-size: 1.4rem; text-transform: uppercase; font-weight: 800; margin-bottom: 25px; }
-        .gym-info-list p { color: #aaa; margin-bottom: 12px; font-size: 0.95rem; }
-        .trainer-profile { display: flex; align-items: center; gap: 20px; background: var(--g-card); padding: 20px; border: 1px solid rgba(255,255,255,0.03); margin-bottom: 15px; }
-        .trainer-meta h5 { font-size: 1.1rem; margin-bottom: 4px; font-weight: 700; }
-        .trainer-meta span { font-size: 0.8rem; color: #777; text-transform: uppercase; }
-        .gym-map { width: 100%; height: 280px; background: #141416; margin-top: 50px; border: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center; color: #444; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
-        .gym-footer { background: #000000; padding: 40px; text-align: center; font-size: 0.8rem; color: #555; border-top: 1px solid #111; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0;}
-        .gym-footer p { margin-bottom: 0; }
-        
-        /* C. PREMIUM EATERY DEMO */
-        .eatery-theme { --e-bg: #fffbf4; --e-text: #1e1b18; --e-accent: #ffb703; --e-secondary: #e85d04; background: var(--e-bg); color: var(--e-text); font-family: var(--font-body); }
-        .eatery-theme h1, .eatery-theme h2, .eatery-theme h3 { font-family: var(--font-head) !important; color: var(--e-text); }
-        .eatery-nav { display: flex; justify-content: space-between; padding: 18px 40px; align-items: center; background: #ffffff; box-shadow: 0 4px 20px rgba(30,27,24,0.02); position: sticky; top: 0; z-index: 5; }
-        .eatery-logo { font-size: 1.6rem; font-weight: 900; }
-        .eatery-links { display: flex; gap: 25px; font-weight: 600; font-size: 0.9rem; }
-        .eatery-links span { cursor: pointer; transition: color 0.2s; }
-        .eatery-links span:hover { color: var(--e-secondary); }
-        .eatery-hero { padding: 80px 40px; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #fffbf4 0%, #ffe9cc 100%); }
-        .eatery-hero-text { flex: 1; padding-right: 40px; }
-        .eatery-hero h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
-        .eatery-hero h1 span { color: var(--e-secondary); }
-        .eatery-hero p { font-size: 1.1rem; color: #5c534a; margin-bottom: 30px; max-width: 500px; line-height: 1.6; }
-        .eatery-btn { background: var(--e-secondary); color: #fff; padding: 14px 30px; border-radius: 100px; font-weight: 700; border: none; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
-        .eatery-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(232,93,4,0.3); }
-        .eatery-hero-img { width: 220px; height: 220px; background: #ffffff; border-radius: 50%; box-shadow: 0 20px 40px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--e-secondary); }
-        .eatery-section { padding: 70px 40px; }
-        .eatery-section h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 40px; text-align: center; }
-        .eatery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px; }
-        .eatery-item { background: #ffffff; border-radius: 24px; padding: 30px 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.01); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .eatery-item:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(232,93,4,0.06); }
-        .eatery-item-img { width: 90px; height: 90px; background: #fff4db; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
-        .eatery-item h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 6px; }
-        .eatery-item p { font-size: 0.85rem; color: #7c7267; margin-bottom: 15px; line-height: 1.4; }
-        .eatery-item .price { color: var(--e-secondary); font-weight: 900; font-size: 1.2rem; }
-        .eatery-reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }
-        .eatery-review { background: #ffffff; padding: 25px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.01); border-left: 4px solid var(--e-accent); }
-        .eatery-review p { font-style: italic; color: #5c534a; font-size: 0.95rem; margin-bottom: 15px; }
-        .eatery-review-user { font-weight: 700; font-size: 0.85rem; }
-        .eatery-footer { background: #1e1b18; color: #ffffff; text-align: center; padding: 30px; margin-top: 50px; font-size: 0.85rem; }
+        .media-fallback i { font-size: 1.6rem; opacity: 0.5; }
 
         /* ==========================================================================
-           PROJECTS SHOWCASE SECTION
+           LIVE PROJECTS SECTION
            ========================================================================== */
         #projects { padding: 100px 0; background: #050505; position: relative; z-index: 1; }
         .project-card {
-            background: rgba(255,255,255,0.01); border: 1px solid var(--glass-border); border-radius: 24px;
-            padding: 30px; height: 100%; transition: var(--transition); display: flex; flex-direction: column;
+            background: rgba(255,255,255,0.01); border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 20px; height: 100%; transition: var(--transition); display: flex; flex-direction: column;
         }
         .project-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); box-shadow: var(--premium-shadow); }
         .project-inner { display: flex; flex-direction: column; height: 100%; }
-        .project-mockup { width: 100%; height: 200px; border-radius: 12px; margin-bottom: 25px; overflow: hidden; background: #111; position: relative; }
-        .project-mockup-inner { width: 100%; height: 100%; transition: transform 0.6s ease; }
-        .project-card:hover .project-mockup-inner { transform: scale(1.05); }
-        
-        .mockup-1 { background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%); }
-        .mockup-2 { background: linear-gradient(135deg, #3d2b33 0%, #291c24 100%); }
-        .mockup-3 { background: linear-gradient(135deg, #112624 0%, #0a1118 100%); }
-        
-        .project-category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
-        .project-title { font-size: 1.6rem; margin-bottom: 14px; font-weight: 600; }
-        .project-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px; flex-grow: 1; }
-        .project-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-family: var(--font-head); font-size: 0.9rem; color: #ffffff; transition: var(--transition); }
-        .project-link i { font-size: 0.8rem; transition: var(--transition); }
+        .project-mockup { width: 100%; aspect-ratio: 16/9; border-radius: 12px; margin-bottom: 16px; overflow: hidden; background: #111; position: relative; }
+        .project-card:hover .project-mockup img { transform: scale(1.05); }
+
+        .project-category { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 6px; font-weight: 600; }
+        .project-title { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
+        .project-desc { color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; margin-bottom: 16px; flex-grow: 1; }
+        .project-link { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-family: var(--font-head); font-size: 0.8rem; color: #ffffff; transition: var(--transition); }
+        .project-link i { font-size: 0.72rem; transition: var(--transition); }
         .project-card:hover .project-link i { transform: translateX(6px); }
 
         /* ==========================================================================
-           CONTACT SECTION (BOOTSTRAP ADAPTED & REFINED)
+           INDUSTRY WEBSITE DEMOS SECTION
            ========================================================================== */
-        #contact { padding: 140px 0; position: relative; }
-        .contact-info h2 { font-size: clamp(2.5rem, 4.5vw, 4.2rem); margin-bottom: 24px; font-weight: 700; line-height: 1.1; }
-        .contact-info p { color: var(--text-muted); font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px; max-width: 480px; }
+        #demos { padding: 110px 0; position: relative; }
+        .demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+        .demo-card {
+            background: rgba(255,255,255,0.01); border: 1px solid var(--glass-border); border-radius: 18px;
+            overflow: hidden; display: flex; flex-direction: column; height: 100%; transition: var(--transition);
+        }
+        .demo-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.12); box-shadow: var(--premium-shadow); }
+        .demo-card-media { width: 100%; aspect-ratio: 16/10; overflow: hidden; position: relative; background: #111; }
+        .demo-card:hover .demo-card-media img { transform: scale(1.05); }
+        .demo-card-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex-grow: 1; }
+        .demo-card-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+        .demo-card-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px; flex-grow: 1; }
+        .demo-card-link { font-size: 0.82rem; font-weight: 600; font-family: var(--font-head); display: inline-flex; align-items: center; gap: 6px; color: #ffffff; }
+        .demo-card-link i { font-size: 0.72rem; transition: var(--transition); }
+        .demo-card:hover .demo-card-link i { transform: translateX(4px); }
+
+        /* ==========================================================================
+           WHO WE HELP SECTION
+           ========================================================================== */
+        #who-we-help { padding: 100px 0; position: relative; }
+        .who-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .who-card {
+            background: rgba(255,255,255,0.015); border: 1px solid var(--glass-border); border-radius: 16px;
+            padding: 24px 18px; text-align: center; transition: var(--transition);
+        }
+        .who-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); transform: translateY(-4px); }
+        .who-icon {
+            width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05);
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 1.05rem;
+        }
+        .who-card h4 { font-size: 0.92rem; font-weight: 600; margin: 0; }
+
+        /* ==========================================================================
+           PRICING SHARED (PACKAGES / SEO / HOSTING)
+           ========================================================================== */
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+        .pricing-card {
+            background: rgba(255,255,255,0.015); border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 32px 28px; display: flex; flex-direction: column; height: 100%; transition: var(--transition); position: relative;
+        }
+        .pricing-card:hover { border-color: rgba(255,255,255,0.12); transform: translateY(-6px); box-shadow: var(--premium-shadow); }
+        .pricing-card.popular { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.035); }
+        .pricing-badge {
+            position: absolute; top: -13px; right: 26px; background: #ffffff; color: #000000;
+            font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+            padding: 6px 14px; border-radius: 100px; font-family: var(--font-head);
+        }
+        .pricing-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
+        .pricing-price { font-family: var(--font-head); font-size: 2rem; font-weight: 700; margin-bottom: 22px; }
+        .pricing-price span { font-size: 0.82rem; color: var(--text-muted); font-weight: 400; }
+        .pricing-features { margin-bottom: 24px; flex-grow: 1; }
+        .pricing-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; color: var(--text-muted); padding: 6px 0; line-height: 1.4; }
+        .pricing-features li i { color: #ffffff; font-size: 0.72rem; margin-top: 4px; }
+
+        #packages, #seo { padding: 110px 0; position: relative; }
+
+        /* ==========================================================================
+           HOSTING PLANS SECTION
+           ========================================================================== */
+        #hosting { padding: 110px 0; position: relative; }
+        .hosting-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+        .hosting-card {
+            background: rgba(255,255,255,0.015); border: 1px solid var(--glass-border); border-radius: 16px;
+            padding: 24px 18px; text-align: center; transition: var(--transition);
+        }
+        .hosting-card:hover { border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); transform: translateY(-4px); }
+        .hosting-name { font-size: 0.88rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px; }
+        .hosting-price { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; margin-bottom: 4px; }
+        .hosting-price span { font-size: 0.7rem; color: var(--text-muted); font-weight: 400; }
+        .hosting-ccu { font-size: 0.8rem; color: #ffffff; font-weight: 600; margin-top: 8px; }
+        .hosting-ccu-label { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
+
+        /* ==========================================================================
+           DOMAIN REGISTRATION SECTION
+           ========================================================================== */
+        #domain { padding: 70px 0; position: relative; }
+        .domain-banner {
+            text-align: center; background: linear-gradient(135deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
+            border: 1px solid var(--glass-border); border-radius: 20px; padding: 44px 28px;
+        }
+        .domain-banner h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 18px; }
+        .domain-chips { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .domain-chips span {
+            font-family: var(--font-head); font-size: 0.82rem; font-weight: 600; padding: 8px 20px;
+            border-radius: 100px; background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); color: #ffffff;
+        }
+
+        /* ==========================================================================
+           WHY ORYGYNS SECTION
+           ========================================================================== */
+        #why { padding: 110px 0; position: relative; }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .why-card {
+            background: rgba(255,255,255,0.015); border: 1px solid var(--glass-border); border-radius: 16px;
+            padding: 26px 22px; transition: var(--transition);
+        }
+        .why-card:hover { border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); }
+        .why-card i { font-size: 1.25rem; margin-bottom: 14px; color: #ffffff; display: block; }
+        .why-card h4 { font-size: 0.98rem; font-weight: 600; margin-bottom: 6px; }
+        .why-card p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+        /* ==========================================================================
+           CONTACT SECTION
+           ========================================================================== */
+        #contact { padding: 130px 0; position: relative; }
+        .contact-info h2 { font-size: clamp(2.2rem, 4vw, 3.6rem); margin-bottom: 22px; font-weight: 700; line-height: 1.1; }
+        .contact-info p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 36px; max-width: 480px; }
+        .contact-info .contact-email { display: inline-flex; align-items: center; gap: 10px; color: #ffffff; font-weight: 600; font-family: var(--font-head); font-size: 0.95rem; }
         .gradient-card {
             padding: 32px; border-radius: 20px; background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
             border: 1px solid rgba(255,255,255,0.05);
         }
-        
-        /* Contact Form Overrides */
+
         .form-control-custom {
             background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: #fff;
             padding: 15px 20px; border-radius: 12px; font-size: 0.95rem; transition: all 0.3s;
@@ -418,16 +397,22 @@
         .form-control-custom:focus { background: rgba(0,0,0,0.8); border-color: rgba(255,255,255,0.3); box-shadow: none; color: #fff; }
         .form-control-custom::placeholder { color: #666; }
 
-        /* Footer */
         footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--glass-border); font-size: 0.85rem; color: var(--text-muted); }
 
         /* ==========================================================================
            RESPONSIVE ADJUSTMENTS
            ========================================================================== */
+        @media (max-width: 1200px) {
+            .hosting-grid { grid-template-columns: repeat(3, 1fr); }
+        }
         @media (max-width: 1024px) {
-            .demo-wrapper { min-width: 90vw; height: 75vh; }
-            .cafe-about, .gym-info-grid { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
-            .gradient-card { padding: 40px 30px; }
+            .demo-grid { grid-template-columns: repeat(2, 1fr); }
+            .who-grid { grid-template-columns: repeat(3, 1fr); }
+            .gradient-card { padding: 30px 26px; }
+        }
+        @media (max-width: 900px) {
+            .pricing-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             nav.main-nav { padding: 20px 0; }
@@ -440,13 +425,25 @@
             .nav-links.active { right: 0; }
             .mobile-menu-btn { display: block; z-index: 1001; }
             .hero-cta { flex-direction: column; gap: 14px; }
-            .gym-stats { flex-direction: column; gap: 15px; }
-            .gym-hero { padding: 0 30px; }
-            .eatery-hero { flex-direction: column; text-align: center; padding: 45px 25px; }
-            .eatery-hero-text { padding-right: 0; margin-bottom: 35px; }
-            .eatery-hero-img { width: 160px; height: 160px; font-size: 3.5rem; }
+            .hero-badges { gap: 18px 24px; }
             #cursor-glow { display: none; }
-            .contact-info h2 { font-size: 2.8rem; }
+            .who-grid { grid-template-columns: repeat(2, 1fr); }
+            .hosting-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-info h2 { font-size: 2.6rem; }
+            #projects, #demos, #who-we-help, #packages, #seo, #hosting, #why, #contact { padding-top: 80px; padding-bottom: 80px; }
+        }
+        @media (max-width: 600px) {
+            .demo-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 520px) {
+            .why-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 420px) {
+            .who-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hosting-grid { grid-template-columns: 1fr; }
+            .domain-banner { padding: 34px 20px; }
         }
     </style>
 </head>
@@ -454,23 +451,24 @@
     <div id="loader">
         <div class="spinner"></div>
     </div>
-    
+
     <div id="cursor-glow"></div>
-    
+
     <div class="bg-shapes">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
-    
+
     <nav id="navbar" class="main-nav">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="logo">ORYGYNS</a>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#demos">Demos</a>
                 <a href="#projects">Work</a>
-                <a href="#contact">Inquire</a>
+                <a href="#demos">Demos</a>
+                <a href="#packages">Pricing</a>
+                <a href="#contact">Contact</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
         </div>
@@ -478,11 +476,59 @@
 
     <section id="home">
         <div class="container text-center reveal active">
-            <h1 class="hero-title">Elevating Digital Presence</h1>
-            <p class="hero-subtitle">We design and develop premium, high-performance web experiences tailored for modern businesses, portfolios, and organizational scaling.</p>
+            <h1 class="hero-title">Professional Websites for Growing Businesses</h1>
+            <p class="hero-subtitle">We design modern, responsive, SEO-ready websites for boutiques, gyms, cafes, consultants, startups, and local businesses.</p>
             <div class="hero-cta">
-                <a href="#demos" class="btn-custom btn-primary-custom">View Prototypes</a>
-                <a href="#contact" class="btn-custom btn-secondary-custom">Start Project</a>
+                <a href="#demos" class="btn-custom btn-primary-custom">View Portfolio</a>
+                <a href="#contact" class="btn-custom btn-secondary-custom">Start Your Project</a>
+            </div>
+            <div class="hero-badges">
+                <span><i class="fa-solid fa-check"></i> Responsive Design</span>
+                <span><i class="fa-solid fa-check"></i> SEO Ready</span>
+                <span><i class="fa-solid fa-check"></i> Fast Delivery</span>
+                <span><i class="fa-solid fa-check"></i> Affordable Pricing</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container reveal">
+            <div class="section-header text-center mb-5">
+                <h2>Live Projects</h2>
+                <p>Real websites developed and deployed for businesses.</p>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <div class="project-inner">
+                            <div class="project-mockup media-frame">
+                                <img src="vyasagroup.png" alt="VYASA Group website preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="media-fallback" style="display:none;"><i class="fa-solid fa-building"></i><span>VYASA Group</span></div>
+                            </div>
+                            <div class="project-category">Corporate &amp; Logistics</div>
+                            <h3 class="project-title">VYASA Group</h3>
+                            <p class="project-desc">Professional corporate website developed for VYASA Group with modern design, responsive layouts, and business-focused presentation.</p>
+                            <a href="https://vyasagroup.com" target="_blank" rel="noopener noreferrer" class="project-link mt-auto">Visit Live Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <div class="project-inner">
+                            <div class="project-mockup media-frame">
+                                <img src="bb.png" alt="Brahmin Bazaar website preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="media-fallback" style="display:none;"><i class="fa-solid fa-cart-shopping"></i><span>Brahmin Bazaar</span></div>
+                            </div>
+                            <div class="project-category">E-Commerce Platform</div>
+                            <h3 class="project-title">Brahmin Bazaar</h3>
+                            <p class="project-desc">Custom e-commerce platform developed for Brahmin Bazaar featuring product management, shopping experience optimization, and scalable architecture.</p>
+                            <a href="https://brahminbazaar.com" target="_blank" rel="noopener noreferrer" class="project-link mt-auto">Visit Live Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -490,295 +536,268 @@
     <section id="demos">
         <div class="container reveal">
             <div class="section-header text-center mb-5">
-                <h2>Simulated Environments</h2>
-                <p>Interact with our custom framework architectures designed for specific industry aesthetics and operational flows.</p>
+                <h2>Industry Website Demos</h2>
+                <p>Explore professionally designed website concepts tailored for different industries.</p>
             </div>
-        </div>
-        
-        <div class="demo-slider-container reveal">
-            
-            <div class="demo-wrapper" id="demo-cafe">
-                <div class="browser-header">
-                    <div class="browser-dots">
-                        <div class="browser-dot dot-r"></div>
-                        <div class="browser-dot dot-y"></div>
-                        <div class="browser-dot dot-g"></div>
-                    </div>
-                    <div class="browser-url"><i class="fa-solid fa-lock"></i> brewhaven.core</div>
-                    <div class="browser-actions">
-                        <button class="fullscreen-toggle" title="Maximize Viewport" aria-label="Maximize Viewport"><i class="fa-solid fa-expand"></i></button>
-                    </div>
-                </div>
-                <div class="demo-content cafe-theme">
-                    <nav class="cafe-nav">
-                        <div class="cafe-logo">Brew Haven</div>
-                        <div class="cafe-links">
-                            <span>Menu</span>
-                            <span>Sourcing</span>
-                            <span>Visit</span>
-                        </div>
-                    </nav>
-                    <header class="cafe-hero">
-                        <div class="cafe-hero-ambient"></div>
-                        <h1>The Art of Extraction</h1>
-                        <p>We source, roast, and extract micro-lot coffees with uncompromised precision. A sanctuary for the modern minimalist palate.</p>
-                        <button class="cafe-action-btn" aria-label="View Menu">View Selection</button>
-                    </header>
-                    <section class="cafe-section">
-                        <h2 class="cafe-title">Signature Profiles</h2>
-                        <div class="cafe-grid">
-                            <div class="cafe-card">
-                                <span class="cafe-card-icon"><i class="fa-solid fa-mug-hot"></i></span>
-                                <h3>Bourbon Espresso</h3>
-                                <p>Delicate tasting notes of roasted hazelnut, stone fruit, and dark cocoa crisp finish.</p>
-                            </div>
-                            <div class="cafe-card">
-                                <span class="cafe-card-icon"><i class="fa-solid fa-leaf"></i></span>
-                                <h3>Ceremonial Matcha</h3>
-                                <p>Pure shade-grown Uji tencha whisked elegantly with oat emulsion.</p>
-                            </div>
-                            <div class="cafe-card">
-                                <span class="cafe-card-icon"><i class="fa-solid fa-bread-slice"></i></span>
-                                <h3>Cardamom Bun</h3>
-                                <p>Slow-fermented laminated dough spiced lightly with freshly ground pods.</p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="cafe-section" style="padding-top: 0;">
-                        <div class="cafe-about">
-                            <div class="cafe-about-text">
-                                <h2>Conscious Sourcing</h2>
-                                <p>Every single bean traveling through our inventory is ethically procured through direct trade alliances with independent farm structures worldwide, rewarding cultivation mastery equitably.</p>
-                            </div>
-                            <div class="cafe-faq-container">
-                                <details>
-                                    <summary>Can we book for remote work sessions?</summary>
-                                    <p>We provide open dedicated tech-communal zones equipped with high-speed architecture throughout weekdays.</p>
-                                </details>
-                                <details>
-                                    <summary>Are subscription beans available?</summary>
-                                    <p>Yes, custom profile roasting shipments can be assigned directly to your door monthly.</p>
-                                </details>
-                            </div>
-                        </div>
-                        <div class="cafe-map-section">
-                            <div class="cafe-map-frame">
-                                <i class="fa-solid fa-map-pin" style="margin-right: 10px;"></i> 742 Ambient Boulevard, Cultural District
-                            </div>
-                        </div>
-                    </section>
-                    <footer class="cafe-footer">
-                        <p>© 2026 Brew Haven Core. Minimal Aesthetics Realized.</p>
-                    </footer>
-                </div>
-            </div>
-            
-            <div class="demo-wrapper" id="demo-gym">
-                <div class="browser-header">
-                    <div class="browser-dots">
-                        <div class="browser-dot dot-r"></div>
-                        <div class="browser-dot dot-y"></div>
-                        <div class="browser-dot dot-g"></div>
-                    </div>
-                    <div class="browser-url"><i class="fa-solid fa-lock"></i> ironpulse.club</div>
-                    <div class="browser-actions">
-                        <button class="fullscreen-toggle" title="Maximize Viewport" aria-label="Maximize Viewport"><i class="fa-solid fa-expand"></i></button>
-                    </div>
-                </div>
-                <div class="demo-content gym-theme">
-                    <nav class="gym-nav">
-                        <div class="gym-logo">IRON<span>PULSE</span></div>
-                        <div class="gym-links">
-                            <span>Training</span>
-                            <span>Facility</span>
-                            <span>Join</span>
-                        </div>
-                    </nav>
-                    <header class="gym-hero">
-                        <h1>Redefine <span>Limits</span></h1>
-                        <p>High-performance biomechanical optimization and professional leadership</p>
-                        <div>
-                            <button class="gym-btn-action" aria-label="Join Iron Pulse">Commence Training</button>
-                        </div>
-                    </header>
-                    <section class="gym-section">
-                        <div class="gym-title-block">
-                            <h2 class="gym-title">System Metrics</h2>
-                            <p class="gym-subtitle">Operational superiority</p>
-                        </div>
-                        <div class="gym-stats">
-                            <div class="gym-stat">
-                                <h3>24/7</h3>
-                                <p>Access Protocol</p>
-                            </div>
-                            <div class="gym-stat">
-                                <h3>15k</h3>
-                                <p>Sq. Ft Complex</p>
-                            </div>
-                            <div class="gym-stat">
-                                <h3>Elite</h3>
-                                <p>Coaching Staff</p>
-                            </div>
-                        </div>
-                        <div class="gym-info-grid">
-                            <div class="gym-info-col">
-                                <h4>Hours & Operations</h4>
-                                <div class="gym-info-list">
-                                    <p><strong>Monday - Friday:</strong> 5:00 AM - 11:00 PM</p>
-                                    <p><strong>Saturday - Sunday:</strong> 6:00 AM - 9:00 PM</p>
-                                    <p><strong>Location:</strong> 909 Vanguard Way, Suite X</p>
-                                    <p><strong>Contact Desk:</strong> orygynstc@gmail.com</p>
-                                </div>
-                                <h4 style="margin-top: 30px;">Premium Facilities</h4>
-                                <div class="gym-info-list">
-                                    <p><i class="fa-solid fa-layer-group" style="color:var(--g-accent); margin-right:8px;"></i> Cryotherapy & Thermal Recovery Lounge</p>
-                                    <p><i class="fa-solid fa-layer-group" style="color:var(--g-accent); margin-right:8px;"></i> Competition Olympic Lifting Platforms</p>
-                                </div>
-                            </div>
-                            <div class="gym-info-col">
-                                <h4>Leadership & Conditioning Directors</h4>
-                                <p style="font-size: 0.9rem; color: #888; line-height: 1.5; margin-bottom: 15px;">Our trainers hold elite degrees in exercise physiology and performance specialization certifications.</p>
-                                <div class="trainer-profile">
-                                    <div class="trainer-meta">
-                                        <h5>Marcus Vance</h5>
-                                        <span>Founder & Head of Strength Systems</span>
-                                    </div>
-                                </div>
-                                <div class="trainer-profile">
-                                    <div class="trainer-meta">
-                                        <h5>Elena Rostova</h5>
-                                        <span>Director of HIIT & Cardiovascular Performance</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gym-map">
-                            <i class="fa-solid fa-location-crosshairs" style="color: var(--g-accent); margin-right: 10px;"></i> Diagnostic Map Vector Viewport Active
-                        </div>
-                    </section>
-                    <footer class="gym-footer">
-                        <p>IRON PULSE PERFORMANCE ECOSYSTEM © 2026. ALL RIGHTS RESERVED.</p>
-                    </footer>
-                </div>
-            </div>
+            <div class="demo-grid reveal">
 
-            <div class="demo-wrapper" id="demo-eatery">
-                <div class="browser-header">
-                    <div class="browser-dots">
-                        <div class="browser-dot dot-r"></div>
-                        <div class="browser-dot dot-y"></div>
-                        <div class="browser-dot dot-g"></div>
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="penstore.png" alt="Pen Store demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-pen-nib"></i><span>Pen Store</span></div>
                     </div>
-                    <div class="browser-url"><i class="fa-solid fa-lock"></i> cravestreet.kitchen</div>
-                    <div class="browser-actions">
-                        <button class="fullscreen-toggle" title="Maximize Viewport" aria-label="Maximize Viewport"><i class="fa-solid fa-expand"></i></button>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Pen Store</h4>
+                        <p class="demo-card-desc">Premium stationery and luxury writing instrument showcase.</p>
+                        <a href="https://orygyns.github.io/penstore/" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="demo-content eatery-theme">
-                    <nav class="eatery-nav">
-                        <div class="eatery-logo">Crave Street</div>
-                        <div class="eatery-links">
-                            <span>Dishes</span>
-                            <span>Location</span>
-                            <span>Order</span>
-                        </div>
-                    </nav>
-                    <header class="eatery-hero">
-                        <div class="eatery-hero-text">
-                            <h1>Bold Flavors. <span>Real Food.</span></h1>
-                            <p>Urban street food elevated with fresh, local ingredients and fire-grilled mastery. Taste the revolution in every bite.</p>
-                            <button class="eatery-btn" aria-label="Order Now">Order Now</button>
-                        </div>
-                        <div class="eatery-hero-img">
-                            <i class="fa-solid fa-burger"></i>
-                        </div>
-                    </header>
-                    <section class="eatery-section">
-                        <h2>Top Picks</h2>
-                        <div class="eatery-grid">
-                            <div class="eatery-item">
-                                <div class="eatery-item-img"><i class="fa-solid fa-hotdog"></i></div>
-                                <h3>The Classic Dog</h3>
-                                <p>All-beef frank, toasted bun, signature house relish, and mustard.</p>
-                                <div class="price">$5.99</div>
-                            </div>
-                            <div class="eatery-item">
-                                <div class="eatery-item-img"><i class="fa-solid fa-pizza-slice"></i></div>
-                                <h3>Spicy Pepperoni</h3>
-                                <p>Wood-fired crust, San Marzano tomato base, cupping pepperoni.</p>
-                                <div class="price">$12.50</div>
-                            </div>
-                            <div class="eatery-item">
-                                <div class="eatery-item-img"><i class="fa-solid fa-ice-cream"></i></div>
-                                <h3>Vanilla Bean</h3>
-                                <p>Hand-churned artisan gelato made with real Madagascar vanilla.</p>
-                                <div class="price">$4.00</div>
-                            </div>
-                        </div>
-                        
-                        <h2 style="margin-top: 60px;">What Locals Say</h2>
-                        <div class="eatery-reviews">
-                            <div class="eatery-review">
-                                <p>"Absolute game changer. The flavors are intense and the ingredients are remarkably fresh. Best spot in the city."</p>
-                                <div class="eatery-review-user">James T. — Local Guide</div>
-                            </div>
-                            <div class="eatery-review">
-                                <p>"Fast service and incredible taste. The spicy pepperoni pizza has the perfect amount of heat. Will be coming back again this weekend."</p>
-                                <div class="eatery-review-user">Aria S. — Verified Eater</div>
-                            </div>
-                        </div>
-                        
-                        <div class="eatery-map" style="margin-top: 50px;">
-                            <div style="width:100%; height:200px; background:#f2eade; display:flex; align-items:center; justify-content:center; font-size:0.9rem; font-weight:700; color:#8c7e70; text-transform:uppercase; letter-spacing:1px; border-radius: 20px;">
-                                <i class="fa-solid fa-route" style="margin-right:10px; color:var(--e-secondary);"></i> Delivery Zone Geo-Grid Loaded
-                            </div>
-                        </div>
-                    </section>
-                    <footer class="eatery-footer">
-                        <p>© 2026 Crave Street Co. Built For Freshness.</p>
-                    </footer>
+
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="bakery.png" alt="Bakery demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-bread-slice"></i><span>Bakery</span></div>
+                    </div>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Bakery</h4>
+                        <p class="demo-card-desc">Modern bakery experience featuring menus, galleries, and customer engagement.</p>
+                        <a href="https://orygyns.github.io/demo-bakery/" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
+
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="cafe.png" alt="Cafe demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-mug-hot"></i><span>Cafe</span></div>
+                    </div>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Cafe</h4>
+                        <p class="demo-card-desc">Elegant coffee shop website with premium visual storytelling.</p>
+                        <a href="https://orygyns.github.io/demo-cafe/" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="icecreamparlour.png" alt="Ice Cream Parlour demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-ice-cream"></i><span>Ice Cream Parlour</span></div>
+                    </div>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Ice Cream Parlour</h4>
+                        <p class="demo-card-desc">Bright and engaging dessert-focused customer experience.</p>
+                        <a href="https://orygyns.github.io/ice-cream/" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="gym.png" alt="Gym demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-dumbbell"></i><span>Gym</span></div>
+                    </div>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Gym</h4>
+                        <p class="demo-card-desc">Fitness-focused website built for memberships, trainers, and lead generation.</p>
+                        <a href="https://orygyns.github.io/demos/gym.html" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="boutique.png" alt="Boutique demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-shirt"></i><span>Boutique</span></div>
+                    </div>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Boutique</h4>
+                        <p class="demo-card-desc">Fashion and apparel showcase with premium branding.</p>
+                        <a href="https://orygyns.github.io/demos/boutiqe.html" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-card-media media-frame">
+                        <img src="streetfood.png" alt="Street Food demo preview" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="media-fallback" style="display:none;"><i class="fa-solid fa-utensils"></i><span>Street Food</span></div>
+                    </div>
+                    <div class="demo-card-body">
+                        <h4 class="demo-card-title">Street Food</h4>
+                        <p class="demo-card-desc">Bold and modern food business website optimized for customer engagement.</p>
+                        <a href="https://orygyns.github.io/demos/streetfood.html" target="_blank" rel="noopener noreferrer" class="demo-card-link">View Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
             </div>
-            
         </div>
     </section>
 
-    <section id="projects">
+    <section id="who-we-help">
         <div class="container reveal">
             <div class="section-header text-center mb-5">
-                <h2>Selected Works</h2>
-                <p>A rigorous curation of enterprise production projects deployed live across global markets.</p>
+                <h2>Who We Help</h2>
+                <p>Trusted by growing businesses across industries.</p>
             </div>
-            <div class="row g-4">
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-inner">
-                            <div class="project-mockup">
-                                <div class="project-mockup-inner mockup-1"></div>
-                            </div>
-                            <div class="project-category">Corporate Logistics Architecture</div>
-                            <h3 class="project-title">vyasagroup.com</h3>
-                            <p class="project-desc">Global enterprise logistical operational tracking architecture deployed with clean semantic layout components and premium performance optimization parameters.</p>
-                            <a href="https://vyasagroup.com" target="_blank" rel="noopener noreferrer" class="project-link mt-auto">Launch Live Experience <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
+            <div class="who-grid reveal">
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-store"></i></div><h4>Boutiques</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-dumbbell"></i></div><h4>Gyms</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-mug-hot"></i></div><h4>Cafes</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-bread-slice"></i></div><h4>Bakeries</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-briefcase"></i></div><h4>Consultants</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-graduation-cap"></i></div><h4>Educational Institutions</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-rocket"></i></div><h4>Startups</h4></div>
+                <div class="who-card"><div class="who-icon"><i class="fa-solid fa-bag-shopping"></i></div><h4>Retail Stores</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages">
+        <div class="container reveal">
+            <div class="section-header text-center mb-5">
+                <h2>Website Packages</h2>
+                <p>Transparent pricing built for growing businesses.</p>
+            </div>
+            <div class="pricing-grid reveal">
+
+                <div class="pricing-card">
+                    <div class="pricing-name">Basic Website</div>
+                    <div class="pricing-price">&#8377;2,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Up to 5 Pages</li>
+                        <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                        <li><i class="fa-solid fa-check"></i> Basic UI/UX Customization</li>
+                        <li><i class="fa-solid fa-check"></i> SEO Setup</li>
+                        <li><i class="fa-solid fa-check"></i> Google Analytics Integration</li>
+                    </ul>
+                    <a href="#contact" class="btn-custom-sm btn-secondary-custom">Get Started</a>
                 </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-inner">
-                            <div class="project-mockup">
-                                <div class="project-mockup-inner mockup-2"></div>
-                            </div>
-                            <div class="project-category">High-Conversion E-Commerce System</div>
-                            <h3 class="project-title">brahminbazaar.com</h3>
-                            <p class="project-desc">A highly tailored e-commerce deployment featuring modern aesthetic transaction dynamics, optimized user flow patterns, and unified checkout architecture.</p>
-                            <a href="https://brahminbazaar.com" target="_blank" rel="noopener noreferrer" class="project-link mt-auto">Launch Live Experience <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
+
+                <div class="pricing-card popular">
+                    <span class="pricing-badge">Most Popular</span>
+                    <div class="pricing-name">Premium Website</div>
+                    <div class="pricing-price">&#8377;3,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Up to 10 Pages</li>
+                        <li><i class="fa-solid fa-check"></i> Full Design Customization</li>
+                        <li><i class="fa-solid fa-check"></i> Enhanced UI/UX</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced SEO</li>
+                        <li><i class="fa-solid fa-check"></i> GEO Optimization</li>
+                        <li><i class="fa-solid fa-check"></i> Google Search Console</li>
+                        <li><i class="fa-solid fa-check"></i> Google Analytics</li>
+                    </ul>
+                    <a href="#contact" class="btn-custom-sm btn-primary-custom">Get Started</a>
                 </div>
-                
+
+                <div class="pricing-card">
+                    <div class="pricing-name">E-Commerce Website</div>
+                    <div class="pricing-price">&#8377;7,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> User Portal</li>
+                        <li><i class="fa-solid fa-check"></i> Seller Portal (Optional)</li>
+                        <li><i class="fa-solid fa-check"></i> Admin Dashboard</li>
+                        <li><i class="fa-solid fa-check"></i> Razorpay Integration</li>
+                        <li><i class="fa-solid fa-check"></i> Basic Security</li>
+                    </ul>
+                    <a href="#contact" class="btn-custom-sm btn-secondary-custom">Get Started</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="seo">
+        <div class="container reveal">
+            <div class="section-header text-center mb-5">
+                <h2>SEO &amp; GEO</h2>
+                <p>Get found by search engines and AI assistants alike.</p>
+            </div>
+            <div class="pricing-grid reveal" style="max-width: 420px; margin: 0 auto; grid-template-columns: 1fr;">
+                <div class="pricing-card">
+                    <div class="pricing-name">SEO &amp; GEO Package</div>
+                    <div class="pricing-price">&#8377;1,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> SEO Optimization</li>
+                        <li><i class="fa-solid fa-check"></i> GEO Optimization</li>
+                        <li><i class="fa-solid fa-check"></i> AI Search Visibility</li>
+                        <li><i class="fa-solid fa-check"></i> Search Ranking Improvements</li>
+                    </ul>
+                    <a href="#contact" class="btn-custom-sm btn-secondary-custom">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hosting">
+        <div class="container reveal">
+            <div class="section-header text-center mb-5">
+                <h2>Hosting Plans</h2>
+                <p>Hosted through trusted third-party infrastructure providers.</p>
+            </div>
+            <div class="hosting-grid reveal">
+
+                <div class="hosting-card">
+                    <div class="hosting-name">Basic</div>
+                    <div class="hosting-price">&#8377;1,500<span>/month</span></div>
+                    <div class="hosting-ccu">100 CCU</div>
+                    <div class="hosting-ccu-label">Concurrent Users</div>
+                </div>
+
+                <div class="hosting-card">
+                    <div class="hosting-name">Pro</div>
+                    <div class="hosting-price">&#8377;3,000<span>/month</span></div>
+                    <div class="hosting-ccu">300 CCU</div>
+                    <div class="hosting-ccu-label">Concurrent Users</div>
+                </div>
+
+                <div class="hosting-card">
+                    <div class="hosting-name">Business</div>
+                    <div class="hosting-price">&#8377;4,500<span>/month</span></div>
+                    <div class="hosting-ccu">500 CCU</div>
+                    <div class="hosting-ccu-label">Concurrent Users</div>
+                </div>
+
+                <div class="hosting-card">
+                    <div class="hosting-name">Professional</div>
+                    <div class="hosting-price">&#8377;8,000<span>/month</span></div>
+                    <div class="hosting-ccu">1000 CCU</div>
+                    <div class="hosting-ccu-label">Concurrent Users</div>
+                </div>
+
+                <div class="hosting-card">
+                    <div class="hosting-name">Enterprise</div>
+                    <div class="hosting-price">&#8377;30,000<span>/month</span></div>
+                    <div class="hosting-ccu">5000 CCU</div>
+                    <div class="hosting-ccu-label">Concurrent Users</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="domain">
+        <div class="container reveal">
+            <div class="domain-banner">
+                <h3>Domain Registration at Actual Cost</h3>
+                <div class="domain-chips">
+                    <span>.com</span>
+                    <span>.in</span>
+                    <span>.org</span>
+                    <span>.net</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <div class="container reveal">
+            <div class="section-header text-center mb-5">
+                <h2>Why ORYGYNS</h2>
+                <p>Built for businesses that want to grow online without overspending.</p>
+            </div>
+            <div class="why-grid reveal">
+                <div class="why-card"><i class="fa-solid fa-tag"></i><h4>Affordable Pricing</h4><p>Premium quality websites without enterprise-level price tags.</p></div>
+                <div class="why-card"><i class="fa-solid fa-wand-magic-sparkles"></i><h4>Modern Design</h4><p>Clean, contemporary layouts that reflect your brand's quality.</p></div>
+                <div class="why-card"><i class="fa-solid fa-magnifying-glass-chart"></i><h4>SEO &amp; GEO Ready</h4><p>Built to rank on search engines and stay visible to AI search.</p></div>
+                <div class="why-card"><i class="fa-solid fa-mobile-screen"></i><h4>Responsive Across Devices</h4><p>Looks and works great on phones, tablets, and desktops.</p></div>
+                <div class="why-card"><i class="fa-solid fa-bolt"></i><h4>Fast Turnaround</h4><p>Efficient development process that gets you online quickly.</p></div>
+                <div class="why-card"><i class="fa-solid fa-briefcase"></i><h4>Business-Focused Solutions</h4><p>Every detail is designed to support your real business goals.</p></div>
             </div>
         </div>
     </section>
@@ -788,23 +807,24 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="contact-info">
-                        <h2>Architect Your Vision</h2>
-                        <p>Initiate a dialogue regarding enterprise deployment, custom system architecture, or premium UI/UX integration.</p>
+                        <h2>Let's Build Your Website</h2>
+                        <p>Tell us about your project and we'll help bring your business online.</p>
+                        <a href="mailto:orygynstc@gmail.com" class="contact-email"><i class="fa-solid fa-envelope"></i> orygynstc@gmail.com</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="gradient-card">
                         <form id="contactForm">
                             <div class="mb-4">
-                                <input type="text" class="form-control form-control-custom" id="draftName" placeholder="Entity / Individual Name" required>
+                                <input type="text" class="form-control form-control-custom" id="draftName" placeholder="Your Name" required>
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control form-control-custom" id="draftProject" placeholder="Project Classification" required>
+                                <input type="text" class="form-control form-control-custom" id="draftProject" placeholder="Project Type" required>
                             </div>
                             <div class="mb-4">
-                                <textarea class="form-control form-control-custom" id="draftMessage" rows="4" placeholder="Operational Requirements" required></textarea>
+                                <textarea class="form-control form-control-custom" id="draftMessage" rows="4" placeholder="Tell us about your project" required></textarea>
                             </div>
-                            <button type="submit" class="btn-custom btn-primary-custom w-100" aria-label="Compile Inquiry">Compile Inquiry</button>
+                            <button type="submit" class="btn-custom btn-primary-custom w-100" aria-label="Send Inquiry">Send Inquiry</button>
                         </form>
                     </div>
                 </div>
@@ -893,46 +913,19 @@
             });
         });
 
-        // Fullscreen API Injection for Demos
-        document.querySelectorAll('.fullscreen-toggle').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const demoWrapper = this.closest('.demo-wrapper');
-                const content = demoWrapper.querySelector('.demo-content');
-                if (!document.fullscreenElement) {
-                    content.requestFullscreen().catch(err => {
-                        console.error(`Error attempting to enable fullscreen: ${err.message}`);
-                    });
-                    this.innerHTML = '<i class="fa-solid fa-compress"></i>';
-                } else {
-                    document.exitFullscreen().then(() => {
-                        this.innerHTML = '<i class="fa-solid fa-expand"></i>';
-                    });
-                }
-            });
-        });
-
-        // Monitor Fullscreen Escapes To Restore Default Icons Smoothly
-        document.addEventListener('fullscreenchange', () => {
-            if (!document.fullscreenElement) {
-                document.querySelectorAll('.fullscreen-toggle').forEach(b => {
-                    b.innerHTML = '<i class="fa-solid fa-expand"></i>';
-                });
-            }
-        });
-
         // Email Client Draft Generator via Mailto
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const name = document.getElementById('draftName').value.trim();
             const project = document.getElementById('draftProject').value.trim();
             const message = document.getElementById('draftMessage').value.trim();
-            
+
             const targetEmail = "orygynstc@gmail.com";
             const subject = encodeURIComponent(`New Project Inquiry: ${project} - ${name}`);
             const bodyText = `Hello ORYGYNS Team,\n\nMy name is ${name}.\n\nProject Overview:\n${project}\n\nProject Details:\n${message}\n\nLooking forward to hearing from you.\n\nBest regards,\n${name}`;
             const body = encodeURIComponent(bodyText);
-            
+
             window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
         });
     </script>
